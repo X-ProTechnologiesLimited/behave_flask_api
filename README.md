@@ -1,4 +1,4 @@
-# BEHAVE_FLASK_API
+# behave_flask_app
 
 This project is a demo for flask API and behave automated framework deployed on Docker
 
