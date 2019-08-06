@@ -9,7 +9,7 @@ pipeline {
     stage('test') {
       steps {
         sh 'utils/start.sh Y'
-	sh 'utils/run_behave.sh
+	sh 'utils/run_behave.sh'
       }   
     }
   }
