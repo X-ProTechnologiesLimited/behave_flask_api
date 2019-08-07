@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 filename=country_app_`date +%d%m%Y%H%M%S`.log
 mkdir -p ../logs
-echo "Starting the Country App..."
-echo "Starting the Country App..." >> ../logs/$filename
+echo "Started the Country App..."
+echo "Started the Country App..." >> ../logs/$filename
 echo
 if [ "$1" = "Y" ]
 then
