@@ -10,7 +10,7 @@ node() {
     stage ("Get Source") {
         // run a command to get the source code download
         myImg.inside('-v /home/git/repos:/home/git/repos') {
-	    sh "rm -rf behave_flask_api_master*"
+	    sh "rm -rf behave_flask_api*"
             sh "git clone https://github.com/X-ProTechnologiesLimited/behave_flask_api.git"
         }
     }
