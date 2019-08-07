@@ -1,3 +1,4 @@
+#!/bin/bash
 #Build the Docker Image(Replaces any current image)
 echo "Building the Docker Image for Country Application"
 echo
