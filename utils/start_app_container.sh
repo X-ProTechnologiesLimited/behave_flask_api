@@ -34,7 +34,7 @@ echo "Starting the Automated Test Suite..."
 echo
 behave tests
 echo "Waiting for the container to finish the behave tests...."
-sleep 30
+sleep 10
 
 # For Development and Debug Purposes, to keep the container running, uncomment the following line
 #tail -200f /app/logs/$filename
