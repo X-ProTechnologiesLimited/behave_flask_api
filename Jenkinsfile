@@ -3,14 +3,9 @@ pipeline {
   stages {
     stage('build') {
       steps {
-        sh 'pip install -r requirements.txt'
+        sh 'cd ../behave_flask_api_master'
+	sh 'build_container.sh'
       }
-    }
-    stage('test') {
-      steps {
-        sh 'utils/start.sh Y'
-	sh 'utils/run_behave.sh'
-      }   
     }
   }
 }
