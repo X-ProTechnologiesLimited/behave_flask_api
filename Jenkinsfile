@@ -16,7 +16,7 @@ node() {
     }
     stage ("Run Build") {
         myImg.inside() {
-            sh "cd behave_flask_api/"
+            sh "cd behave_flask_api/ && utils/start.sh Y"
 	    sh "behave --junit tests"
             junit "reports/*.xml"
         }
