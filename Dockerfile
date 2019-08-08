@@ -19,4 +19,4 @@ RUN if [ -d "tests/test_output" ] ; then rm -f tests/test_output/* ; fi
 RUN chown -R user: /app
 USER user
 
-ENTRYPOINT ["/bin/bash"]
+ENTRYPOINT ["/bin/bash", "utils/run_flask_container.sh"]
