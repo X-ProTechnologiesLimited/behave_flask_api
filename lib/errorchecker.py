@@ -26,6 +26,17 @@ def data_not_found_country(country_name):
 
 
 @errorchecker.errorhandler(404)
+def data_not_found_capital(capital):
+    message = {
+        'status' : 404,
+        'message' : 'Country for Capital: ' + capital + ' Not Found'
+    }
+    resp = jsonify(message)
+    resp.status_code = 404
+    return resp
+
+
+@errorchecker.errorhandler(404)
 def data_not_found_continent(continent):
     message = {
         'status' : 404,

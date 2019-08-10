@@ -66,6 +66,34 @@ def get_country_continent(continent):
     json_data = dumps(country_data, sort_keys=True)
     return json_data
 
+
+@getcountry.route('/get_country/capital/<capital>')
+def get_country_capital(capital):
+    logger.info('Get Country Request For Capital: ' + capital)
+    country_data = {}
+    country_data['countries'] = {}
+    country_data['countries']['currency'] = {}
+    country = Country.query.filter_by(capital=capital).first()
+    if not country:# if a country is not found, return data not found
+        logger.error('Country for Capital: ' + capital + ' Not Found in Database')
+        return errorchecker.data_not_found_capital(capital)
+
+
+    country_data['countries']['country_name'] = country.country_name
+    country_data['countries']['capital'] = country.capital
+    country_data['countries']['continent'] = country.continent
+    country_data['countries']['subregion'] = country.subregion
+    country_data['countries']['currency']['name'] = country.currency
+    country_data['countries']['currency']['type'] = country.type
+    country_data['countries']['population'] = country.population
+    country_data['total'] = Country.query.filter_by(capital=capital).count()
+
+    json_data = dumps(country_data, sort_keys=True)
+    return json_data
+
+
+
+
 @getcountry.route('/get_countries')
 def get_countries():
     logger.info('Get All Countries')
