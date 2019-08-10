@@ -18,8 +18,22 @@ class Get_Country(object):
     def set_continent(self, continent):
         self.continent = continent
 
+    def set_capital(self, capital):
+        self.capital = capital
+
     def get_single_country(self):
         self.url = 'http://localhost:5000/get_country/' + self.country
+        response_country = requests.get(url=self.url)
+        self.get_single_country = response_country.json()
+        self.response_json_map = {}
+        self.response_json_map['http_response_code'] = response_country.status_code
+        try:
+            self.response_json_map['total'] = self.get_single_country['total']
+        except KeyError:
+            self.response_json_map['status'] = self.get_single_country['status']
+
+    def get_country_by_capital(self):
+        self.url = 'http://localhost:5000/get_country/capital/' + self.capital
         response_country = requests.get(url=self.url)
         self.get_single_country = response_country.json()
         self.response_json_map = {}

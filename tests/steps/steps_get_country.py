@@ -21,6 +21,11 @@ def step_given_get_country_continent(context, continent):
 def step_given_get_all_country(context):
     context.get_country = Get_Country()
 
+@given('I want to get data based on "{capital}"')
+def step_given_get_capital(context, capital):
+    context.get_country = Get_Country()
+    context.get_country.set_capital(capital)
+
 @when('I send request to get specific country details')
 def step_get_country_specific(context):
     context.get_country.get_single_country()
@@ -32,6 +37,10 @@ def step_get_country_continent(context):
 @when('I send request to get all countries')
 def step_get_all_countries(context):
     context.get_country.get_all_countries()
+
+@when('I send request to get country for capital')
+def step_get_country_by_capital(context):
+    context.get_country.get_country_by_capital()
 
 @then('The http get country request is successful')
 def step_http_status_success(context):
