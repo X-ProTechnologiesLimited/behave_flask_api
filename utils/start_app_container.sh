@@ -31,8 +31,14 @@ sleep 5
 
 # Run the automated behave test suite
 echo "Starting the Automated Test Suite..."
-echo
-behave tests
+echo "--------------------------------------------------------------------------------"
+echo "Executing Only ADD GET and UPDATE Scenarios now...Skipping DELETE Scenarios"
+echo "--------------------------------------------------------------------------------"
+behave --tags=~@delete --no-skipped tests
+echo "--------------------------------------------------------------------------------"
+echo "Executing only DELETE Scenarios now....Skipping ADD/GET/UPDATE Scenarios"
+echo "--------------------------------------------------------------------------------"
+behave --tags=@delete --no-skipped tests
 echo "Waiting for the container to finish the behave tests...."
 sleep 10
 

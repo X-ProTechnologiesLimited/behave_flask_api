@@ -1,4 +1,6 @@
 # file:features/country_api.feature
+
+@delete
 Feature:Delete Country
 
   Scenario Outline:Delete a country "<country>" from the database
