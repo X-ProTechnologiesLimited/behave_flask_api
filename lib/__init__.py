@@ -36,4 +36,8 @@ def create_app():
     from .updatecountry import updatecountry as updatecountry_blueprint
     app.register_blueprint(updatecountry_blueprint)
 
+    # blueprint for non-auth parts of app
+    from .deletecontinent import deletecontinent as deletecontinent_blueprint
+    app.register_blueprint(deletecontinent_blueprint)
+
     return app

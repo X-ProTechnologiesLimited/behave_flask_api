@@ -18,7 +18,7 @@ class Del_Country(object):
     def del_country(self):
         self.url = 'http://localhost:5000/delete/' + self.country
         headers = {'Content-type': 'application/json', 'Accept': 'application/json'}
-        response_del_country = requests.post(url=self.url, headers=headers)
+        response_del_country = requests.delete(url=self.url, headers=headers)
         self.data_del_country = response_del_country.json()
         self.response_json_map = {}
         self.response_json_map['http_response_code'] = response_del_country.status_code

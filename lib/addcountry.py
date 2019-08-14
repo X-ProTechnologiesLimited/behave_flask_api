@@ -28,6 +28,7 @@ def add_country(countryname):
         currency = data['currency']['name']
         type = data['currency']['type']
         population = data['population']
+
     except:
         return errorchecker.param_mismatch_error()
 

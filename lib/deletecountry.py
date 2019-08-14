@@ -15,7 +15,7 @@ deletecountry = Blueprint('deletecountry', __name__)
 
 logger = logging.getLogger('deletecountry')
 
-@deletecountry.route('/delete/<country_name>', methods=['POST'])
+@deletecountry.route('/delete/<country_name>', methods=['DELETE'])
 def delete_country(country_name):
     country = Country.query.filter_by(
         country_name=country_name).first()  # if this returns a country_name, then the country already exists in database
