@@ -47,7 +47,7 @@ then
     echo "Container is shut down successfully........"
 else
     echo "Container for Country_App Started successfully. Country_App API is ready to serve http requests now...."
-    sleep inf
+    while true ; do continue ; done
 fi
 # For Development and Debug Purposes, to keep the container running, uncomment the following line
 #tail -200f /app/logs/$filename
