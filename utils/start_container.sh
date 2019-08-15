@@ -47,6 +47,14 @@ then
     echo "Container is shut down successfully........"
 else
     echo "Container for Country_App Started successfully. Country_App API is ready to serve http requests now...."
+    echo "To Shutdown Container, press Ctrl+C  OR run /utils/shutdown_container.sh"
+    trap printout SIGINT
+    printout() {
+       echo ""
+       echo "Shutting Down Container..User Interrupted Container"
+       sleep 5
+       exit
+    }
     while true ; do continue ; done
 fi
 # For Development and Debug Purposes, to keep the container running, uncomment the following line
