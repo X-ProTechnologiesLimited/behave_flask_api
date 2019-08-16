@@ -13,6 +13,15 @@ then
     export FLASK_APP=/app/lib/
     export FLASK_DEBUG=0
     python -m flask run --host=0.0.0.0 >> /app/logs/$filename 2>&1 &
+    if [[ $2 == "--load-data" ]]
+    then
+       echo "Loading Preloaded Country Data to Container..."
+       sleep 5
+       sqlite3 /app/lib/db.sqlite ".mode csv" ".import /app/utils/preload_country.csv country" 2>/dev/null
+    else
+       echo "Using Empty Database For Container"
+    fi
+     
 elif [ "$1" = "N" ]
 then
     echo "Using the existing database..."
