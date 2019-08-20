@@ -13,6 +13,8 @@ class Add_Country(object):
         self.response_json_map = None
         self.new_country_add_body = {}
         self.new_country_add_body['currency'] = {}
+        self.bulk_country_add_body = {}
+        self.bulk_country_add_body['currency'] = {}
 
 
     @classmethod
@@ -54,3 +56,24 @@ class Add_Country(object):
     def country_success_map(self):
         self.response_json_map['message'] = self.data_new_country['message']
         self.response_json_map['status'] = self.data_new_country['status']
+
+
+    def bulk_country_add(self, limit):
+        n = 1
+        while n <= limit:
+            i = str(n)
+            self.url = 'http://localhost:5000/add_country/country_' + i
+            self.bulk_country_add_body['country_name'] = 'country_' + i
+            self.bulk_country_add_body['capital'] = 'country_' + i + '_capital'
+            self.bulk_country_add_body['continent'] = self.continent
+            self.bulk_country_add_body['subregion'] = 'country_' + i + '_subregion'
+            self.bulk_country_add_body['currency']['name'] = 'country_' + i + '_curr_name'
+            self.bulk_country_add_body['currency']['type'] = 'country_' + i + '_curr_type'
+            self.bulk_country_add_body  ['population'] = 500000
+            new_country_add_request_body = json.dumps(self.bulk_country_add_body)
+            headers = {'Content-type': 'application/json', 'Accept': 'application/json'}
+            response_new_country = requests.post(url=self.url, data=new_country_add_request_body, headers=headers)
+            self.data_new_country = response_new_country.json()
+            self.response_json_map = {}
+            self.response_json_map['http_response_code'] = response_new_country.status_code
+            n += 1

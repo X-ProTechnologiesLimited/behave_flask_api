@@ -32,6 +32,12 @@ def step_given_add_population(context, population, country):
 def step_given_add_currency(context, currency, type, country):
     context.set_country.add_currency(currency, type)
 
+@given('I add bulk data for {limit} countries to "{continent}"')
+def step_given_add_bulk_country(context, limit, continent):
+    context.set_country = Add_Country()
+    context.set_country.add_continent(continent)
+    context.set_country.bulk_country_add(int(limit))
+
 @when('I send request to add the country')
 def step_add_country(context):
     context.set_country.new_country_add()
