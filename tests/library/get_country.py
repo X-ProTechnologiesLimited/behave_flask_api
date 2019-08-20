@@ -51,8 +51,24 @@ class Get_Country(object):
         self.response_json_map['http_response_code'] = response_country.status_code
         self.response_json_map['total'] = self.get_continent_country['total']
 
+    def get_continent_country_list(self):
+        self.url = 'http://localhost:5000/get_country/continent/' + self.continent + '/name'
+        response_country = requests.get(url=self.url)
+        self.get_continent_country = response_country.json()
+        self.response_json_map = {}
+        self.response_json_map['http_response_code'] = response_country.status_code
+        self.response_json_map['total'] = self.get_continent_country['total']
+
     def get_all_countries(self):
         self.url = 'http://localhost:5000/get_countries'
+        response_country = requests.get(url=self.url)
+        self.get_all_country = response_country.json()
+        self.response_json_map = {}
+        self.response_json_map['http_response_code'] = response_country.status_code
+        self.response_json_map['total'] = self.get_all_country['total']
+
+    def get_country_list(self):
+        self.url = 'http://localhost:5000/get_country/name'
         response_country = requests.get(url=self.url)
         self.get_all_country = response_country.json()
         self.response_json_map = {}

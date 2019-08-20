@@ -62,8 +62,8 @@ class Add_Country(object):
         n = 1
         while n <= limit:
             i = str(n)
-            self.url = 'http://localhost:5000/add_country/country_' + i
-            self.bulk_country_add_body['country_name'] = 'country_' + i
+            self.url = 'http://localhost:5000/add_country/' + self.continent + '_country_' + i
+            self.bulk_country_add_body['country_name'] = self.continent + '_country_' + i
             self.bulk_country_add_body['capital'] = 'country_' + i + '_capital'
             self.bulk_country_add_body['continent'] = self.continent
             self.bulk_country_add_body['subregion'] = 'country_' + i + '_subregion'

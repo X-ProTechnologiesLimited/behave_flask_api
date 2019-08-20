@@ -34,9 +34,18 @@ def step_get_country_specific(context):
 def step_get_country_continent(context):
     context.get_country.get_continent_country()
 
+@when('I send request to get country list for continent')
+def step_get_country_continent(context):
+    context.get_country.get_continent_country_list()
+
 @when('I send request to get all countries')
 def step_get_all_countries(context):
     context.get_country.get_all_countries()
+
+@when('I send request to get list of all countries')
+def step_get_list_countries(context):
+    context.get_country = Get_Country()
+    context.get_country.get_country_list()
 
 @when('I send request to get country for capital')
 def step_get_country_by_capital(context):

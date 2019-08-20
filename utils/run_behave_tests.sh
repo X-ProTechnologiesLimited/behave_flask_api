@@ -8,3 +8,4 @@ echo "--------------------------------------------------------------------------
 echo "Executing only DELETE Scenarios now....Skipping ADD/GET/UPDATE Scenarios"
 echo "--------------------------------------------------------------------------------"
 behave --tags=@delete --no-skipped --junit ../tests
+
