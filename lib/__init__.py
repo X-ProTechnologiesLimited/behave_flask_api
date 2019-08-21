@@ -40,4 +40,8 @@ def create_app():
     from .deletecontinent import deletecontinent as deletecontinent_blueprint
     app.register_blueprint(deletecontinent_blueprint)
 
+    # blueprint for non-auth parts of app
+    from .searchcountry import searchcountry as searchcountry_blueprint
+    app.register_blueprint(searchcountry_blueprint)
+
     return app

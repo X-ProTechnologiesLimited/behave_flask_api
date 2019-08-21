@@ -12,3 +12,5 @@ class Country(UserMixin, db.Model):
     currency = db.Column(db.String(100))
     type = db.Column(db.String(100))
     population = db.Column(db.Integer)
+    country_href = db.Column(db.String(500))
+    continent_href = db.Column(db.String(500))

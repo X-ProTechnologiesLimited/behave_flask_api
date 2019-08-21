@@ -12,6 +12,7 @@ then
     echo "Created new database for application..." >> ../logs/$filename
     export FLASK_APP=../lib/
     export FLASK_DEBUG=0
+    export FLASK_RUN_PORT=5000
     python -m flask run >> ../logs/$filename 2>&1 &
     if [ "$2" == "--load-data" ]
     then

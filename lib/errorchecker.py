@@ -88,3 +88,14 @@ def no_countries():
     resp = jsonify(message)
     resp.status_code = 404
     return resp
+
+
+@errorchecker.errorhandler(404)
+def data_not_found_string(search_string):
+    message = {
+        'status' : 404,
+        'message' : 'No Country found with search criteria: ' + search_string
+    }
+    resp = jsonify(message)
+    resp.status_code = 404
+    return resp
