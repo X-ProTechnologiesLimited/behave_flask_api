@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
-filename=country_app_`date +%d%m%Y%H%M%S`.log
+filestamp=`date +%H%M%S`
+filename=country_app.log
 mkdir -p /app/logs
 echo "Starting the Country App..."
 echo "Starting the Country App..." >> /app/logs/$filename
