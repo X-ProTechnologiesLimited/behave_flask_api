@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 filestamp=`date +%H%M%S`
 filename=country_app.log
 mkdir -p ../logs
@@ -9,15 +9,13 @@ gzip ../logs/country_app_$filestamp.log
 echo "Started the Country App..."
 echo "Started the Country App..." >> ../logs/$filename
 echo
+. app_run.config && export $(cut -d= -f1 app_run.config)
 if [ "$1" = "Y" ]
 then
     rm -rf ../lib/db.sqlite
     python3 ../initialise_db.py
     echo "Created new database for application..."
     echo "Created new database for application..." >> ../logs/$filename
-    export FLASK_APP=../lib/
-    export FLASK_DEBUG=0
-    export FLASK_RUN_PORT=5000
     python3 -m flask run >> ../logs/$filename 2>&1 &
     if [ "$2" == "--load-data" ]
     then
@@ -32,8 +30,6 @@ elif [ "$1" = "N" ]
 then
     echo "Using the existing database..."
     echo "Using the existing database..." >> ../logs/$filename
-    export FLASK_APP=../lib/
-    export FLASK_DEBUG=0
     python3 -m flask run >> ../logs/$filename 2>&1 &
 else
     echo "Error: No Database Creation option specified.."

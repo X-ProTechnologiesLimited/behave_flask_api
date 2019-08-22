@@ -43,7 +43,6 @@ Feature:Get Country
     Given I want to get list of all countries
     When I send request to get all countries
     Then The http get country request is successful
-    And The response should return number of results : 6
 
 
 

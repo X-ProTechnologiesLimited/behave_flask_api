@@ -5,14 +5,14 @@ mkdir -p /app/logs
 echo "Starting the Country App..."
 echo "Starting the Country App..." >> /app/logs/$filename
 echo
+source /app/utils/app_run.config && export $(cut -d= -f1 /app/utils/app_run.config)
 if [ "$1" = "Y" ]
 then
+    source /app/utils/app_run.config && export $(cut -d= -f1 /app/utils/app_run.config)
     rm -rf /app/lib/db.sqlite
     python /app/initialise_db.py
     echo "Created new database for application..."
     echo "Created new database for application..." >> /app/logs/$filename
-    export FLASK_APP=/app/lib/
-    export FLASK_DEBUG=0
     python -m flask run --host=0.0.0.0 >> /app/logs/$filename 2>&1 &
     if [[ $2 == "--load-data" ]]
     then
@@ -25,11 +25,21 @@ then
      
 elif [ "$1" = "N" ]
 then
+    source /app/utils/app_run.config && export $(cut -d= -f1 /app/utils/app_run.config)
     echo "Using the existing database..."
     echo "Using the existing database..." >> /app/logs/$filename
+    python -m flask run --host=0.0.0.0>> /app/logs/$filename 2>&1 &
+
+elif [ "$1" = "Jenkins" ]
+then
+    rm -rf /app/lib/db.sqlite
+    python /app/initialise_db.py
+    echo "Created new database for application..."
+    echo "Created new database for application..." >> /app/logs/$filename
     export FLASK_APP=/app/lib/
     export FLASK_DEBUG=0
-    python -m flask run --host=0.0.0.0>> /app/logs/$filename 2>&1 &
+    export FLASK_RUN_PORT=5000
+    python -m flask run --host=0.0.0.0 >> /app/logs/$filename 2>&1 &
 else
     echo "Error: No Database Creation option specified.."
     echo "usage ./app_run.sh <Y/N>"
@@ -40,6 +50,7 @@ sleep 10
 echo "Application Started Successfully"
 if [[ "$2" == 'local' ]]
 then
+    source /app/utils/app_run.config && export $(cut -d= -f1 /app/utils/app_run.config)
     echo "Starting Tests in Container....."
     echo "Keeping the Container running while executing the tests...."
     # Run the automated behave test suite

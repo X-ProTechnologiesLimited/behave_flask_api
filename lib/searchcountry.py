@@ -19,10 +19,13 @@ logger = logging.getLogger('searchcountry')
 def search_country_names(country_name):
     logger.info('Search Country with Keyword: ' + country_name)
     country_data = {}
-    country_data['countries_continent'] = []
+    country_data['countries'] = []
     search = "%{}%".format(country_name)
     for country in Country.query.filter(Country.country_name.like(search)).all():
-        country_data['countries_continent'].append(country.country_name + ' ; ' + country.continent)
+        country_data['countries'].append({
+            'name': country.country_name,
+            'continent': country.continent
+        })
 
     country_data['total'] = Country.query.filter(Country.country_name.like(search)).count()
 
@@ -30,7 +33,7 @@ def search_country_names(country_name):
         logger.error('No Countries Found in Database')
         return errorchecker.data_not_found_string(country_name)
 
-    json_data = dumps(country_data, sort_keys=True)
+    json_data = dumps(country_data, sort_keys=True, indent=4)
     return json_data
 
 
@@ -38,10 +41,13 @@ def search_country_names(country_name):
 def search_country_names_starting(country_name):
     logger.info('Search Country with Keyword starting: ' + country_name)
     country_data = {}
-    country_data['countries_continent'] = []
+    country_data['countries'] = []
     search = "{}%".format(country_name)
     for country in Country.query.filter(Country.country_name.like(search)).all():
-        country_data['countries_continent'].append(country.country_name + ' ; ' + country.continent)
+        country_data['countries'].append({
+            'name': country.country_name,
+            'continent': country.continent
+        })
 
     country_data['total'] = Country.query.filter(Country.country_name.like(search)).count()
 

@@ -1,6 +1,8 @@
+#!/bin/bash
 echo "Calling Shutdown..."
 sleep 1
-response=$(curl --silent 'http://localhost:5000/quit')
+. app_run.config && export $(cut -d= -f1 app_run.config)
+response=$(curl --silent "http://localhost:$FLASK_RUN_PORT/quit")
 if [ "$response" == "Appliation shutting down..." ];
 then
   echo

@@ -3,6 +3,7 @@
 # -----------------------------------------------------------------------------
 import requests
 import json
+import os
 
 
 class Add_Country(object):
@@ -15,6 +16,11 @@ class Add_Country(object):
         self.new_country_add_body['currency'] = {}
         self.bulk_country_add_body = {}
         self.bulk_country_add_body['currency'] = {}
+        try:
+            app_port = int(os.environ['FLASK_RUN_PORT'])
+        except KeyError:
+            app_port = int(5000)
+        self.add_country_url = 'http://localhost:'+ str(app_port) + '/add_country/'
 
 
     @classmethod
@@ -38,7 +44,7 @@ class Add_Country(object):
         self.type = type
 
     def new_country_add(self):
-        self.url = 'http://localhost:5000/add_country/' + self.country
+        self.url = self.add_country_url + self.country
         self.new_country_add_body['country_name'] = self.country
         self.new_country_add_body['capital'] = self.capital
         self.new_country_add_body['continent'] = self.continent
@@ -62,7 +68,7 @@ class Add_Country(object):
         n = 1
         while n <= limit:
             i = str(n)
-            self.url = 'http://localhost:5000/add_country/' + self.continent + '_country_' + i
+            self.url = self.add_country_url + self.continent + '_country_' + i
             self.bulk_country_add_body['country_name'] = self.continent + '_country_' + i
             self.bulk_country_add_body['capital'] = 'country_' + i + '_capital'
             self.bulk_country_add_body['continent'] = self.continent

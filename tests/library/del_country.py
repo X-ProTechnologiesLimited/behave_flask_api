@@ -3,12 +3,18 @@
 # -----------------------------------------------------------------------------
 import requests
 import json
-
+import os
 
 class Del_Country(object):
 
     def __init__(self):
         self.response_json_map = None
+        try:
+            app_port = int(os.environ['FLASK_RUN_PORT'])
+        except KeyError:
+            app_port = 5000
+        self.delete_country_url = 'http://localhost:' + str(app_port) + '/delete/'
+        self.delete_continent_url = 'http://localhost:' + str(app_port) + '/delete/continent/'
 
 
     @classmethod
@@ -19,7 +25,7 @@ class Del_Country(object):
         self.continent = continent
 
     def del_country(self):
-        self.url = 'http://localhost:5000/delete/' + self.country
+        self.url = self.delete_country_url + self.country
         headers = {'Content-type': 'application/json', 'Accept': 'application/json'}
         response_del_country = requests.delete(url=self.url, headers=headers)
         self.data_del_country = response_del_country.json()
@@ -31,7 +37,7 @@ class Del_Country(object):
         self.response_json_map['status'] = self.data_del_country['status']
 
     def del_continent(self, continent):
-        self.url = 'http://localhost:5000/delete/continent/' + continent
+        self.url = self.delete_continent_url + continent
         headers = {'Content-type': 'application/json', 'Accept': 'application/json'}
         response_del_continent = requests.delete(url=self.url, headers=headers)
         self.data_del_continent = response_del_continent.json()

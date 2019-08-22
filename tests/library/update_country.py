@@ -3,7 +3,7 @@
 # -----------------------------------------------------------------------------
 import requests
 import json
-
+import os
 
 class Update_Country(object):
 
@@ -13,6 +13,11 @@ class Update_Country(object):
         self.response_json_map = None
         self.update_country_body = {}
         self.update_country_body['currency'] = {}
+        try:
+            app_port = int(os.environ['FLASK_RUN_PORT'])
+        except KeyError:
+            app_port = 5000
+        self.update_country_url = 'http://localhost:' + str(app_port) + '/update/'
 
 
     @classmethod
@@ -29,11 +34,11 @@ class Update_Country(object):
         self.type = type
 
     def update_country(self):
-        self.url = 'http://localhost:5000/update/' + self.country + '/data/' + self.param
+        self.url = self.update_country_url + self.country + '/data/' + self.param
         if self.param == 'population':
             self.update_country_body[self.param] = int(self.value)
         elif self.param == 'currency':
-            self.url = 'http://localhost:5000/update/' + self.country + '/' + self.param
+            self.url = self.update_country_url + self.country + '/' + self.param
             self.update_country_body[self.param]['name'] = self.value
             self.update_country_body[self.param]['type'] = self.type
         else:
