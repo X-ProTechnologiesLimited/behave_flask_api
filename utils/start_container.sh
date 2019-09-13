@@ -65,6 +65,9 @@ then
     behave --tags=@delete --no-skipped tests
     echo "Waiting for the container to finish the behave tests...."
     sleep 5
+    echo "Now starting Performance Tests using Jmeter...."
+    jmeter -n -t /app/tests/load_tests/Country_API.jmx -l /app/logs/"$filename"_"$filestamp"_jmeter.log -e -o /app/logs/performance_output_$filestamp
+    echo "Finishing off the Performance Tests and Shutting down container....."
     echo "Container is shut down successfully........"
 else
     echo "Container for Country_App Started successfully. Country_App API is ready to serve http requests now...."

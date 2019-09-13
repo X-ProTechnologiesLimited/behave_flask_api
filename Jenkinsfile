@@ -22,12 +22,23 @@ node() {
 		echo "Executing only DELETE Scenarios now....Skipping ADD/GET/UPDATE Scenarios"
 		echo "--------------------------------------------------------------------------------"
 		behave --tags=@delete --no-skipped --junit tests
+                echo "--------------------------------------------------------------------------------"
+                echo "Executing Performance Tests now for 1 minute....Using Jmeter"
+                jmeter -n -t tests/load_tests/Country_API.jmx -l ${WORKSPACE}/country_app_load.log -e -o ${WORKSPACE}/output
 	      """
+            publishHTML (target: [
+            allowMissing: true,
+            alwaysLinkToLastBuild: false,
+            keepAll: true,
+            reportDir: "${WORKSPACE}/output",
+            reportFiles: "index.html",
+            reportName: "Performance"
+            ])
             junit "reports/*.xml"
             sh "ls /logs"
             sh "touch /app/logs/* && ls /app/logs"
             sh "cp /app/logs/* ${WORKSPACE}"
-            archiveArtifacts '*.log'
+            archiveArtifacts '*.log,*.html'
             }
 }
     stage ("Cleanup") {
