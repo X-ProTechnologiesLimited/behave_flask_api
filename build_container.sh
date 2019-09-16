@@ -11,6 +11,10 @@ then
    #Start the docker container for building the rest api application and do the test
    echo "Starting the Container for Country App..."
    docker run -v $PWD/logs:/app/logs --name country_api -p $FLASK_RUN_PORT:$FLASK_RUN_PORT -it country_app /bin/bash
+   echo "Now starting container for reporting....."
+   echo "Reports will be available at http://localhost:80/test_run_reports/"
+   docker build -f utils/Dockerfile.reports --tag=http_reporting .
+   docker run --rm -it --name http_reporter -p 80:7000 http_reporting
 elif [[ $1 == "--no-tests" ]]
 then
    if [[ $2 == "--load-data" ]]

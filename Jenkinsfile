@@ -37,7 +37,7 @@ node() {
             junit "reports/*.xml"
             sh "ls /logs"
             sh "touch /app/logs/* && ls /app/logs"
-            sh "cp /app/logs/* ${WORKSPACE}"
+            sh "cp -R /app/logs/* ${WORKSPACE}"
             archiveArtifacts '*.log,*.html'
             }
 }

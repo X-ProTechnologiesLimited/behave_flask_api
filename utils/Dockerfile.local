@@ -36,6 +36,18 @@ COPY requirements.txt /app/
 COPY utils /app/utils/
 COPY initialise_db.py /app/
 
+
+RUN mkdir /app/allure
+RUN mkdir /app/allure-results
+RUN mkdir /app/allure-report
+RUN mkdir /app/allure-config
+
+RUN wget https://dl.bintray.com/qameta/generic/io/qameta/allure/allure/2.0.0/allure-2.0.0.zip
+RUN unzip allure-2.0.0.zip -d /app/allure
+RUN rm allure-2.0.0.zip
+ENV PATH="/app/allure/allure-2.0.0/bin:${PATH}"
+ENV ALLURE_CONFIG="/app/allure-config/allure.properties"
+
 ENV CONTAINERISED true
 
 USER root

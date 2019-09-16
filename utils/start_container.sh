@@ -2,6 +2,8 @@
 filestamp=`date +%H%M%S`
 filename=country_app.log
 mkdir -p /app/logs
+mkdir -p /app/logs/test_results/functional
+mkdir -p /app/logs/test_results/performance
 echo "Starting the Country App..."
 echo "Starting the Country App..." >> /app/logs/$filename
 echo
@@ -58,17 +60,20 @@ then
     echo "--------------------------------------------------------------------------------"
     echo "Executing Only ADD GET and UPDATE Scenarios now...Skipping DELETE Scenarios"
     echo "--------------------------------------------------------------------------------"
-    behave --tags=~@delete --no-skipped tests
+    behave --tags=~@delete --no-skipped -f allure_behave.formatter:AllureFormatter -o /app/logs/allure_output_"$filestamp" tests
     echo "--------------------------------------------------------------------------------"
     echo "Executing only DELETE Scenarios now....Skipping ADD/GET/UPDATE Scenarios"
     echo "--------------------------------------------------------------------------------"
-    behave --tags=@delete --no-skipped tests
+    behave --tags=@delete --no-skipped -f allure_behave.formatter:AllureFormatter -o /app/logs/allure_output_"$filestamp" tests
     echo "Waiting for the container to finish the behave tests...."
     sleep 5
+    allure generate /app/logs/allure_output_"$filestamp" --clean -o allure_report_"$filestamp"
+    cp -R allure_report_"$filestamp" /app/logs/test_results/functional/
     echo "Now starting Performance Tests using Jmeter...."
-    jmeter -n -t /app/tests/load_tests/Country_API.jmx -l /app/logs/"$filename"_"$filestamp"_jmeter.log -e -o /app/logs/performance_output_$filestamp
-    echo "Finishing off the Performance Tests and Shutting down container....."
-    echo "Container is shut down successfully........"
+    jmeter -n -t /app/tests/load_tests/Country_API.jmx -l /app/logs/"$filename"_"$filestamp"_jmeter.log -e -o /app/logs/test_results/performance/performance_output_$filestamp
+    echo "Finishing off the Performance Tests..."
+    echo "Generating the Test reports........"
+    echo "Shutting down container....."
 else
     echo "Container for Country_App Started successfully. Country_App API is ready to serve http requests now...."
     echo "To Shutdown Container, press Ctrl+C  OR run /utils/shutdown_container.sh"

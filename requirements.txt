@@ -6,3 +6,4 @@ Flask==1.0.3
 Flask-SQLAlchemy==2.4.0
 Flask-Login==0.4.1
 pymongo==3.8.0
+allure-behave==2.8.5
