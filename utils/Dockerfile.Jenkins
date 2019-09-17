@@ -47,4 +47,4 @@ RUN if [ -d "tests/test_output" ] ; then rm -f tests/test_output/* ; fi
 RUN chown -R user: /app
 USER user
 
-ENTRYPOINT ["/bin/bash", "utils/start_app_container.sh", "Y"]
+ENTRYPOINT ["/bin/bash", "utils/start_app.sh", "Y"]

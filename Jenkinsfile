@@ -1,5 +1,8 @@
 node() {
     def myImg
+    stage ("Cleanup") {
+            cleanWs()
+        }
     stage ("Build image") {
         // download the dockerfile to build from
         git 'https://github.com/X-ProTechnologiesLimited/behave_flask_api.git'
@@ -23,6 +26,7 @@ node() {
 		echo "--------------------------------------------------------------------------------"
 		behave --tags=@delete --no-skipped --junit tests
                 echo "--------------------------------------------------------------------------------"
+                sqlite3 lib/db.sqlite ".mode csv" ".import utils/preload_country.csv country" 2>/dev/null
                 echo "Executing Performance Tests now for 1 minute....Using Jmeter"
                 jmeter -n -t tests/load_tests/Country_API.jmx -l ${WORKSPACE}/country_app_load.log -e -o ${WORKSPACE}/output
 	      """
@@ -41,9 +45,6 @@ node() {
             archiveArtifacts '*.log,*.html'
             }
 }
-    stage ("Cleanup") {
-            cleanWs()
-        }
 
 }
 

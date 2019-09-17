@@ -63,3 +63,4 @@ ENV PATH="/app/allure/allure-2.0.0/bin:${PATH}"
 ENV ALLURE_CONFIG="/app/allure-config/allure.properties"
 
 RUN /bin/sh
+ENTRYPOINT ["utils/start_app.sh", "Y"]

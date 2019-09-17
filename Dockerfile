@@ -50,4 +50,4 @@ RUN if [ -d "tests/test_output" ] ; then rm -f tests/test_output/* ; fi
 USER root
 RUN /bin/sh
 
-ENTRYPOINT ["utils/start_container.sh", "Jenkins"]
+ENTRYPOINT ["utils/start_app.sh", "Jenkins"]

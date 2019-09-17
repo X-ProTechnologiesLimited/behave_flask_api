@@ -3,5 +3,5 @@ WORKDIR /temp_reports
 COPY logs/test_results/functional /temp_reports/test_run_reports/functional
 COPY logs/test_results/performance /temp_reports/test_run_reports/performance
 EXPOSE 7000
-CMD echo "The test run results can be found at http://localhost:80/test_run_reports"
+CMD echo "The test run results can be found at http://localhost:8080/test_run_reports"
 CMD python -m http.server 7000

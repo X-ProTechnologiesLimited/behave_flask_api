@@ -5,11 +5,16 @@ sleep 1
 response=$(curl --silent "http://localhost:$FLASK_RUN_PORT/quit")
 if [ "$response" == "Appliation shutting down..." ];
 then
-  echo
-  echo "Application shutdown successful"
-  echo
+  printf "\nApplication shutdown successful\n"
 else
- echo
- echo "Shutdown Error: No Flask Application Running"
- echo
+ printf "\nShutdown Error: No Flask Application Running\n"
+fi
+
+printf "\nChecking Container.....\n"
+
+if [[ $(docker ps | grep country_app | awk -F ' ' '{print $1}') ]]; then
+        docker kill `docker ps | grep country_app | awk -F ' ' '{print $1}'`
+        printf "\nContainer Stopped Successfully\n"
+else
+        printf "\nNo Container is there for Country_App\n"
 fi

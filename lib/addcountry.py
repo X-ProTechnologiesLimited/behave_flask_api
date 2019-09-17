@@ -10,6 +10,7 @@ import os
 import logging
 import logging.config
 import urllib.parse
+
 BASE_DIR=os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 logging.config.fileConfig(os.path.join(BASE_DIR, 'utils', 'logger.conf'))
