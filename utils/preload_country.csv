@@ -6,7 +6,7 @@
 6,Albania,Tirana,Europe,EU,ALL,ALB,783754,http://localhost:5000/get_country/Albania,http://localhost:5000/get_country/continent/Europe
 7,Armenia,Yerevan,Asia,AS,AMD,ARM,174982,http://localhost:5000/get_country/Armenia,http://localhost:5000/get_country/continent/Asia
 8,Angola,Luanda,Africa,AF,AOA,AGO,3351879,http://localhost:5000/get_country/Angola,http://localhost:5000/get_country/continent/Africa
-9,Antarctica,,Antarctica,AN,,ATA,6697173,http://localhost:5000/get_country/Antarctica,http://localhost:5000/get_country/continent/Antarctica
+9,Antarctica,McMurdo,Antarctica,AN,,ATA,6697173,http://localhost:5000/get_country/Antarctica,http://localhost:5000/get_country/continent/Antarctica
 10,Argentina,Buenos Aires,South America,SA,ARS,ARG,3865483,http://localhost:5000/get_country/Argentina,http://localhost:5000/get_country/continent/South%20America
 11,American Samoa,Pago Pago,Oceania,OC,USD,ASM,5880801,http://localhost:5000/get_country/American%20Samoa,http://localhost:5000/get_country/continent/Oceania
 12,Austria,Vienna,Europe,EU,EUR,AUT,2782113,http://localhost:5000/get_country/Austria,http://localhost:5000/get_country/continent/Europe
@@ -31,7 +31,7 @@
 31,Brazil,Brasília,South America,SA,BRL,BRA,3469034,http://localhost:5000/get_country/Brazil,http://localhost:5000/get_country/continent/South%20America
 32,Bahamas,Nassau,North America,NA,BSD,BHS,3572887,http://localhost:5000/get_country/Bahamas,http://localhost:5000/get_country/continent/North%20America
 33,Bhutan,Thimphu,Asia,AS,BTN,BTN,1252634,http://localhost:5000/get_country/Bhutan,http://localhost:5000/get_country/continent/Asia
-34,Bouvet Island,,Antarctica,AN,NOK,BVT,3371123,http://localhost:5000/get_country/Bouvet%20Island,http://localhost:5000/get_country/continent/Antarctica
+34,Bouvet Island,Norvegia Station,Antarctica,AN,NOK,BVT,3371123,http://localhost:5000/get_country/Bouvet%20Island,http://localhost:5000/get_country/continent/Antarctica
 35,Botswana,Gaborone,Africa,AF,BWP,BWA,933860,http://localhost:5000/get_country/Botswana,http://localhost:5000/get_country/continent/Africa
 36,Belarus,Minsk,Europe,EU,BYR,BLR,630336,http://localhost:5000/get_country/Belarus,http://localhost:5000/get_country/continent/Europe
 37,Belize,Belmopan,North America,NA,BZD,BLZ,3582678,http://localhost:5000/get_country/Belize,http://localhost:5000/get_country/continent/North%20America
@@ -93,17 +93,17 @@
 93,Guinea-Bissau,Bissau,Africa,AF,XOF,GNB,2372248,http://localhost:5000/get_country/Guinea-Bissau,http://localhost:5000/get_country/continent/Africa
 94,Guyana,Georgetown,South America,SA,GYD,GUY,3378535,http://localhost:5000/get_country/Guyana,http://localhost:5000/get_country/continent/South%20America
 95,Hong Kong,Hong Kong,Asia,AS,HKD,HKG,1819730,http://localhost:5000/get_country/Hong%20Kong,http://localhost:5000/get_country/continent/Asia
-96,Heard Island and McDonald Islands,,Antarctica,AN,AUD,HMD,1547314,http://localhost:5000/get_country/Heard%20Island%20and%20McDonald%20Islands,http://localhost:5000/get_country/continent/Antarctica
+96,Heard Island and McDonald Islands,Mawson Peak,Antarctica,AN,AUD,HMD,1547314,http://localhost:5000/get_country/Heard%20Island%20and%20McDonald%20Islands,http://localhost:5000/get_country/continent/Antarctica
 97,Honduras,Tegucigalpa,North America,NA,HNL,HND,3608932,http://localhost:5000/get_country/Honduras,http://localhost:5000/get_country/continent/North%20America
 98,Croatia,Zagreb,Europe,EU,HRK,HRV,3202326,http://localhost:5000/get_country/Croatia,http://localhost:5000/get_country/continent/Europe
 99,Haiti,Port-au-Prince,North America,NA,HTG,HTI,3723988,http://localhost:5000/get_country/Haiti,http://localhost:5000/get_country/continent/North%20America
 100,Hungary,Budapest,Europe,EU,HUF,HUN,719819,http://localhost:5000/get_country/Hungary,http://localhost:5000/get_country/continent/Europe
 101,Indonesia,Jakarta,Asia,AS,IDR,IDN,1643084,http://localhost:5000/get_country/Indonesia,http://localhost:5000/get_country/continent/Asia
 102,Ireland,Dublin,Europe,EU,EUR,IRL,2963597,http://localhost:5000/get_country/Ireland,http://localhost:5000/get_country/continent/Europe
-103,Israel,,Asia,AS,ILS,ISR,294640,http://localhost:5000/get_country/Israel,http://localhost:5000/get_country/continent/Asia
+103,Israel,Jerusalem,Asia,AS,ILS,ISR,294640,http://localhost:5000/get_country/Israel,http://localhost:5000/get_country/continent/Asia
 104,Isle of Man,Douglas,Europe,EU,GBP,IMN,3042225,http://localhost:5000/get_country/Isle%20of%20Man,http://localhost:5000/get_country/continent/Europe
 105,India,New Delhi,Asia,AS,INR,IND,1269750,http://localhost:5000/get_country/India,http://localhost:5000/get_country/continent/Asia
-106,British Indian Ocean Territory,,Asia,AS,USD,IOT,1282588,http://localhost:5000/get_country/British%20Indian%20Ocean%20Territory,http://localhost:5000/get_country/continent/Asia
+106,British Indian Ocean Territory,Camp Justice,Asia,AS,USD,IOT,1282588,http://localhost:5000/get_country/British%20Indian%20Ocean%20Territory,http://localhost:5000/get_country/continent/Asia
 107,Iraq,Baghdad,Asia,AS,IQD,IRQ,99237,http://localhost:5000/get_country/Iraq,http://localhost:5000/get_country/continent/Asia
 108,Iran,Tehran,Asia,AS,IRR,IRN,130758,http://localhost:5000/get_country/Iran,http://localhost:5000/get_country/continent/Asia
 109,Iceland,Reykjavik,Europe,EU,ISK,ISL,2629691,http://localhost:5000/get_country/Iceland,http://localhost:5000/get_country/continent/Europe
@@ -166,7 +166,7 @@
 166,Netherlands,Amsterdam,Europe,EU,EUR,NLD,2750405,http://localhost:5000/get_country/Netherlands,http://localhost:5000/get_country/continent/Europe
 167,Norway,Oslo,Europe,EU,NOK,NOR,3144096,http://localhost:5000/get_country/Norway,http://localhost:5000/get_country/continent/Europe
 168,Nepal,Kathmandu,Asia,AS,NPR,NPL,1282988,http://localhost:5000/get_country/Nepal,http://localhost:5000/get_country/continent/Asia
-169,Nauru,,Oceania,OC,AUD,NRU,2110425,http://localhost:5000/get_country/Nauru,http://localhost:5000/get_country/continent/Oceania
+169,Nauru,Yaren,Oceania,OC,AUD,NRU,2110425,http://localhost:5000/get_country/Nauru,http://localhost:5000/get_country/continent/Oceania
 170,Niue,Alofi,Oceania,OC,NZD,NIU,4036232,http://localhost:5000/get_country/Niue,http://localhost:5000/get_country/continent/Oceania
 171,New Zealand,Wellington,Oceania,OC,NZD,NZL,2186224,http://localhost:5000/get_country/New%20Zealand,http://localhost:5000/get_country/continent/Oceania
 172,Oman,Muscat,Asia,AS,OMR,OMN,286963,http://localhost:5000/get_country/Oman,http://localhost:5000/get_country/continent/Asia
@@ -180,7 +180,7 @@
 180,Saint Pierre and Miquelon,Saint-Pierre,North America,NA,EUR,SPM,3424932,http://localhost:5000/get_country/Saint%20Pierre%20and%20Miquelon,http://localhost:5000/get_country/continent/North%20America
 181,Pitcairn Islands,Adamstown,Oceania,OC,NZD,PCN,4030699,http://localhost:5000/get_country/Pitcairn%20Islands,http://localhost:5000/get_country/continent/Oceania
 182,Puerto Rico,San Juan,North America,NA,USD,PRI,4566966,http://localhost:5000/get_country/Puerto%20Rico,http://localhost:5000/get_country/continent/North%20America
-183,Palestine,,Asia,AS,ILS,PSE,6254930,http://localhost:5000/get_country/Palestine,http://localhost:5000/get_country/continent/Asia
+183,Palestine,Ramallah,Asia,AS,ILS,PSE,6254930,http://localhost:5000/get_country/Palestine,http://localhost:5000/get_country/continent/Asia
 184,Portugal,Lisbon,Europe,EU,EUR,PRT,2264397,http://localhost:5000/get_country/Portugal,http://localhost:5000/get_country/continent/Europe
 185,Palau,Melekeok - Palau State Capital,Oceania,OC,USD,PLW,1559582,http://localhost:5000/get_country/Palau,http://localhost:5000/get_country/continent/Oceania
 186,Paraguay,Asunción,South America,SA,PYG,PRY,3437598,http://localhost:5000/get_country/Paraguay,http://localhost:5000/get_country/continent/South%20America
@@ -217,7 +217,7 @@
 217,Togo,Lomé,Africa,AF,XOF,TGO,2363686,http://localhost:5000/get_country/Togo,http://localhost:5000/get_country/continent/Africa
 218,Thailand,Bangkok,Asia,AS,THB,THA,1605651,http://localhost:5000/get_country/Thailand,http://localhost:5000/get_country/continent/Asia
 219,Tajikistan,Dushanbe,Asia,AS,TJS,TJK,1220409,http://localhost:5000/get_country/Tajikistan,http://localhost:5000/get_country/continent/Asia
-220,Tokelau,,Oceania,OC,NZD,TKL,4031074,http://localhost:5000/get_country/Tokelau,http://localhost:5000/get_country/continent/Oceania
+220,Tokelau,Nukunonu,Oceania,OC,NZD,TKL,4031074,http://localhost:5000/get_country/Tokelau,http://localhost:5000/get_country/continent/Oceania
 221,East Timor,Dili,Oceania,OC,USD,TLS,1966436,http://localhost:5000/get_country/East%20Timor,http://localhost:5000/get_country/continent/Oceania
 222,Turkmenistan,Ashgabat,Asia,AS,TMT,TKM,1218197,http://localhost:5000/get_country/Turkmenistan,http://localhost:5000/get_country/continent/Asia
 223,Tunisia,Tunis,Africa,AF,TND,TUN,2464461,http://localhost:5000/get_country/Tunisia,http://localhost:5000/get_country/continent/Africa
@@ -229,7 +229,7 @@
 229,Tanzania,Dodoma,Africa,AF,TZS,TZA,149590,http://localhost:5000/get_country/Tanzania,http://localhost:5000/get_country/continent/Africa
 230,Ukraine,Kyiv,Europe,EU,UAH,UKR,690791,http://localhost:5000/get_country/Ukraine,http://localhost:5000/get_country/continent/Europe
 231,Uganda,Kampala,Africa,AF,UGX,UGA,226074,http://localhost:5000/get_country/Uganda,http://localhost:5000/get_country/continent/Africa
-232,U.S. Minor Outlying Islands,,Oceania,OC,USD,UMI,5854968,http://localhost:5000/get_country/U.S.%20Minor%20Outlying%20Islands,http://localhost:5000/get_country/continent/Oceania
+232,U.S. Minor Outlying Islands,Washington D C,Oceania,OC,USD,UMI,5854968,http://localhost:5000/get_country/U.S.%20Minor%20Outlying%20Islands,http://localhost:5000/get_country/continent/Oceania
 233,United States,Washington,North America,NA,USD,USA,6252001,http://localhost:5000/get_country/United%20States,http://localhost:5000/get_country/continent/North%20America
 234,Uruguay,Montevideo,South America,SA,UYU,URY,3439705,http://localhost:5000/get_country/Uruguay,http://localhost:5000/get_country/continent/South%20America
 235,Uzbekistan,Tashkent,Asia,AS,UZS,UZB,1512440,http://localhost:5000/get_country/Uzbekistan,http://localhost:5000/get_country/continent/Asia

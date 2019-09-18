@@ -7,6 +7,8 @@ from bson.json_util import dumps
 import os
 import logging
 import logging.config
+import urllib.parse
+
 BASE_DIR=os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 logging.config.fileConfig(os.path.join(BASE_DIR, 'utils', 'logger.conf'))
@@ -39,10 +41,11 @@ def search_country_names(country_name):
 
 @searchcountry.route('/search/country/qs=<country_name>')
 def search_country_names_starting(country_name):
-    logger.info('Search Country with Keyword starting: ' + country_name)
+    country_name_uncoded = urllib.parse.unquote_plus(country_name)
+    logger.info('Search Country with Keyword starting: ' + country_name_uncoded)
     country_data = {}
     country_data['countries'] = []
-    search = "{}%".format(country_name)
+    search = "{}%".format(country_name_uncoded)
     for country in Country.query.filter(Country.country_name.like(search)).all():
         country_data['countries'].append({
             'name': country.country_name,

@@ -1,3 +1,9 @@
 *.sqlite
 *.log
 *.pyc
+.idea
+*.iml
+!/.gitignore
+/logs/*
+/reports/*
+
