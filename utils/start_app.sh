@@ -86,7 +86,7 @@ then
     echo "Shutting down container....."
 else
     echo "Container for Country_App Started successfully. Country_App API is ready to serve http requests now...."
-    echo "To Shutdown Container, press Ctrl+C  OR run /utils/shutdown_container.sh"
+    echo "To Shutdown Container, press Ctrl+C AND run /utils/shutdown.sh (For Standalone and Detached Containers)"
     trap printout SIGINT
     printout() {
        echo ""
