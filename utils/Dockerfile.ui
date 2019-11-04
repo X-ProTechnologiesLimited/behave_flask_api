@@ -1,0 +1,23 @@
+FROM python:3.7-alpine
+
+WORKDIR /app
+ENV CONTAINERISED true
+USER root
+
+#SETTING UP FLASK APPLICATION
+COPY requirements.txt /app/
+COPY country_gui/ /app/
+
+#SETTING UP PYTHON AND BEHAVE FUNCTIONAL TESTING ENV FOR APP
+RUN apk add --update python3
+RUN apk add --no-cache bash
+RUN apk add sqlite
+RUN pip3 install --upgrade pip setuptools
+RUN pip3 install -r requirements.txt
+
+
+ENV PATH $PATH:$JMETER_BIN
+ENV TZ Europe/London
+
+RUN /bin/sh
+ENTRYPOINT ["./ui_start.sh"]

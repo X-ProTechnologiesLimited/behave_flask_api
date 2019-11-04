@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="column is-4 is-offset-4">
+    <h3 class="title">Add New Country</h3>
+    <div class="box">
+      {% with messages = get_flashed_messages() %}
+{% if messages %}
+    <div class="notification is-danger">
+        {{ messages[0] }}. Go to <a href="{{ url_for('auth.add_card') }}">add Card page</a>.
+    </div>
+{% endif %}
+{% endwith %}
+        <form method="POST" action="/ui_add_country">
+            <div class="field">
+                <div class="control">
+                    <input class="input is-large" type="text" name="Country" placeholder="Country" autofocus="" required>
+                </div>
+            </div>
+
+            <div class="field">
+                <div class="control">
+                    <input class="input is-large" type="text" name="Capital" placeholder="Capital" autofocus="" required>
+                </div>
+            </div>
+
+            <div class="field">
+                <div class="control">
+                    <input class="input is-large" type="text" name="Continent" placeholder="Continent">
+                </div>
+            </div>
+
+            <div class="field">
+                <div class="control">
+                    <input class="input is-large" type="text" name="Subregion" placeholder="Subregion">
+                </div>
+            </div>
+
+            <div class="field">
+                <div class="control">
+                    <input class="input is-large" type="text" name="Currency_Name" placeholder="Currency_Name" />
+                </div>
+            </div>
+
+            <div class="field">
+                <div class="control">
+                    <input class="input is-large" type="text" name="Currency_Type" placeholder="Currency_Type">
+                </div>
+            </div>
+
+            <div class="field">
+                <div class="control">
+                    <input class="input is-large" type="text" name="Population" placeholder="Population">
+                </div>
+            </div>
+
+            <button class="button is-block is-info is-large is-fullwidth">Add Country</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

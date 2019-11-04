@@ -1,0 +1,55 @@
+<!-- templates/base.html -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The Country Explorer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css" />
+</head>
+
+<body>
+    <section class="hero is-primary is-fullheight">
+        <div class="hero-head">
+            <nav class="navbar">
+                <div class="container">
+
+                    <div id="navbarMenuHeroA" class="navbar-menu">
+                        <div class="navbar-end">
+                            <a href="{{ url_for('main.index') }}" class="navbar-item">
+                                Home
+                            </a>
+                            <a href="{{ url_for('main.ui_add_country') }}" class="navbar-item">
+                                Add New Country
+                            </a>
+                            <a href="{{ url_for('main.ui_view_country') }}" class="navbar-item">
+                                View All Countries
+                            </a>
+                            <a href="{{ url_for('main.ui_view_continent') }}" class="navbar-item">
+                                View All Continents
+                            </a>
+                            <a href="{{ url_for('main.ui_search_country') }}" class="navbar-item">
+                                Search
+                            </a>
+                            <a href="{{ url_for('main.ui_view_spec_country') }}" class="navbar-item">
+                                View Country
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <div class="hero-body">
+            <div class="container has-text-centered">
+               {% block content %}
+               {% endblock %}
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

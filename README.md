@@ -1,4 +1,4 @@
-# behave_flask_app
+# COUNTRY_MANAGER_APPLICATION
 
 This project is a demo for flask API and behave automated framework deployed on Docker
 The project also support integration with Jenkins Pipeline. The pipeline is designed to build the project, run
@@ -11,7 +11,7 @@ The API support documentation can be found at :-
 ## Runing locally (not containerised)
 ### Prerequisites for local run
 1. Install python3 following the instructions from `https://www.python.org/downloads/`
-2. Clone the git repository - `git clone https://github.com/X-ProTechnologiesLimited/behave_flask_api.git`
+2. Clone the git repository - `git clone https://github.com/X-ProTechnologiesLimited/country_manager.git`
 3. Install pip tool and then install prerequistes `RUN pip3 install -r requirements.txt`
 4. The application can be started with a fresh Database or existing
 5. To start with fresh database - script `sh repo_root/utils/start_app.sh Y`

@@ -12,9 +12,16 @@ fi
 
 printf "\nChecking Container.....\n"
 
-if [[ $(docker ps | grep country_app | awk -F ' ' '{print $1}') ]]; then
-        docker kill `docker ps | grep country_app | awk -F ' ' '{print $1}'`
+if [[ $(docker ps | grep country_api | awk -F ' ' '{print $1}') ]]; then
+        docker kill `docker ps | grep country_api | awk -F ' ' '{print $1}'`
         printf "\nContainer Stopped Successfully\n"
 else
         printf "\nNo Container is there for Country_App\n"
+fi
+
+if [[ $(docker ps | grep country_ui | awk -F ' ' '{print $1}') ]]; then
+        docker kill `docker ps | grep country_ui | awk -F ' ' '{print $1}'`
+        printf "\nContainer Stopped Successfully\n"
+else
+        printf "\nNo Container is there for Country_UI\n"
 fi
