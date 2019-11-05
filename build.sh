@@ -26,6 +26,8 @@ docker build -f Dockerfile.local --tag=country_api .
 if [[ $2 == "--d" ]];then
   printf "\nStarting the Application in Detached mode in Background\n"
   docker run --rm -it --name country_manager -v $PWD/logs:/app/logs --name country_manager -p $FLASK_RUN_PORT:$FLASK_RUN_PORT -d -it country_api /bin/bash
+  sleep 5
+  printf "\nNow starting the Country Manager UI\n"
   . country_gui/ui_run.config && export $(cut -d= -f1 country_gui/ui_run.config)
   cp utils/Dockerfile.ui Dockerfile.ui
   docker build -f Dockerfile.ui --tag=country_ui .
@@ -43,6 +45,10 @@ else
   docker run --rm -it --name country_manager -v $PWD/logs:/app/logs --name country_manager -p $FLASK_RUN_PORT:$FLASK_RUN_PORT -it country_api /bin/bash
   . country_gui/ui_run.config && export $(cut -d= -f1 country_gui/ui_run.config)
   cp utils/Dockerfile.ui Dockerfile.ui
+  sleep 5
+  printf "\nNow starting the Country Manager UI\n"
   docker build -f Dockerfile.ui --tag=country_ui .
   docker run --rm -it --name country_gui -v $PWD/logs:/app/logs --name country_gui -p $FLASK_RUN_PORT_UI:$FLASK_RUN_PORT_UI -d -it country_ui /bin/bash
 fi
+
+rm -rf Dockerfile.local Dockerfile.ui

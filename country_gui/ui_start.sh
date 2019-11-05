@@ -2,12 +2,14 @@
 filestamp=`date +%H%M%S`
 filename=country_ui.log
 get_project_dir() { # Gets the root directory of the repository
-    cd "${BASH_SOURCE[0]%*/*}/.." && pwd
+    cd "${BASH_SOURCE[0]%*/*}" && pwd
 }
 if [[ $CONTAINERISED != "true" ]] ; then
     PROJECT_DIR=$(get_project_dir)
+    export COUNTRY_API_HOST=localhost
 else
     PROJECT_DIR="/app"
+    export COUNTRY_API_HOST=host.docker.internal
 fi
 
 mkdir -p $PROJECT_DIR/logs
