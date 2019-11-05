@@ -5,7 +5,7 @@ node() {
         }
     stage ("Build image") {
         // download the dockerfile to build from
-        git 'https://github.com/X-ProTechnologiesLimited/behave_flask_api.git'
+        git 'https://github.com/X-ProTechnologiesLimited/country_manager.git'
 
         // build our docker image
         myImg = docker.build 'my-image:snapshot'
