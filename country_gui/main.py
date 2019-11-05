@@ -7,6 +7,8 @@ from bson.json_util import dumps
 import requests
 from .nocache import nocache
 import os
+from . import response
+
 api_host = os.environ['COUNTRY_API_HOST']
 api_port = os.environ['COUNTRY_API_PORT']
 api_url = 'http://'+api_host+':'+api_port
@@ -42,16 +44,8 @@ def ui_add_country_post():
     data_new_country = response_new_country.json()
     json_data = dumps(data_new_country)
 
-    output = json2html.convert(json=json_data,
-                               table_attributes="id=\"Add Response\" class=\"table table-striped\"" "border=2")
+    return response.asset_retrieve(json_data)
 
-    with open('templates/response_added_country.html', 'w') as outf:
-        outf.write('{% extends "base.html" %}')
-        outf.write('{% block content %}')
-        outf.write(output)
-        outf.write('{% endblock %}')
-
-    return render_template('response_added_country.html')
 
 @main.route('/ui_view_country')
 @nocache
@@ -61,15 +55,8 @@ def ui_view_country():
     response_country_list = requests.get(url=url, headers=headers)
     data_country_list = response_country_list.json()
     json_data = dumps(data_country_list)
-    output = json2html.convert(json=json_data, table_attributes="id=\"Country List\" class=\"table table-striped\"" "border=2")
 
-    with open('templates/added_country.html', 'w') as outf:
-        outf.write('{% extends "base.html" %}')
-        outf.write('{% block content %}')
-        outf.write(output)
-        outf.write('{% endblock %}')
-
-    return render_template('added_country.html')
+    return response.asset_retrieve(json_data)
 
 
 @main.route('/ui_view_continents')
@@ -80,15 +67,9 @@ def ui_view_continent():
     response_continent_list = requests.get(url=url, headers=headers)
     data_continent_list = response_continent_list.json()
     json_data = dumps(data_continent_list)
-    output = json2html.convert(json=json_data, table_attributes="id=\"Continent List\" class=\"table table-striped\"" "border=2")
 
-    with open('templates/added_continents.html', 'w') as outf:
-        outf.write('{% extends "base.html" %}')
-        outf.write('{% block content %}')
-        outf.write(output)
-        outf.write('{% endblock %}')
+    return response.asset_retrieve(json_data)
 
-    return render_template('added_continents.html')
 
 
 @main.route('/ui_search')
@@ -104,16 +85,8 @@ def search_country_post():
     response_continent_list = requests.get(url=url, headers=headers)
     data_continent_list = response_continent_list.json()
     json_data = dumps(data_continent_list)
-    output = json2html.convert(json=json_data,
-                               table_attributes="id=\"Search List\" class=\"table table-striped\"" "border=2")
 
-    with open('templates/search_response.html', 'w') as outf:
-        outf.write('{% extends "base.html" %}')
-        outf.write('{% block content %}')
-        outf.write(output)
-        outf.write('{% endblock %}')
-
-    return render_template('search_response.html')
+    return response.asset_retrieve(json_data)
 
 
 @main.route('/ui_view_specific_country')
@@ -129,16 +102,8 @@ def ui_view_spec_country_post():
     response_list = requests.get(url=url, headers=headers)
     data_list = response_list.json()
     json_data = dumps(data_list)
-    output = json2html.convert(json=json_data,
-                               table_attributes="id=\"Country Details\" class=\"table table-striped\"" "border=2")
 
-    with open('templates/country_details.html', 'w') as outf:
-        outf.write('{% extends "base.html" %}')
-        outf.write('{% block content %}')
-        outf.write(output)
-        outf.write('{% endblock %}')
-
-    return render_template('country_details.html')
+    return response.asset_retrieve(json_data)
 
 @main.route('/quit')
 def quit():

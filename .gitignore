@@ -1,6 +1,7 @@
 *.sqlite
 *.log
 *.pyc
+response.html
 .idea
 *.iml
 !/.gitignore
