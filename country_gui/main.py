@@ -105,6 +105,57 @@ def ui_view_spec_country_post():
 
     return response.asset_retrieve(json_data)
 
+
+@main.route('/ui_delete_country')
+@nocache
+def ui_delete_country():
+    return render_template('delete_specific.html')
+
+@main.route('/ui_delete_country', methods=['POST'])
+@nocache
+def ui_delete_country_delete():
+    url = api_url+'/delete/' + request.form.get('Country')
+    headers = {'Content-type': 'application/json', 'Accept': 'application/json'}
+    response_list = requests.delete(url=url, headers=headers)
+    data_list = response_list.json()
+    json_data = dumps(data_list)
+
+    return response.asset_retrieve(json_data)
+
+
+@main.route('/ui_view_specific_continent')
+@nocache
+def ui_view_specific_continent():
+    return render_template('view_specific_continent.html')
+
+@main.route('/ui_view_specific_continent', methods=['POST'])
+@nocache
+def ui_view_specific_continent__post():
+    url = api_url+'/get_country/continent/' + request.form.get('Continent') + '/name'
+    headers = {'Content-type': 'application/json', 'Accept': 'application/json'}
+    response_list = requests.get(url=url, headers=headers)
+    data_list = response_list.json()
+    json_data = dumps(data_list)
+
+    return response.asset_retrieve(json_data)
+
+
+@main.route('/ui_search_by_capital')
+@nocache
+def ui_search_by_capital():
+    return render_template('search_by_capital.html')
+
+@main.route('/ui_search_by_capital', methods=['POST'])
+@nocache
+def ui_search_by_capital_post():
+    url = api_url+'/get_country/capital/' + request.form.get('Capital')
+    headers = {'Content-type': 'application/json', 'Accept': 'application/json'}
+    response_list = requests.get(url=url, headers=headers)
+    data_list = response_list.json()
+    json_data = dumps(data_list)
+
+    return response.asset_retrieve(json_data)
+
 @main.route('/quit')
 def quit():
     func = request.environ.get('werkzeug.server.shutdown')
