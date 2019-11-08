@@ -1,250 +1,250 @@
-1,Andorra,Andorra la Vella,Europe,EU,EUR,AND,3041565,http://localhost:5000/get_country/Andorra,http://localhost:5000/get_country/continent/Europe
-2,United Arab Emirates,Abu Dhabi,Asia,AS,AED,ARE,290557,http://localhost:5000/get_country/United%20Arab%20Emirates,http://localhost:5000/get_country/continent/Asia
-3,Afghanistan,Kabul,Asia,AS,AFN,AFG,1149361,http://localhost:5000/get_country/Afghanistan,http://localhost:5000/get_country/continent/Asia
-4,Antigua and Barbuda,St. John\s,North America,NA,XCD,ATG,3576396,http://localhost:5000/get_country/Antigua%20and%20Barbuda,http://localhost:5000/get_country/continent/North%20America
-5,Anguilla,The Valley,North America,NA,XCD,AIA,3573511,http://localhost:5000/get_country/Anguilla,http://localhost:5000/get_country/continent/North%20America
-6,Albania,Tirana,Europe,EU,ALL,ALB,783754,http://localhost:5000/get_country/Albania,http://localhost:5000/get_country/continent/Europe
-7,Armenia,Yerevan,Asia,AS,AMD,ARM,174982,http://localhost:5000/get_country/Armenia,http://localhost:5000/get_country/continent/Asia
-8,Angola,Luanda,Africa,AF,AOA,AGO,3351879,http://localhost:5000/get_country/Angola,http://localhost:5000/get_country/continent/Africa
-9,Antarctica,McMurdo,Antarctica,AN,,ATA,6697173,http://localhost:5000/get_country/Antarctica,http://localhost:5000/get_country/continent/Antarctica
-10,Argentina,Buenos Aires,South America,SA,ARS,ARG,3865483,http://localhost:5000/get_country/Argentina,http://localhost:5000/get_country/continent/South%20America
-11,American Samoa,Pago Pago,Oceania,OC,USD,ASM,5880801,http://localhost:5000/get_country/American%20Samoa,http://localhost:5000/get_country/continent/Oceania
-12,Austria,Vienna,Europe,EU,EUR,AUT,2782113,http://localhost:5000/get_country/Austria,http://localhost:5000/get_country/continent/Europe
-13,Australia,Canberra,Oceania,OC,AUD,AUS,2077456,http://localhost:5000/get_country/Australia,http://localhost:5000/get_country/continent/Oceania
-14,Aruba,Oranjestad,North America,NA,AWG,ABW,3577279,http://localhost:5000/get_country/Aruba,http://localhost:5000/get_country/continent/North%20America
-15,Åland Islands,Mariehamn,Europe,EU,EUR,ALA,661882,http://localhost:5000/get_country/Åland%20Islands,http://localhost:5000/get_country/continent/Europe
-16,Azerbaijan,Baku,Asia,AS,AZN,AZE,587116,http://localhost:5000/get_country/Azerbaijan,http://localhost:5000/get_country/continent/Asia
-17,Bosnia and Herzegovina,Sarajevo,Europe,EU,BAM,BIH,3277605,http://localhost:5000/get_country/Bosnia%20and%20Herzegovina,http://localhost:5000/get_country/continent/Europe
-18,Barbados,Bridgetown,North America,NA,BBD,BRB,3374084,http://localhost:5000/get_country/Barbados,http://localhost:5000/get_country/continent/North%20America
-19,Bangladesh,Dhaka,Asia,AS,BDT,BGD,1210997,http://localhost:5000/get_country/Bangladesh,http://localhost:5000/get_country/continent/Asia
-20,Belgium,Brussels,Europe,EU,EUR,BEL,2802361,http://localhost:5000/get_country/Belgium,http://localhost:5000/get_country/continent/Europe
-21,Burkina Faso,Ouagadougou,Africa,AF,XOF,BFA,2361809,http://localhost:5000/get_country/Burkina%20Faso,http://localhost:5000/get_country/continent/Africa
-22,Bulgaria,Sofia,Europe,EU,BGN,BGR,732800,http://localhost:5000/get_country/Bulgaria,http://localhost:5000/get_country/continent/Europe
-23,Bahrain,Manama,Asia,AS,BHD,BHR,290291,http://localhost:5000/get_country/Bahrain,http://localhost:5000/get_country/continent/Asia
-24,Burundi,Bujumbura,Africa,AF,BIF,BDI,433561,http://localhost:5000/get_country/Burundi,http://localhost:5000/get_country/continent/Africa
-25,Benin,Porto-Novo,Africa,AF,XOF,BEN,2395170,http://localhost:5000/get_country/Benin,http://localhost:5000/get_country/continent/Africa
-26,Saint Barthélemy,Gustavia,North America,NA,EUR,BLM,3578476,http://localhost:5000/get_country/Saint%20Barthélemy,http://localhost:5000/get_country/continent/North%20America
-27,Bermuda,Hamilton,North America,NA,BMD,BMU,3573345,http://localhost:5000/get_country/Bermuda,http://localhost:5000/get_country/continent/North%20America
-28,Brunei Darussalam,Bandar Seri Begawan,Asia,AS,BND,BRN,1820814,http://localhost:5000/get_country/Brunei%20Darussalam,http://localhost:5000/get_country/continent/Asia
-29,Bolivia,Sucre,South America,SA,BOB,BOL,3923057,http://localhost:5000/get_country/Bolivia,http://localhost:5000/get_country/continent/South%20America
-30,Bonaire,Sint Eustatius and Saba,North America,NA,BON,BRE,18208140,http://localhost:5000/get_country/Bonaire,http://localhost:5000/get_country/continent/North%20America
-31,Brazil,Brasília,South America,SA,BRL,BRA,3469034,http://localhost:5000/get_country/Brazil,http://localhost:5000/get_country/continent/South%20America
-32,Bahamas,Nassau,North America,NA,BSD,BHS,3572887,http://localhost:5000/get_country/Bahamas,http://localhost:5000/get_country/continent/North%20America
-33,Bhutan,Thimphu,Asia,AS,BTN,BTN,1252634,http://localhost:5000/get_country/Bhutan,http://localhost:5000/get_country/continent/Asia
-34,Bouvet Island,Norvegia Station,Antarctica,AN,NOK,BVT,3371123,http://localhost:5000/get_country/Bouvet%20Island,http://localhost:5000/get_country/continent/Antarctica
-35,Botswana,Gaborone,Africa,AF,BWP,BWA,933860,http://localhost:5000/get_country/Botswana,http://localhost:5000/get_country/continent/Africa
-36,Belarus,Minsk,Europe,EU,BYR,BLR,630336,http://localhost:5000/get_country/Belarus,http://localhost:5000/get_country/continent/Europe
-37,Belize,Belmopan,North America,NA,BZD,BLZ,3582678,http://localhost:5000/get_country/Belize,http://localhost:5000/get_country/continent/North%20America
-38,Canada,Ottawa,North America,NA,CAD,CAN,6251999,http://localhost:5000/get_country/Canada,http://localhost:5000/get_country/continent/North%20America
-39,Cocos [Keeling] Islands,West Island,Asia,AS,AUD,CCK,1547376,http://localhost:5000/get_country/Cocos%20[Keeling]%20Islands,http://localhost:5000/get_country/continent/Asia
-40,Democratic Republic of the Congo,Kinshasa,Africa,AF,COD,COD,203312,http://localhost:5000/get_country/Democratic%20Republic%20of%20the%20Congo,http://localhost:5000/get_country/continent/Africa
-41,Central African Republic,Bangui,Africa,AF,XAF,CAF,239880,http://localhost:5000/get_country/Central%20African%20Republic,http://localhost:5000/get_country/continent/Africa
-42,Republic of the Congo,Brazzaville,Africa,AF,XAF,COG,2260494,http://localhost:5000/get_country/Republic%20of%20the%20Congo,http://localhost:5000/get_country/continent/Africa
-43,Switzerland,Berne,Europe,EU,CHF,CHE,2658434,http://localhost:5000/get_country/Switzerland,http://localhost:5000/get_country/continent/Europe
-44,Ivory Coast,Yamoussoukro,Africa,AF,XOF,CIV,2287781,http://localhost:5000/get_country/Ivory%20Coast,http://localhost:5000/get_country/continent/Africa
-45,Cook Islands,Avarua,Oceania,OC,NZD,COK,1899402,http://localhost:5000/get_country/Cook%20Islands,http://localhost:5000/get_country/continent/Oceania
-46,Chile,Santiago,South America,SA,CLP,CHL,3895114,http://localhost:5000/get_country/Chile,http://localhost:5000/get_country/continent/South%20America
-47,Cameroon,Yaoundé,Africa,AF,XAF,CMR,2233387,http://localhost:5000/get_country/Cameroon,http://localhost:5000/get_country/continent/Africa
-48,China,Beijing,Asia,AS,CNY,CHN,1814991,http://localhost:5000/get_country/China,http://localhost:5000/get_country/continent/Asia
-49,Colombia,Bogotá,South America,SA,COP,COL,3686110,http://localhost:5000/get_country/Colombia,http://localhost:5000/get_country/continent/South%20America
-50,Costa Rica,San José,North America,NA,CRC,CRI,3624060,http://localhost:5000/get_country/Costa%20Rica,http://localhost:5000/get_country/continent/North%20America
-51,Cuba,Havana,North America,NA,CUP,CUB,3562981,http://localhost:5000/get_country/Cuba,http://localhost:5000/get_country/continent/North%20America
-52,Cape Verde,Praia,Africa,AF,CVE,CPV,3374766,http://localhost:5000/get_country/Cape%20Verde,http://localhost:5000/get_country/continent/Africa
-53,Curaçao,Willemstad,North America,NA,ANG,CUW,7626836,http://localhost:5000/get_country/Curaçao,http://localhost:5000/get_country/continent/North%20America
-54,Christmas Island,The Settlement,Asia,AS,AUD,CXR,2078138,http://localhost:5000/get_country/Christmas%20Island,http://localhost:5000/get_country/continent/Asia
-55,Cyprus,Nicosia,Europe,EU,EUR,CYP,146669,http://localhost:5000/get_country/Cyprus,http://localhost:5000/get_country/continent/Europe
-56,Czech Republic,Prague,Europe,EU,CZK,CZE,3077311,http://localhost:5000/get_country/Czech%20Republic,http://localhost:5000/get_country/continent/Europe
-57,Germany,Berlin,Europe,EU,EUR,DEU,2921044,http://localhost:5000/get_country/Germany,http://localhost:5000/get_country/continent/Europe
-58,Djibouti,Djibouti,Africa,AF,DJF,DJI,223816,http://localhost:5000/get_country/Djibouti,http://localhost:5000/get_country/continent/Africa
-59,Denmark,Copenhagen,Europe,EU,DKK,DNK,2623032,http://localhost:5000/get_country/Denmark,http://localhost:5000/get_country/continent/Europe
-60,Dominica,Roseau,North America,NA,XCD,DMA,3575830,http://localhost:5000/get_country/Dominica,http://localhost:5000/get_country/continent/North%20America
-61,Dominican Republic,Santo Domingo,North America,NA,DOP,DOM,3508796,http://localhost:5000/get_country/Dominican%20Republic,http://localhost:5000/get_country/continent/North%20America
-62,Algeria,Algiers,Africa,AF,DZD,DZA,2589581,http://localhost:5000/get_country/Algeria,http://localhost:5000/get_country/continent/Africa
-63,Ecuador,Quito,South America,SA,USD,ECU,3658394,http://localhost:5000/get_country/Ecuador,http://localhost:5000/get_country/continent/South%20America
-64,Estonia,Tallinn,Europe,EU,EUR,EST,453733,http://localhost:5000/get_country/Estonia,http://localhost:5000/get_country/continent/Europe
-65,Egypt,Cairo,Africa,AF,EGP,EGY,357994,http://localhost:5000/get_country/Egypt,http://localhost:5000/get_country/continent/Africa
-66,Western Sahara,El Aaiún,Africa,AF,MAD,ESH,2461445,http://localhost:5000/get_country/Western%20Sahara,http://localhost:5000/get_country/continent/Africa
-67,Eritrea,Asmara,Africa,AF,ERN,ERI,338010,http://localhost:5000/get_country/Eritrea,http://localhost:5000/get_country/continent/Africa
-68,Spain,Madrid,Europe,EU,EUR,ESP,2510769,http://localhost:5000/get_country/Spain,http://localhost:5000/get_country/continent/Europe
-69,Ethiopia,Addis Ababa,Africa,AF,ETB,ETH,337996,http://localhost:5000/get_country/Ethiopia,http://localhost:5000/get_country/continent/Africa
-70,Finland,Helsinki,Europe,EU,EUR,FIN,660013,http://localhost:5000/get_country/Finland,http://localhost:5000/get_country/continent/Europe
-71,Fiji,Suva,Oceania,OC,FJD,FJI,2205218,http://localhost:5000/get_country/Fiji,http://localhost:5000/get_country/continent/Oceania
-72,Falkland Islands,Stanley,South America,SA,FKP,FLK,3474414,http://localhost:5000/get_country/Falkland%20Islands,http://localhost:5000/get_country/continent/South%20America
-73,Micronesia,Palikir,Oceania,OC,USD,FSM,2081918,http://localhost:5000/get_country/Micronesia,http://localhost:5000/get_country/continent/Oceania
-74,Faroe Islands,Tórshavn,Europe,EU,DKK,FRO,2622320,http://localhost:5000/get_country/Faroe%20Islands,http://localhost:5000/get_country/continent/Europe
-75,France,Paris,Europe,EU,EUR,FRA,3017382,http://localhost:5000/get_country/France,http://localhost:5000/get_country/continent/Europe
-76,Gabon,Libreville,Africa,AF,XAF,GAB,2400553,http://localhost:5000/get_country/Gabon,http://localhost:5000/get_country/continent/Africa
-77,United Kingdom of Great Britain and Northern Ireland,London,Europe,EU,GBP,GBR,2635167,http://localhost:5000/get_country/United%20Kingdom%20of%20Great%20Britain%20and%20Northern%20Ireland,http://localhost:5000/get_country/continent/Europe
-78,Grenada,St. George\s,North America,NA,XCD,GRD,3580239,http://localhost:5000/get_country/Grenada,http://localhost:5000/get_country/continent/North%20America
-79,Georgia,Tbilisi,Asia,AS,GEL,GEO,614540,http://localhost:5000/get_country/Georgia,http://localhost:5000/get_country/continent/Asia
-80,French Guiana,Cayenne,South America,SA,EUR,GUF,3381670,http://localhost:5000/get_country/French%20Guiana,http://localhost:5000/get_country/continent/South%20America
-81,Guernsey,St Peter Port,Europe,EU,GBP,GGY,3042362,http://localhost:5000/get_country/Guernsey,http://localhost:5000/get_country/continent/Europe
-82,Ghana,Accra,Africa,AF,GHS,GHA,2300660,http://localhost:5000/get_country/Ghana,http://localhost:5000/get_country/continent/Africa
-83,Gibraltar,Gibraltar,Europe,EU,GIP,GIB,2411586,http://localhost:5000/get_country/Gibraltar,http://localhost:5000/get_country/continent/Europe
-84,Greenland,Nuuk,North America,NA,DKK,GRL,3425505,http://localhost:5000/get_country/Greenland,http://localhost:5000/get_country/continent/North%20America
-85,Gambia,Banjul,Africa,AF,GMD,GMB,2413451,http://localhost:5000/get_country/Gambia,http://localhost:5000/get_country/continent/Africa
-86,Guinea,Conakry,Africa,AF,GNF,GIN,2420477,http://localhost:5000/get_country/Guinea,http://localhost:5000/get_country/continent/Africa
-87,Guadeloupe,Basse-Terre,North America,NA,EUR,GLP,3579143,http://localhost:5000/get_country/Guadeloupe,http://localhost:5000/get_country/continent/North%20America
-88,Equatorial Guinea,Malabo,Africa,AF,XAF,GNQ,2309096,http://localhost:5000/get_country/Equatorial%20Guinea,http://localhost:5000/get_country/continent/Africa
-89,Greece,Athens,Europe,EU,EUR,GRC,390903,http://localhost:5000/get_country/Greece,http://localhost:5000/get_country/continent/Europe
-90,South Georgia and the South Sandwich Islands,Grytviken,Antarctica,AN,GBP,SGS,3474415,http://localhost:5000/get_country/South%20Georgia%20and%20the%20South%20Sandwich%20Islands,http://localhost:5000/get_country/continent/Antarctica
-91,Guatemala,Guatemala City,North America,NA,GTQ,GTM,3595528,http://localhost:5000/get_country/Guatemala,http://localhost:5000/get_country/continent/North%20America
-92,Guam,Hagåtña,Oceania,OC,USD,GUM,4043988,http://localhost:5000/get_country/Guam,http://localhost:5000/get_country/continent/Oceania
-93,Guinea-Bissau,Bissau,Africa,AF,XOF,GNB,2372248,http://localhost:5000/get_country/Guinea-Bissau,http://localhost:5000/get_country/continent/Africa
-94,Guyana,Georgetown,South America,SA,GYD,GUY,3378535,http://localhost:5000/get_country/Guyana,http://localhost:5000/get_country/continent/South%20America
-95,Hong Kong,Hong Kong,Asia,AS,HKD,HKG,1819730,http://localhost:5000/get_country/Hong%20Kong,http://localhost:5000/get_country/continent/Asia
-96,Heard Island and McDonald Islands,Mawson Peak,Antarctica,AN,AUD,HMD,1547314,http://localhost:5000/get_country/Heard%20Island%20and%20McDonald%20Islands,http://localhost:5000/get_country/continent/Antarctica
-97,Honduras,Tegucigalpa,North America,NA,HNL,HND,3608932,http://localhost:5000/get_country/Honduras,http://localhost:5000/get_country/continent/North%20America
-98,Croatia,Zagreb,Europe,EU,HRK,HRV,3202326,http://localhost:5000/get_country/Croatia,http://localhost:5000/get_country/continent/Europe
-99,Haiti,Port-au-Prince,North America,NA,HTG,HTI,3723988,http://localhost:5000/get_country/Haiti,http://localhost:5000/get_country/continent/North%20America
-100,Hungary,Budapest,Europe,EU,HUF,HUN,719819,http://localhost:5000/get_country/Hungary,http://localhost:5000/get_country/continent/Europe
-101,Indonesia,Jakarta,Asia,AS,IDR,IDN,1643084,http://localhost:5000/get_country/Indonesia,http://localhost:5000/get_country/continent/Asia
-102,Ireland,Dublin,Europe,EU,EUR,IRL,2963597,http://localhost:5000/get_country/Ireland,http://localhost:5000/get_country/continent/Europe
-103,Israel,Jerusalem,Asia,AS,ILS,ISR,294640,http://localhost:5000/get_country/Israel,http://localhost:5000/get_country/continent/Asia
-104,Isle of Man,Douglas,Europe,EU,GBP,IMN,3042225,http://localhost:5000/get_country/Isle%20of%20Man,http://localhost:5000/get_country/continent/Europe
-105,India,New Delhi,Asia,AS,INR,IND,1269750,http://localhost:5000/get_country/India,http://localhost:5000/get_country/continent/Asia
-106,British Indian Ocean Territory,Camp Justice,Asia,AS,USD,IOT,1282588,http://localhost:5000/get_country/British%20Indian%20Ocean%20Territory,http://localhost:5000/get_country/continent/Asia
-107,Iraq,Baghdad,Asia,AS,IQD,IRQ,99237,http://localhost:5000/get_country/Iraq,http://localhost:5000/get_country/continent/Asia
-108,Iran,Tehran,Asia,AS,IRR,IRN,130758,http://localhost:5000/get_country/Iran,http://localhost:5000/get_country/continent/Asia
-109,Iceland,Reykjavik,Europe,EU,ISK,ISL,2629691,http://localhost:5000/get_country/Iceland,http://localhost:5000/get_country/continent/Europe
-110,Italy,Rome,Europe,EU,EUR,ITA,3175395,http://localhost:5000/get_country/Italy,http://localhost:5000/get_country/continent/Europe
-111,Jersey,Saint Helier,Europe,EU,GBP,JEY,3042142,http://localhost:5000/get_country/Jersey,http://localhost:5000/get_country/continent/Europe
-112,Jamaica,Kingston,North America,NA,JMD,JAM,3489940,http://localhost:5000/get_country/Jamaica,http://localhost:5000/get_country/continent/North%20America
-113,Jordan,Amman,Asia,AS,JOD,JOR,248816,http://localhost:5000/get_country/Jordan,http://localhost:5000/get_country/continent/Asia
-114,Japan,Tokyo,Asia,AS,JPY,JPN,1861060,http://localhost:5000/get_country/Japan,http://localhost:5000/get_country/continent/Asia
-115,Kenya,Nairobi,Africa,AF,KES,KEN,192950,http://localhost:5000/get_country/Kenya,http://localhost:5000/get_country/continent/Africa
-116,Kyrgyzstan,Bishkek,Asia,AS,KGS,KGZ,1527747,http://localhost:5000/get_country/Kyrgyzstan,http://localhost:5000/get_country/continent/Asia
-117,Cambodia,Phnom Penh,Asia,AS,KHR,KHM,1831722,http://localhost:5000/get_country/Cambodia,http://localhost:5000/get_country/continent/Asia
-118,Kiribati,Tarawa,Oceania,OC,AUD,KIR,4030945,http://localhost:5000/get_country/Kiribati,http://localhost:5000/get_country/continent/Oceania
-119,Comoros,Moroni,Africa,AF,KMF,COM,921929,http://localhost:5000/get_country/Comoros,http://localhost:5000/get_country/continent/Africa
-120,Saint Kitts and Nevis,Basseterre,North America,NA,XCD,KNA,3575174,http://localhost:5000/get_country/Saint%20Kitts%20and%20Nevis,http://localhost:5000/get_country/continent/North%20America
-121,North Korea,Pyongyang,Asia,AS,KPW,PRK,1873107,http://localhost:5000/get_country/North%20Korea,http://localhost:5000/get_country/continent/Asia
-122,South Korea,Seoul,Asia,AS,KRW,KOR,1835841,http://localhost:5000/get_country/South%20Korea,http://localhost:5000/get_country/continent/Asia
-123,Kuwait,Kuwait City,Asia,AS,KWD,KWT,285570,http://localhost:5000/get_country/Kuwait,http://localhost:5000/get_country/continent/Asia
-124,Cayman Islands,George Town,North America,NA,KYD,CYM,3580718,http://localhost:5000/get_country/Cayman%20Islands,http://localhost:5000/get_country/continent/North%20America
-125,Kazakhstan,Astana,Asia,AS,KZT,KAZ,1522867,http://localhost:5000/get_country/Kazakhstan,http://localhost:5000/get_country/continent/Asia
-126,Laos,Vientiane,Asia,AS,LAK,LAO,1655842,http://localhost:5000/get_country/Laos,http://localhost:5000/get_country/continent/Asia
-127,Lebanon,Beirut,Asia,AS,LBP,LBN,272103,http://localhost:5000/get_country/Lebanon,http://localhost:5000/get_country/continent/Asia
-128,Saint Lucia,Castries,North America,NA,XCD,LCA,3576468,http://localhost:5000/get_country/Saint%20Lucia,http://localhost:5000/get_country/continent/North%20America
-129,Liechtenstein,Vaduz,Europe,EU,CHF,LIE,3042058,http://localhost:5000/get_country/Liechtenstein,http://localhost:5000/get_country/continent/Europe
-130,Sri Lanka,Colombo,Asia,AS,LKR,LKA,1227603,http://localhost:5000/get_country/Sri%20Lanka,http://localhost:5000/get_country/continent/Asia
-131,Liberia,Monrovia,Africa,AF,LRD,LBR,2275384,http://localhost:5000/get_country/Liberia,http://localhost:5000/get_country/continent/Africa
-132,Lesotho,Maseru,Africa,AF,LSL,LSO,932692,http://localhost:5000/get_country/Lesotho,http://localhost:5000/get_country/continent/Africa
-133,Lithuania,Vilnius,Europe,EU,EUR,LTU,597427,http://localhost:5000/get_country/Lithuania,http://localhost:5000/get_country/continent/Europe
-134,Luxembourg,Luxembourg,Europe,EU,EUR,LUX,2960313,http://localhost:5000/get_country/Luxembourg,http://localhost:5000/get_country/continent/Europe
-135,Latvia,Riga,Europe,EU,EUR,LVA,458258,http://localhost:5000/get_country/Latvia,http://localhost:5000/get_country/continent/Europe
-136,Libya,Tripoli,Africa,AF,LYD,LBY,2215636,http://localhost:5000/get_country/Libya,http://localhost:5000/get_country/continent/Africa
-137,Morocco,Rabat,Africa,AF,MAD,MAR,2542007,http://localhost:5000/get_country/Morocco,http://localhost:5000/get_country/continent/Africa
-138,Monaco,Monaco,Europe,EU,EUR,MCO,2993457,http://localhost:5000/get_country/Monaco,http://localhost:5000/get_country/continent/Europe
-139,Moldova,Chişinău,Europe,EU,MDL,MDA,617790,http://localhost:5000/get_country/Moldova,http://localhost:5000/get_country/continent/Europe
-140,Montenegro,Podgorica,Europe,EU,EUR,MNE,3194884,http://localhost:5000/get_country/Montenegro,http://localhost:5000/get_country/continent/Europe
-141,Saint Martin,Marigot,North America,NA,EUR,MAF,3578421,http://localhost:5000/get_country/Saint%20Martin,http://localhost:5000/get_country/continent/North%20America
-142,Madagascar,Antananarivo,Africa,AF,MGA,MDG,1062947,http://localhost:5000/get_country/Madagascar,http://localhost:5000/get_country/continent/Africa
-143,Marshall Islands,Majuro,Oceania,OC,USD,MHL,2080185,http://localhost:5000/get_country/Marshall%20Islands,http://localhost:5000/get_country/continent/Oceania
-144,North Macedonia,Skopje,Europe,EU,MKD,MKD,718075,http://localhost:5000/get_country/North%20Macedonia,http://localhost:5000/get_country/continent/Europe
-145,Mali,Bamako,Africa,AF,XOF,MLI,2453866,http://localhost:5000/get_country/Mali,http://localhost:5000/get_country/continent/Africa
-146,Myanmar [Burma],Nay Pyi Taw,Asia,AS,MMK,MMR,1327865,http://localhost:5000/get_country/Myanmar%20[Burma],http://localhost:5000/get_country/continent/Asia
-147,Mongolia,Ulan Bator,Asia,AS,MNT,MNG,2029969,http://localhost:5000/get_country/Mongolia,http://localhost:5000/get_country/continent/Asia
-148,Macao,Macao,Asia,AS,MOP,MAC,1821275,http://localhost:5000/get_country/Macao,http://localhost:5000/get_country/continent/Asia
-149,Northern Mariana Islands,Saipan,Oceania,OC,USD,MNP,4041468,http://localhost:5000/get_country/Northern%20Mariana%20Islands,http://localhost:5000/get_country/continent/Oceania
-150,Martinique,Fort-de-France,North America,NA,EUR,MTQ,3570311,http://localhost:5000/get_country/Martinique,http://localhost:5000/get_country/continent/North%20America
-151,Mauritania,Nouakchott,Africa,AF,MRO,MRT,2378080,http://localhost:5000/get_country/Mauritania,http://localhost:5000/get_country/continent/Africa
-152,Montserrat,Plymouth,North America,NA,XCD,MSR,3578097,http://localhost:5000/get_country/Montserrat,http://localhost:5000/get_country/continent/North%20America
-153,Malta,Valletta,Europe,EU,EUR,MLT,2562770,http://localhost:5000/get_country/Malta,http://localhost:5000/get_country/continent/Europe
-154,Mauritius,Port Louis,Africa,AF,MUR,MUS,934292,http://localhost:5000/get_country/Mauritius,http://localhost:5000/get_country/continent/Africa
-155,Maldives,Malé,Asia,AS,MVR,MDV,1282028,http://localhost:5000/get_country/Maldives,http://localhost:5000/get_country/continent/Asia
-156,Malawi,Lilongwe,Africa,AF,MWK,MWI,927384,http://localhost:5000/get_country/Malawi,http://localhost:5000/get_country/continent/Africa
-157,Mexico,Mexico City,North America,NA,MXN,MEX,3996063,http://localhost:5000/get_country/Mexico,http://localhost:5000/get_country/continent/North%20America
-158,Malaysia,Kuala Lumpur,Asia,AS,MYR,MYS,1733045,http://localhost:5000/get_country/Malaysia,http://localhost:5000/get_country/continent/Asia
-159,Mozambique,Maputo,Africa,AF,MZN,MOZ,1036973,http://localhost:5000/get_country/Mozambique,http://localhost:5000/get_country/continent/Africa
-160,Namibia,Windhoek,Africa,AF,NAD,NAM,3355338,http://localhost:5000/get_country/Namibia,http://localhost:5000/get_country/continent/Africa
-161,New Caledonia,Noumea,Oceania,OC,XPF,NCL,2139685,http://localhost:5000/get_country/New%20Caledonia,http://localhost:5000/get_country/continent/Oceania
-162,Niger,Niamey,Africa,AF,XOF,NER,2440476,http://localhost:5000/get_country/Niger,http://localhost:5000/get_country/continent/Africa
-163,Norfolk Island,Kingston,Oceania,OC,AUD,NFK,2155115,http://localhost:5000/get_country/Norfolk%20Island,http://localhost:5000/get_country/continent/Oceania
-164,Nigeria,Abuja,Africa,AF,NGN,NGA,2328926,http://localhost:5000/get_country/Nigeria,http://localhost:5000/get_country/continent/Africa
-165,Nicaragua,Managua,North America,NA,NIO,NIC,3617476,http://localhost:5000/get_country/Nicaragua,http://localhost:5000/get_country/continent/North%20America
-166,Netherlands,Amsterdam,Europe,EU,EUR,NLD,2750405,http://localhost:5000/get_country/Netherlands,http://localhost:5000/get_country/continent/Europe
-167,Norway,Oslo,Europe,EU,NOK,NOR,3144096,http://localhost:5000/get_country/Norway,http://localhost:5000/get_country/continent/Europe
-168,Nepal,Kathmandu,Asia,AS,NPR,NPL,1282988,http://localhost:5000/get_country/Nepal,http://localhost:5000/get_country/continent/Asia
-169,Nauru,Yaren,Oceania,OC,AUD,NRU,2110425,http://localhost:5000/get_country/Nauru,http://localhost:5000/get_country/continent/Oceania
-170,Niue,Alofi,Oceania,OC,NZD,NIU,4036232,http://localhost:5000/get_country/Niue,http://localhost:5000/get_country/continent/Oceania
-171,New Zealand,Wellington,Oceania,OC,NZD,NZL,2186224,http://localhost:5000/get_country/New%20Zealand,http://localhost:5000/get_country/continent/Oceania
-172,Oman,Muscat,Asia,AS,OMR,OMN,286963,http://localhost:5000/get_country/Oman,http://localhost:5000/get_country/continent/Asia
-173,Panama,Panama City,North America,NA,PAB,PAN,3703430,http://localhost:5000/get_country/Panama,http://localhost:5000/get_country/continent/North%20America
-174,Peru,Lima,South America,SA,PEN,PER,3932488,http://localhost:5000/get_country/Peru,http://localhost:5000/get_country/continent/South%20America
-175,French Polynesia,Papeete,Oceania,OC,XPF,PYF,4030656,http://localhost:5000/get_country/French%20Polynesia,http://localhost:5000/get_country/continent/Oceania
-176,Papua New Guinea,Port Moresby,Oceania,OC,PGK,PNG,2088628,http://localhost:5000/get_country/Papua%20New%20Guinea,http://localhost:5000/get_country/continent/Oceania
-177,Philippines,Manila,Asia,AS,PHP,PHL,1694008,http://localhost:5000/get_country/Philippines,http://localhost:5000/get_country/continent/Asia
-178,Pakistan,Islamabad,Asia,AS,PKR,PAK,1168579,http://localhost:5000/get_country/Pakistan,http://localhost:5000/get_country/continent/Asia
-179,Poland,Warsaw,Europe,EU,PLN,POL,798544,http://localhost:5000/get_country/Poland,http://localhost:5000/get_country/continent/Europe
-180,Saint Pierre and Miquelon,Saint-Pierre,North America,NA,EUR,SPM,3424932,http://localhost:5000/get_country/Saint%20Pierre%20and%20Miquelon,http://localhost:5000/get_country/continent/North%20America
-181,Pitcairn Islands,Adamstown,Oceania,OC,NZD,PCN,4030699,http://localhost:5000/get_country/Pitcairn%20Islands,http://localhost:5000/get_country/continent/Oceania
-182,Puerto Rico,San Juan,North America,NA,USD,PRI,4566966,http://localhost:5000/get_country/Puerto%20Rico,http://localhost:5000/get_country/continent/North%20America
-183,Palestine,Ramallah,Asia,AS,ILS,PSE,6254930,http://localhost:5000/get_country/Palestine,http://localhost:5000/get_country/continent/Asia
-184,Portugal,Lisbon,Europe,EU,EUR,PRT,2264397,http://localhost:5000/get_country/Portugal,http://localhost:5000/get_country/continent/Europe
-185,Palau,Melekeok - Palau State Capital,Oceania,OC,USD,PLW,1559582,http://localhost:5000/get_country/Palau,http://localhost:5000/get_country/continent/Oceania
-186,Paraguay,Asunción,South America,SA,PYG,PRY,3437598,http://localhost:5000/get_country/Paraguay,http://localhost:5000/get_country/continent/South%20America
-187,Qatar,Doha,Asia,AS,QAR,QAT,289688,http://localhost:5000/get_country/Qatar,http://localhost:5000/get_country/continent/Asia
-188,Réunion,Saint-Denis,Africa,AF,EUR,REU,935317,http://localhost:5000/get_country/Réunion,http://localhost:5000/get_country/continent/Africa
-189,Romania,Bucharest,Europe,EU,RON,ROU,798549,http://localhost:5000/get_country/Romania,http://localhost:5000/get_country/continent/Europe
-190,Serbia,Belgrade,Europe,EU,RSD,SRB,6290252,http://localhost:5000/get_country/Serbia,http://localhost:5000/get_country/continent/Europe
-191,Russia,Moscow,Europe,EU,RUB,RUS,2017370,http://localhost:5000/get_country/Russia,http://localhost:5000/get_country/continent/Europe
-192,Rwanda,Kigali,Africa,AF,RWF,RWA,49518,http://localhost:5000/get_country/Rwanda,http://localhost:5000/get_country/continent/Africa
-193,Saudi Arabia,Riyadh,Asia,AS,SAR,SAU,102358,http://localhost:5000/get_country/Saudi%20Arabia,http://localhost:5000/get_country/continent/Asia
-194,Solomon Islands,Honiara,Oceania,OC,SBD,SLB,2103350,http://localhost:5000/get_country/Solomon%20Islands,http://localhost:5000/get_country/continent/Oceania
-195,Seychelles,Victoria,Africa,AF,SCR,SYC,241170,http://localhost:5000/get_country/Seychelles,http://localhost:5000/get_country/continent/Africa
-196,Sudan,Khartoum,Africa,AF,SDG,SDN,366755,http://localhost:5000/get_country/Sudan,http://localhost:5000/get_country/continent/Africa
-197,Sweden,Stockholm,Europe,EU,SEK,SWE,2661886,http://localhost:5000/get_country/Sweden,http://localhost:5000/get_country/continent/Europe
-198,Singapore,Singapore,Asia,AS,SGD,SGP,1880251,http://localhost:5000/get_country/Singapore,http://localhost:5000/get_country/continent/Asia
-199,Saint Helena,Jamestown,Africa,AF,SHP,SHN,3370751,http://localhost:5000/get_country/Saint%20Helena,http://localhost:5000/get_country/continent/Africa
-200,Slovenia,Ljubljana,Europe,EU,EUR,SVN,3190538,http://localhost:5000/get_country/Slovenia,http://localhost:5000/get_country/continent/Europe
-201,Svalbard and Jan Mayen,Longyearbyen,Europe,EU,NOK,SJM,607072,http://localhost:5000/get_country/Svalbard%20and%20Jan%20Mayen,http://localhost:5000/get_country/continent/Europe
-202,Slovakia,Bratislava,Europe,EU,EUR,SVK,3057568,http://localhost:5000/get_country/Slovakia,http://localhost:5000/get_country/continent/Europe
-203,Sierra Leone,Freetown,Africa,AF,SLL,SLE,2403846,http://localhost:5000/get_country/Sierra%20Leone,http://localhost:5000/get_country/continent/Africa
-204,San Marino,San Marino,Europe,EU,EUR,SMR,3168068,http://localhost:5000/get_country/San%20Marino,http://localhost:5000/get_country/continent/Europe
-205,Senegal,Dakar,Africa,AF,XOF,SEN,2245662,http://localhost:5000/get_country/Senegal,http://localhost:5000/get_country/continent/Africa
-206,Somalia,Mogadishu,Africa,AF,SOS,SOM,51537,http://localhost:5000/get_country/Somalia,http://localhost:5000/get_country/continent/Africa
-207,Suriname,Paramaribo,South America,SA,SRD,SUR,3382998,http://localhost:5000/get_country/Suriname,http://localhost:5000/get_country/continent/South%20America
-208,South Sudan,Juba,Africa,AF,SSP,SSD,7909807,http://localhost:5000/get_country/South%20Sudan,http://localhost:5000/get_country/continent/Africa
-209,São Tomé and Príncipe,São Tomé,Africa,AF,STD,STP,2410758,http://localhost:5000/get_country/São%20Tomé%20and%20Príncipe,http://localhost:5000/get_country/continent/Africa
-210,El Salvador,San Salvador,North America,NA,USD,SLV,3585968,http://localhost:5000/get_country/El%20Salvador,http://localhost:5000/get_country/continent/North%20America
-211,Sint Maarten,Philipsburg,North America,NA,ANG,SXM,7609695,http://localhost:5000/get_country/Sint%20Maarten,http://localhost:5000/get_country/continent/North%20America
-212,Syria,Damascus,Asia,AS,SYP,SYR,163843,http://localhost:5000/get_country/Syria,http://localhost:5000/get_country/continent/Asia
-213,Swaziland,Mbabane,Africa,AF,SZL,SWZ,934841,http://localhost:5000/get_country/Swaziland,http://localhost:5000/get_country/continent/Africa
-214,Turks and Caicos Islands,Cockburn Town,North America,NA,USD,TCA,3576916,http://localhost:5000/get_country/Turks%20and%20Caicos%20Islands,http://localhost:5000/get_country/continent/North%20America
-215,Chad,N\Djamena,Africa,AF,XAF,TCD,2434508,http://localhost:5000/get_country/Chad,http://localhost:5000/get_country/continent/Africa
-216,French Southern Territories,Port-aux-Français,Antarctica,AN,EUR,ATF,1546748,http://localhost:5000/get_country/French%20Southern%20Territories,http://localhost:5000/get_country/continent/Antarctica
-217,Togo,Lomé,Africa,AF,XOF,TGO,2363686,http://localhost:5000/get_country/Togo,http://localhost:5000/get_country/continent/Africa
-218,Thailand,Bangkok,Asia,AS,THB,THA,1605651,http://localhost:5000/get_country/Thailand,http://localhost:5000/get_country/continent/Asia
-219,Tajikistan,Dushanbe,Asia,AS,TJS,TJK,1220409,http://localhost:5000/get_country/Tajikistan,http://localhost:5000/get_country/continent/Asia
-220,Tokelau,Nukunonu,Oceania,OC,NZD,TKL,4031074,http://localhost:5000/get_country/Tokelau,http://localhost:5000/get_country/continent/Oceania
-221,East Timor,Dili,Oceania,OC,USD,TLS,1966436,http://localhost:5000/get_country/East%20Timor,http://localhost:5000/get_country/continent/Oceania
-222,Turkmenistan,Ashgabat,Asia,AS,TMT,TKM,1218197,http://localhost:5000/get_country/Turkmenistan,http://localhost:5000/get_country/continent/Asia
-223,Tunisia,Tunis,Africa,AF,TND,TUN,2464461,http://localhost:5000/get_country/Tunisia,http://localhost:5000/get_country/continent/Africa
-224,Tonga,Nuku\alofa,Oceania,OC,TOP,TON,4032283,http://localhost:5000/get_country/Tonga,http://localhost:5000/get_country/continent/Oceania
-225,Turkey,Ankara,Asia,AS,TRY,TUR,298795,http://localhost:5000/get_country/Turkey,http://localhost:5000/get_country/continent/Asia
-226,Trinidad and Tobago,Port of Spain,North America,NA,TTD,TTO,3573591,http://localhost:5000/get_country/Trinidad%20and%20Tobago,http://localhost:5000/get_country/continent/North%20America
-227,Tuvalu,Funafuti,Oceania,OC,AUD,TUV,2110297,http://localhost:5000/get_country/Tuvalu,http://localhost:5000/get_country/continent/Oceania
-228,Taiwan,Taipei,Asia,AS,TWD,TWN,1668284,http://localhost:5000/get_country/Taiwan,http://localhost:5000/get_country/continent/Asia
-229,Tanzania,Dodoma,Africa,AF,TZS,TZA,149590,http://localhost:5000/get_country/Tanzania,http://localhost:5000/get_country/continent/Africa
-230,Ukraine,Kyiv,Europe,EU,UAH,UKR,690791,http://localhost:5000/get_country/Ukraine,http://localhost:5000/get_country/continent/Europe
-231,Uganda,Kampala,Africa,AF,UGX,UGA,226074,http://localhost:5000/get_country/Uganda,http://localhost:5000/get_country/continent/Africa
-232,U.S. Minor Outlying Islands,Washington D C,Oceania,OC,USD,UMI,5854968,http://localhost:5000/get_country/U.S.%20Minor%20Outlying%20Islands,http://localhost:5000/get_country/continent/Oceania
-233,United States,Washington,North America,NA,USD,USA,6252001,http://localhost:5000/get_country/United%20States,http://localhost:5000/get_country/continent/North%20America
-234,Uruguay,Montevideo,South America,SA,UYU,URY,3439705,http://localhost:5000/get_country/Uruguay,http://localhost:5000/get_country/continent/South%20America
-235,Uzbekistan,Tashkent,Asia,AS,UZS,UZB,1512440,http://localhost:5000/get_country/Uzbekistan,http://localhost:5000/get_country/continent/Asia
-236,Vatican City,Vatican,Europe,EU,EUR,VAT,3164670,http://localhost:5000/get_country/Vatican%20City,http://localhost:5000/get_country/continent/Europe
-237,Saint Vincent and the Grenadines,Kingstown,North America,NA,XCD,VCT,3577815,http://localhost:5000/get_country/Saint%20Vincent%20and%20the%20Grenadines,http://localhost:5000/get_country/continent/North%20America
-238,Venezuela,Caracas,South America,SA,VEF,VEN,3625428,http://localhost:5000/get_country/Venezuela,http://localhost:5000/get_country/continent/South%20America
-239,British Virgin Islands,Road Town,North America,NA,USD,VGB,3577718,http://localhost:5000/get_country/British%20Virgin%20Islands,http://localhost:5000/get_country/continent/North%20America
-240,U.S. Virgin Islands,Charlotte Amalie,North America,NA,USD,VIR,4796775,http://localhost:5000/get_country/U.S.%20Virgin%20Islands,http://localhost:5000/get_country/continent/North%20America
-241,Vietnam,Hanoi,Asia,AS,VND,VNM,1562822,http://localhost:5000/get_country/Vietnam,http://localhost:5000/get_country/continent/Asia
-242,Vanuatu,Port Vila,Oceania,OC,VUV,VUT,2134431,http://localhost:5000/get_country/Vanuatu,http://localhost:5000/get_country/continent/Oceania
-243,Wallis and Futuna,Mata-Utu,Oceania,OC,XPF,WLF,4034749,http://localhost:5000/get_country/Wallis%20and%20Futuna,http://localhost:5000/get_country/continent/Oceania
-244,Samoa,Apia,Oceania,OC,WST,WSM,4034894,http://localhost:5000/get_country/Samoa,http://localhost:5000/get_country/continent/Oceania
-245,Kosovo,Pristina,Europe,EU,EUR,XKX,831053,http://localhost:5000/get_country/Kosovo,http://localhost:5000/get_country/continent/Europe
-246,Yemen,Sanaa,Asia,AS,YER,YEM,69543,http://localhost:5000/get_country/Yemen,http://localhost:5000/get_country/continent/Asia
-247,Mayotte,Mamoutzou,Africa,AF,EUR,MYT,1024031,http://localhost:5000/get_country/Mayotte,http://localhost:5000/get_country/continent/Africa
-248,South Africa,Pretoria,Africa,AF,ZAR,ZAF,953987,http://localhost:5000/get_country/South%20Africa,http://localhost:5000/get_country/continent/Africa
-249,Zambia,Lusaka,Africa,AF,ZMW,ZMB,895949,http://localhost:5000/get_country/Zambia,http://localhost:5000/get_country/continent/Africa
-250,Zimbabwe,Harare,Africa,AF,ZWL,ZWE,878675,http://localhost:5000/get_country/Zimbabwe,http://localhost:5000/get_country/continent/Africa
+1,Andorra,Andorra la Vella,Europe,EU,EUR,AND,3041565,http://localhost:5000/get_country/Andorra,http://localhost:5000/get_country/continent/Europe,0
+2,United Arab Emirates,Abu Dhabi,Asia,AS,AED,ARE,290557,http://localhost:5000/get_country/United%20Arab%20Emirates,http://localhost:5000/get_country/continent/Asia,0
+3,Afghanistan,Kabul,Asia,AS,AFN,AFG,1149361,http://localhost:5000/get_country/Afghanistan,http://localhost:5000/get_country/continent/Asia,0
+4,Antigua and Barbuda,St. John\s,North America,NA,XCD,ATG,3576396,http://localhost:5000/get_country/Antigua%20and%20Barbuda,http://localhost:5000/get_country/continent/North%20America,0
+5,Anguilla,The Valley,North America,NA,XCD,AIA,3573511,http://localhost:5000/get_country/Anguilla,http://localhost:5000/get_country/continent/North%20America,0
+6,Albania,Tirana,Europe,EU,ALL,ALB,783754,http://localhost:5000/get_country/Albania,http://localhost:5000/get_country/continent/Europe,0
+7,Armenia,Yerevan,Asia,AS,AMD,ARM,174982,http://localhost:5000/get_country/Armenia,http://localhost:5000/get_country/continent/Asia,0
+8,Angola,Luanda,Africa,AF,AOA,AGO,3351879,http://localhost:5000/get_country/Angola,http://localhost:5000/get_country/continent/Africa,0
+9,Antarctica,McMurdo,Antarctica,AN,,ATA,6697173,http://localhost:5000/get_country/Antarctica,http://localhost:5000/get_country/continent/Antarctica,0
+10,Argentina,Buenos Aires,South America,SA,ARS,ARG,3865483,http://localhost:5000/get_country/Argentina,http://localhost:5000/get_country/continent/South%20America,0
+11,American Samoa,Pago Pago,Oceania,OC,USD,ASM,5880801,http://localhost:5000/get_country/American%20Samoa,http://localhost:5000/get_country/continent/Oceania,0
+12,Austria,Vienna,Europe,EU,EUR,AUT,2782113,http://localhost:5000/get_country/Austria,http://localhost:5000/get_country/continent/Europe,0
+13,Australia,Canberra,Oceania,OC,AUD,AUS,2077456,http://localhost:5000/get_country/Australia,http://localhost:5000/get_country/continent/Oceania,0
+14,Aruba,Oranjestad,North America,NA,AWG,ABW,3577279,http://localhost:5000/get_country/Aruba,http://localhost:5000/get_country/continent/North%20America,0
+15,Åland Islands,Mariehamn,Europe,EU,EUR,ALA,661882,http://localhost:5000/get_country/Åland%20Islands,http://localhost:5000/get_country/continent/Europe,0
+16,Azerbaijan,Baku,Asia,AS,AZN,AZE,587116,http://localhost:5000/get_country/Azerbaijan,http://localhost:5000/get_country/continent/Asia,0
+17,Bosnia and Herzegovina,Sarajevo,Europe,EU,BAM,BIH,3277605,http://localhost:5000/get_country/Bosnia%20and%20Herzegovina,http://localhost:5000/get_country/continent/Europe,0
+18,Barbados,Bridgetown,North America,NA,BBD,BRB,3374084,http://localhost:5000/get_country/Barbados,http://localhost:5000/get_country/continent/North%20America,0
+19,Bangladesh,Dhaka,Asia,AS,BDT,BGD,1210997,http://localhost:5000/get_country/Bangladesh,http://localhost:5000/get_country/continent/Asia,0
+20,Belgium,Brussels,Europe,EU,EUR,BEL,2802361,http://localhost:5000/get_country/Belgium,http://localhost:5000/get_country/continent/Europe,0
+21,Burkina Faso,Ouagadougou,Africa,AF,XOF,BFA,2361809,http://localhost:5000/get_country/Burkina%20Faso,http://localhost:5000/get_country/continent/Africa,0
+22,Bulgaria,Sofia,Europe,EU,BGN,BGR,732800,http://localhost:5000/get_country/Bulgaria,http://localhost:5000/get_country/continent/Europe,0
+23,Bahrain,Manama,Asia,AS,BHD,BHR,290291,http://localhost:5000/get_country/Bahrain,http://localhost:5000/get_country/continent/Asia,0
+24,Burundi,Bujumbura,Africa,AF,BIF,BDI,433561,http://localhost:5000/get_country/Burundi,http://localhost:5000/get_country/continent/Africa,0
+25,Benin,Porto-Novo,Africa,AF,XOF,BEN,2395170,http://localhost:5000/get_country/Benin,http://localhost:5000/get_country/continent/Africa,0
+26,Saint Barthélemy,Gustavia,North America,NA,EUR,BLM,3578476,http://localhost:5000/get_country/Saint%20Barthélemy,http://localhost:5000/get_country/continent/North%20America,0
+27,Bermuda,Hamilton,North America,NA,BMD,BMU,3573345,http://localhost:5000/get_country/Bermuda,http://localhost:5000/get_country/continent/North%20America,0
+28,Brunei Darussalam,Bandar Seri Begawan,Asia,AS,BND,BRN,1820814,http://localhost:5000/get_country/Brunei%20Darussalam,http://localhost:5000/get_country/continent/Asia,0
+29,Bolivia,Sucre,South America,SA,BOB,BOL,3923057,http://localhost:5000/get_country/Bolivia,http://localhost:5000/get_country/continent/South%20America,0
+30,Bonaire,Sint Eustatius and Saba,North America,NA,BON,BRE,18208140,http://localhost:5000/get_country/Bonaire,http://localhost:5000/get_country/continent/North%20America,0
+31,Brazil,Brasília,South America,SA,BRL,BRA,3469034,http://localhost:5000/get_country/Brazil,http://localhost:5000/get_country/continent/South%20America,0
+32,Bahamas,Nassau,North America,NA,BSD,BHS,3572887,http://localhost:5000/get_country/Bahamas,http://localhost:5000/get_country/continent/North%20America,0
+33,Bhutan,Thimphu,Asia,AS,BTN,BTN,1252634,http://localhost:5000/get_country/Bhutan,http://localhost:5000/get_country/continent/Asia,0
+34,Bouvet Island,Norvegia Station,Antarctica,AN,NOK,BVT,3371123,http://localhost:5000/get_country/Bouvet%20Island,http://localhost:5000/get_country/continent/Antarctica,0
+35,Botswana,Gaborone,Africa,AF,BWP,BWA,933860,http://localhost:5000/get_country/Botswana,http://localhost:5000/get_country/continent/Africa,0
+36,Belarus,Minsk,Europe,EU,BYR,BLR,630336,http://localhost:5000/get_country/Belarus,http://localhost:5000/get_country/continent/Europe,0
+37,Belize,Belmopan,North America,NA,BZD,BLZ,3582678,http://localhost:5000/get_country/Belize,http://localhost:5000/get_country/continent/North%20America,0
+38,Canada,Ottawa,North America,NA,CAD,CAN,6251999,http://localhost:5000/get_country/Canada,http://localhost:5000/get_country/continent/North%20America,0
+39,Cocos [Keeling] Islands,West Island,Asia,AS,AUD,CCK,1547376,http://localhost:5000/get_country/Cocos%20[Keeling]%20Islands,http://localhost:5000/get_country/continent/Asia,0
+40,Democratic Republic of the Congo,Kinshasa,Africa,AF,COD,COD,203312,http://localhost:5000/get_country/Democratic%20Republic%20of%20the%20Congo,http://localhost:5000/get_country/continent/Africa,0
+41,Central African Republic,Bangui,Africa,AF,XAF,CAF,239880,http://localhost:5000/get_country/Central%20African%20Republic,http://localhost:5000/get_country/continent/Africa,0
+42,Republic of the Congo,Brazzaville,Africa,AF,XAF,COG,2260494,http://localhost:5000/get_country/Republic%20of%20the%20Congo,http://localhost:5000/get_country/continent/Africa,0
+43,Switzerland,Berne,Europe,EU,CHF,CHE,2658434,http://localhost:5000/get_country/Switzerland,http://localhost:5000/get_country/continent/Europe,0
+44,Ivory Coast,Yamoussoukro,Africa,AF,XOF,CIV,2287781,http://localhost:5000/get_country/Ivory%20Coast,http://localhost:5000/get_country/continent/Africa,0
+45,Cook Islands,Avarua,Oceania,OC,NZD,COK,1899402,http://localhost:5000/get_country/Cook%20Islands,http://localhost:5000/get_country/continent/Oceania,0
+46,Chile,Santiago,South America,SA,CLP,CHL,3895114,http://localhost:5000/get_country/Chile,http://localhost:5000/get_country/continent/South%20America,0
+47,Cameroon,Yaoundé,Africa,AF,XAF,CMR,2233387,http://localhost:5000/get_country/Cameroon,http://localhost:5000/get_country/continent/Africa,0
+48,China,Beijing,Asia,AS,CNY,CHN,1814991,http://localhost:5000/get_country/China,http://localhost:5000/get_country/continent/Asia,0
+49,Colombia,Bogotá,South America,SA,COP,COL,3686110,http://localhost:5000/get_country/Colombia,http://localhost:5000/get_country/continent/South%20America,0
+50,Costa Rica,San José,North America,NA,CRC,CRI,3624060,http://localhost:5000/get_country/Costa%20Rica,http://localhost:5000/get_country/continent/North%20America,0
+51,Cuba,Havana,North America,NA,CUP,CUB,3562981,http://localhost:5000/get_country/Cuba,http://localhost:5000/get_country/continent/North%20America,0
+52,Cape Verde,Praia,Africa,AF,CVE,CPV,3374766,http://localhost:5000/get_country/Cape%20Verde,http://localhost:5000/get_country/continent/Africa,0
+53,Curaçao,Willemstad,North America,NA,ANG,CUW,7626836,http://localhost:5000/get_country/Curaçao,http://localhost:5000/get_country/continent/North%20America,0
+54,Christmas Island,The Settlement,Asia,AS,AUD,CXR,2078138,http://localhost:5000/get_country/Christmas%20Island,http://localhost:5000/get_country/continent/Asia,0
+55,Cyprus,Nicosia,Europe,EU,EUR,CYP,146669,http://localhost:5000/get_country/Cyprus,http://localhost:5000/get_country/continent/Europe,0
+56,Czech Republic,Prague,Europe,EU,CZK,CZE,3077311,http://localhost:5000/get_country/Czech%20Republic,http://localhost:5000/get_country/continent/Europe,0
+57,Germany,Berlin,Europe,EU,EUR,DEU,2921044,http://localhost:5000/get_country/Germany,http://localhost:5000/get_country/continent/Europe,0
+58,Djibouti,Djibouti,Africa,AF,DJF,DJI,223816,http://localhost:5000/get_country/Djibouti,http://localhost:5000/get_country/continent/Africa,0
+59,Denmark,Copenhagen,Europe,EU,DKK,DNK,2623032,http://localhost:5000/get_country/Denmark,http://localhost:5000/get_country/continent/Europe,0
+60,Dominica,Roseau,North America,NA,XCD,DMA,3575830,http://localhost:5000/get_country/Dominica,http://localhost:5000/get_country/continent/North%20America,0
+61,Dominican Republic,Santo Domingo,North America,NA,DOP,DOM,3508796,http://localhost:5000/get_country/Dominican%20Republic,http://localhost:5000/get_country/continent/North%20America,0
+62,Algeria,Algiers,Africa,AF,DZD,DZA,2589581,http://localhost:5000/get_country/Algeria,http://localhost:5000/get_country/continent/Africa,0
+63,Ecuador,Quito,South America,SA,USD,ECU,3658394,http://localhost:5000/get_country/Ecuador,http://localhost:5000/get_country/continent/South%20America,0
+64,Estonia,Tallinn,Europe,EU,EUR,EST,453733,http://localhost:5000/get_country/Estonia,http://localhost:5000/get_country/continent/Europe,0
+65,Egypt,Cairo,Africa,AF,EGP,EGY,357994,http://localhost:5000/get_country/Egypt,http://localhost:5000/get_country/continent/Africa,0
+66,Western Sahara,El Aaiún,Africa,AF,MAD,ESH,2461445,http://localhost:5000/get_country/Western%20Sahara,http://localhost:5000/get_country/continent/Africa,0
+67,Eritrea,Asmara,Africa,AF,ERN,ERI,338010,http://localhost:5000/get_country/Eritrea,http://localhost:5000/get_country/continent/Africa,0
+68,Spain,Madrid,Europe,EU,EUR,ESP,2510769,http://localhost:5000/get_country/Spain,http://localhost:5000/get_country/continent/Europe,0
+69,Ethiopia,Addis Ababa,Africa,AF,ETB,ETH,337996,http://localhost:5000/get_country/Ethiopia,http://localhost:5000/get_country/continent/Africa,0
+70,Finland,Helsinki,Europe,EU,EUR,FIN,660013,http://localhost:5000/get_country/Finland,http://localhost:5000/get_country/continent/Europe,0
+71,Fiji,Suva,Oceania,OC,FJD,FJI,2205218,http://localhost:5000/get_country/Fiji,http://localhost:5000/get_country/continent/Oceania,0
+72,Falkland Islands,Stanley,South America,SA,FKP,FLK,3474414,http://localhost:5000/get_country/Falkland%20Islands,http://localhost:5000/get_country/continent/South%20America,0
+73,Micronesia,Palikir,Oceania,OC,USD,FSM,2081918,http://localhost:5000/get_country/Micronesia,http://localhost:5000/get_country/continent/Oceania,0
+74,Faroe Islands,Tórshavn,Europe,EU,DKK,FRO,2622320,http://localhost:5000/get_country/Faroe%20Islands,http://localhost:5000/get_country/continent/Europe,0
+75,France,Paris,Europe,EU,EUR,FRA,3017382,http://localhost:5000/get_country/France,http://localhost:5000/get_country/continent/Europe,0
+76,Gabon,Libreville,Africa,AF,XAF,GAB,2400553,http://localhost:5000/get_country/Gabon,http://localhost:5000/get_country/continent/Africa,0
+77,United Kingdom of Great Britain and Northern Ireland,London,Europe,EU,GBP,GBR,2635167,http://localhost:5000/get_country/United%20Kingdom%20of%20Great%20Britain%20and%20Northern%20Ireland,http://localhost:5000/get_country/continent/Europe,0
+78,Grenada,St. George\s,North America,NA,XCD,GRD,3580239,http://localhost:5000/get_country/Grenada,http://localhost:5000/get_country/continent/North%20America,0
+79,Georgia,Tbilisi,Asia,AS,GEL,GEO,614540,http://localhost:5000/get_country/Georgia,http://localhost:5000/get_country/continent/Asia,0
+80,French Guiana,Cayenne,South America,SA,EUR,GUF,3381670,http://localhost:5000/get_country/French%20Guiana,http://localhost:5000/get_country/continent/South%20America,0
+81,Guernsey,St Peter Port,Europe,EU,GBP,GGY,3042362,http://localhost:5000/get_country/Guernsey,http://localhost:5000/get_country/continent/Europe,0
+82,Ghana,Accra,Africa,AF,GHS,GHA,2300660,http://localhost:5000/get_country/Ghana,http://localhost:5000/get_country/continent/Africa,0
+83,Gibraltar,Gibraltar,Europe,EU,GIP,GIB,2411586,http://localhost:5000/get_country/Gibraltar,http://localhost:5000/get_country/continent/Europe,0
+84,Greenland,Nuuk,North America,NA,DKK,GRL,3425505,http://localhost:5000/get_country/Greenland,http://localhost:5000/get_country/continent/North%20America,0
+85,Gambia,Banjul,Africa,AF,GMD,GMB,2413451,http://localhost:5000/get_country/Gambia,http://localhost:5000/get_country/continent/Africa,0
+86,Guinea,Conakry,Africa,AF,GNF,GIN,2420477,http://localhost:5000/get_country/Guinea,http://localhost:5000/get_country/continent/Africa,0
+87,Guadeloupe,Basse-Terre,North America,NA,EUR,GLP,3579143,http://localhost:5000/get_country/Guadeloupe,http://localhost:5000/get_country/continent/North%20America,0
+88,Equatorial Guinea,Malabo,Africa,AF,XAF,GNQ,2309096,http://localhost:5000/get_country/Equatorial%20Guinea,http://localhost:5000/get_country/continent/Africa,0
+89,Greece,Athens,Europe,EU,EUR,GRC,390903,http://localhost:5000/get_country/Greece,http://localhost:5000/get_country/continent/Europe,0
+90,South Georgia and the South Sandwich Islands,Grytviken,Antarctica,AN,GBP,SGS,3474415,http://localhost:5000/get_country/South%20Georgia%20and%20the%20South%20Sandwich%20Islands,http://localhost:5000/get_country/continent/Antarctica,0
+91,Guatemala,Guatemala City,North America,NA,GTQ,GTM,3595528,http://localhost:5000/get_country/Guatemala,http://localhost:5000/get_country/continent/North%20America,0
+92,Guam,Hagåtña,Oceania,OC,USD,GUM,4043988,http://localhost:5000/get_country/Guam,http://localhost:5000/get_country/continent/Oceania,0
+93,Guinea-Bissau,Bissau,Africa,AF,XOF,GNB,2372248,http://localhost:5000/get_country/Guinea-Bissau,http://localhost:5000/get_country/continent/Africa,0
+94,Guyana,Georgetown,South America,SA,GYD,GUY,3378535,http://localhost:5000/get_country/Guyana,http://localhost:5000/get_country/continent/South%20America,0
+95,Hong Kong,Hong Kong,Asia,AS,HKD,HKG,1819730,http://localhost:5000/get_country/Hong%20Kong,http://localhost:5000/get_country/continent/Asia,0
+96,Heard Island and McDonald Islands,Mawson Peak,Antarctica,AN,AUD,HMD,1547314,http://localhost:5000/get_country/Heard%20Island%20and%20McDonald%20Islands,http://localhost:5000/get_country/continent/Antarctica,0
+97,Honduras,Tegucigalpa,North America,NA,HNL,HND,3608932,http://localhost:5000/get_country/Honduras,http://localhost:5000/get_country/continent/North%20America,0
+98,Croatia,Zagreb,Europe,EU,HRK,HRV,3202326,http://localhost:5000/get_country/Croatia,http://localhost:5000/get_country/continent/Europe,0
+99,Haiti,Port-au-Prince,North America,NA,HTG,HTI,3723988,http://localhost:5000/get_country/Haiti,http://localhost:5000/get_country/continent/North%20America,0
+100,Hungary,Budapest,Europe,EU,HUF,HUN,719819,http://localhost:5000/get_country/Hungary,http://localhost:5000/get_country/continent/Europe,0
+101,Indonesia,Jakarta,Asia,AS,IDR,IDN,1643084,http://localhost:5000/get_country/Indonesia,http://localhost:5000/get_country/continent/Asia,0
+102,Ireland,Dublin,Europe,EU,EUR,IRL,2963597,http://localhost:5000/get_country/Ireland,http://localhost:5000/get_country/continent/Europe,0
+103,Israel,Jerusalem,Asia,AS,ILS,ISR,294640,http://localhost:5000/get_country/Israel,http://localhost:5000/get_country/continent/Asia,0
+104,Isle of Man,Douglas,Europe,EU,GBP,IMN,3042225,http://localhost:5000/get_country/Isle%20of%20Man,http://localhost:5000/get_country/continent/Europe,0
+105,India,New Delhi,Asia,AS,INR,IND,1269750,http://localhost:5000/get_country/India,http://localhost:5000/get_country/continent/Asia,0
+106,British Indian Ocean Territory,Camp Justice,Asia,AS,USD,IOT,1282588,http://localhost:5000/get_country/British%20Indian%20Ocean%20Territory,http://localhost:5000/get_country/continent/Asia,0
+107,Iraq,Baghdad,Asia,AS,IQD,IRQ,99237,http://localhost:5000/get_country/Iraq,http://localhost:5000/get_country/continent/Asia,0
+108,Iran,Tehran,Asia,AS,IRR,IRN,130758,http://localhost:5000/get_country/Iran,http://localhost:5000/get_country/continent/Asia,0
+109,Iceland,Reykjavik,Europe,EU,ISK,ISL,2629691,http://localhost:5000/get_country/Iceland,http://localhost:5000/get_country/continent/Europe,0
+110,Italy,Rome,Europe,EU,EUR,ITA,3175395,http://localhost:5000/get_country/Italy,http://localhost:5000/get_country/continent/Europe,0
+111,Jersey,Saint Helier,Europe,EU,GBP,JEY,3042142,http://localhost:5000/get_country/Jersey,http://localhost:5000/get_country/continent/Europe,0
+112,Jamaica,Kingston,North America,NA,JMD,JAM,3489940,http://localhost:5000/get_country/Jamaica,http://localhost:5000/get_country/continent/North%20America,0
+113,Jordan,Amman,Asia,AS,JOD,JOR,248816,http://localhost:5000/get_country/Jordan,http://localhost:5000/get_country/continent/Asia,0
+114,Japan,Tokyo,Asia,AS,JPY,JPN,1861060,http://localhost:5000/get_country/Japan,http://localhost:5000/get_country/continent/Asia,0
+115,Kenya,Nairobi,Africa,AF,KES,KEN,192950,http://localhost:5000/get_country/Kenya,http://localhost:5000/get_country/continent/Africa,0
+116,Kyrgyzstan,Bishkek,Asia,AS,KGS,KGZ,1527747,http://localhost:5000/get_country/Kyrgyzstan,http://localhost:5000/get_country/continent/Asia,0
+117,Cambodia,Phnom Penh,Asia,AS,KHR,KHM,1831722,http://localhost:5000/get_country/Cambodia,http://localhost:5000/get_country/continent/Asia,0
+118,Kiribati,Tarawa,Oceania,OC,AUD,KIR,4030945,http://localhost:5000/get_country/Kiribati,http://localhost:5000/get_country/continent/Oceania,0
+119,Comoros,Moroni,Africa,AF,KMF,COM,921929,http://localhost:5000/get_country/Comoros,http://localhost:5000/get_country/continent/Africa,0
+120,Saint Kitts and Nevis,Basseterre,North America,NA,XCD,KNA,3575174,http://localhost:5000/get_country/Saint%20Kitts%20and%20Nevis,http://localhost:5000/get_country/continent/North%20America,0
+121,North Korea,Pyongyang,Asia,AS,KPW,PRK,1873107,http://localhost:5000/get_country/North%20Korea,http://localhost:5000/get_country/continent/Asia,0
+122,South Korea,Seoul,Asia,AS,KRW,KOR,1835841,http://localhost:5000/get_country/South%20Korea,http://localhost:5000/get_country/continent/Asia,0
+123,Kuwait,Kuwait City,Asia,AS,KWD,KWT,285570,http://localhost:5000/get_country/Kuwait,http://localhost:5000/get_country/continent/Asia,0
+124,Cayman Islands,George Town,North America,NA,KYD,CYM,3580718,http://localhost:5000/get_country/Cayman%20Islands,http://localhost:5000/get_country/continent/North%20America,0
+125,Kazakhstan,Astana,Asia,AS,KZT,KAZ,1522867,http://localhost:5000/get_country/Kazakhstan,http://localhost:5000/get_country/continent/Asia,0
+126,Laos,Vientiane,Asia,AS,LAK,LAO,1655842,http://localhost:5000/get_country/Laos,http://localhost:5000/get_country/continent/Asia,0
+127,Lebanon,Beirut,Asia,AS,LBP,LBN,272103,http://localhost:5000/get_country/Lebanon,http://localhost:5000/get_country/continent/Asia,0
+128,Saint Lucia,Castries,North America,NA,XCD,LCA,3576468,http://localhost:5000/get_country/Saint%20Lucia,http://localhost:5000/get_country/continent/North%20America,0
+129,Liechtenstein,Vaduz,Europe,EU,CHF,LIE,3042058,http://localhost:5000/get_country/Liechtenstein,http://localhost:5000/get_country/continent/Europe,0
+130,Sri Lanka,Colombo,Asia,AS,LKR,LKA,1227603,http://localhost:5000/get_country/Sri%20Lanka,http://localhost:5000/get_country/continent/Asia,0
+131,Liberia,Monrovia,Africa,AF,LRD,LBR,2275384,http://localhost:5000/get_country/Liberia,http://localhost:5000/get_country/continent/Africa,0
+132,Lesotho,Maseru,Africa,AF,LSL,LSO,932692,http://localhost:5000/get_country/Lesotho,http://localhost:5000/get_country/continent/Africa,0
+133,Lithuania,Vilnius,Europe,EU,EUR,LTU,597427,http://localhost:5000/get_country/Lithuania,http://localhost:5000/get_country/continent/Europe,0
+134,Luxembourg,Luxembourg,Europe,EU,EUR,LUX,2960313,http://localhost:5000/get_country/Luxembourg,http://localhost:5000/get_country/continent/Europe,0
+135,Latvia,Riga,Europe,EU,EUR,LVA,458258,http://localhost:5000/get_country/Latvia,http://localhost:5000/get_country/continent/Europe,0
+136,Libya,Tripoli,Africa,AF,LYD,LBY,2215636,http://localhost:5000/get_country/Libya,http://localhost:5000/get_country/continent/Africa,0
+137,Morocco,Rabat,Africa,AF,MAD,MAR,2542007,http://localhost:5000/get_country/Morocco,http://localhost:5000/get_country/continent/Africa,0
+138,Monaco,Monaco,Europe,EU,EUR,MCO,2993457,http://localhost:5000/get_country/Monaco,http://localhost:5000/get_country/continent/Europe,0
+139,Moldova,Chişinău,Europe,EU,MDL,MDA,617790,http://localhost:5000/get_country/Moldova,http://localhost:5000/get_country/continent/Europe,0
+140,Montenegro,Podgorica,Europe,EU,EUR,MNE,3194884,http://localhost:5000/get_country/Montenegro,http://localhost:5000/get_country/continent/Europe,0
+141,Saint Martin,Marigot,North America,NA,EUR,MAF,3578421,http://localhost:5000/get_country/Saint%20Martin,http://localhost:5000/get_country/continent/North%20America,0
+142,Madagascar,Antananarivo,Africa,AF,MGA,MDG,1062947,http://localhost:5000/get_country/Madagascar,http://localhost:5000/get_country/continent/Africa,0
+143,Marshall Islands,Majuro,Oceania,OC,USD,MHL,2080185,http://localhost:5000/get_country/Marshall%20Islands,http://localhost:5000/get_country/continent/Oceania,0
+144,North Macedonia,Skopje,Europe,EU,MKD,MKD,718075,http://localhost:5000/get_country/North%20Macedonia,http://localhost:5000/get_country/continent/Europe,0
+145,Mali,Bamako,Africa,AF,XOF,MLI,2453866,http://localhost:5000/get_country/Mali,http://localhost:5000/get_country/continent/Africa,0
+146,Myanmar [Burma],Nay Pyi Taw,Asia,AS,MMK,MMR,1327865,http://localhost:5000/get_country/Myanmar%20[Burma],http://localhost:5000/get_country/continent/Asia,0
+147,Mongolia,Ulan Bator,Asia,AS,MNT,MNG,2029969,http://localhost:5000/get_country/Mongolia,http://localhost:5000/get_country/continent/Asia,0
+148,Macao,Macao,Asia,AS,MOP,MAC,1821275,http://localhost:5000/get_country/Macao,http://localhost:5000/get_country/continent/Asia,0
+149,Northern Mariana Islands,Saipan,Oceania,OC,USD,MNP,4041468,http://localhost:5000/get_country/Northern%20Mariana%20Islands,http://localhost:5000/get_country/continent/Oceania,0
+150,Martinique,Fort-de-France,North America,NA,EUR,MTQ,3570311,http://localhost:5000/get_country/Martinique,http://localhost:5000/get_country/continent/North%20America,0
+151,Mauritania,Nouakchott,Africa,AF,MRO,MRT,2378080,http://localhost:5000/get_country/Mauritania,http://localhost:5000/get_country/continent/Africa,0
+152,Montserrat,Plymouth,North America,NA,XCD,MSR,3578097,http://localhost:5000/get_country/Montserrat,http://localhost:5000/get_country/continent/North%20America,0
+153,Malta,Valletta,Europe,EU,EUR,MLT,2562770,http://localhost:5000/get_country/Malta,http://localhost:5000/get_country/continent/Europe,0
+154,Mauritius,Port Louis,Africa,AF,MUR,MUS,934292,http://localhost:5000/get_country/Mauritius,http://localhost:5000/get_country/continent/Africa,0
+155,Maldives,Malé,Asia,AS,MVR,MDV,1282028,http://localhost:5000/get_country/Maldives,http://localhost:5000/get_country/continent/Asia,0
+156,Malawi,Lilongwe,Africa,AF,MWK,MWI,927384,http://localhost:5000/get_country/Malawi,http://localhost:5000/get_country/continent/Africa,0
+157,Mexico,Mexico City,North America,NA,MXN,MEX,3996063,http://localhost:5000/get_country/Mexico,http://localhost:5000/get_country/continent/North%20America,0
+158,Malaysia,Kuala Lumpur,Asia,AS,MYR,MYS,1733045,http://localhost:5000/get_country/Malaysia,http://localhost:5000/get_country/continent/Asia,0
+159,Mozambique,Maputo,Africa,AF,MZN,MOZ,1036973,http://localhost:5000/get_country/Mozambique,http://localhost:5000/get_country/continent/Africa,0
+160,Namibia,Windhoek,Africa,AF,NAD,NAM,3355338,http://localhost:5000/get_country/Namibia,http://localhost:5000/get_country/continent/Africa,0
+161,New Caledonia,Noumea,Oceania,OC,XPF,NCL,2139685,http://localhost:5000/get_country/New%20Caledonia,http://localhost:5000/get_country/continent/Oceania,0
+162,Niger,Niamey,Africa,AF,XOF,NER,2440476,http://localhost:5000/get_country/Niger,http://localhost:5000/get_country/continent/Africa,0
+163,Norfolk Island,Kingston,Oceania,OC,AUD,NFK,2155115,http://localhost:5000/get_country/Norfolk%20Island,http://localhost:5000/get_country/continent/Oceania,0
+164,Nigeria,Abuja,Africa,AF,NGN,NGA,2328926,http://localhost:5000/get_country/Nigeria,http://localhost:5000/get_country/continent/Africa,0
+165,Nicaragua,Managua,North America,NA,NIO,NIC,3617476,http://localhost:5000/get_country/Nicaragua,http://localhost:5000/get_country/continent/North%20America,0
+166,Netherlands,Amsterdam,Europe,EU,EUR,NLD,2750405,http://localhost:5000/get_country/Netherlands,http://localhost:5000/get_country/continent/Europe,0
+167,Norway,Oslo,Europe,EU,NOK,NOR,3144096,http://localhost:5000/get_country/Norway,http://localhost:5000/get_country/continent/Europe,0
+168,Nepal,Kathmandu,Asia,AS,NPR,NPL,1282988,http://localhost:5000/get_country/Nepal,http://localhost:5000/get_country/continent/Asia,0
+169,Nauru,Yaren,Oceania,OC,AUD,NRU,2110425,http://localhost:5000/get_country/Nauru,http://localhost:5000/get_country/continent/Oceania,0
+170,Niue,Alofi,Oceania,OC,NZD,NIU,4036232,http://localhost:5000/get_country/Niue,http://localhost:5000/get_country/continent/Oceania,0
+171,New Zealand,Wellington,Oceania,OC,NZD,NZL,2186224,http://localhost:5000/get_country/New%20Zealand,http://localhost:5000/get_country/continent/Oceania,0
+172,Oman,Muscat,Asia,AS,OMR,OMN,286963,http://localhost:5000/get_country/Oman,http://localhost:5000/get_country/continent/Asia,0
+173,Panama,Panama City,North America,NA,PAB,PAN,3703430,http://localhost:5000/get_country/Panama,http://localhost:5000/get_country/continent/North%20America,0
+174,Peru,Lima,South America,SA,PEN,PER,3932488,http://localhost:5000/get_country/Peru,http://localhost:5000/get_country/continent/South%20America,0
+175,French Polynesia,Papeete,Oceania,OC,XPF,PYF,4030656,http://localhost:5000/get_country/French%20Polynesia,http://localhost:5000/get_country/continent/Oceania,0
+176,Papua New Guinea,Port Moresby,Oceania,OC,PGK,PNG,2088628,http://localhost:5000/get_country/Papua%20New%20Guinea,http://localhost:5000/get_country/continent/Oceania,0
+177,Philippines,Manila,Asia,AS,PHP,PHL,1694008,http://localhost:5000/get_country/Philippines,http://localhost:5000/get_country/continent/Asia,0
+178,Pakistan,Islamabad,Asia,AS,PKR,PAK,1168579,http://localhost:5000/get_country/Pakistan,http://localhost:5000/get_country/continent/Asia,0
+179,Poland,Warsaw,Europe,EU,PLN,POL,798544,http://localhost:5000/get_country/Poland,http://localhost:5000/get_country/continent/Europe,0
+180,Saint Pierre and Miquelon,Saint-Pierre,North America,NA,EUR,SPM,3424932,http://localhost:5000/get_country/Saint%20Pierre%20and%20Miquelon,http://localhost:5000/get_country/continent/North%20America,0
+181,Pitcairn Islands,Adamstown,Oceania,OC,NZD,PCN,4030699,http://localhost:5000/get_country/Pitcairn%20Islands,http://localhost:5000/get_country/continent/Oceania,0
+182,Puerto Rico,San Juan,North America,NA,USD,PRI,4566966,http://localhost:5000/get_country/Puerto%20Rico,http://localhost:5000/get_country/continent/North%20America,0
+183,Palestine,Ramallah,Asia,AS,ILS,PSE,6254930,http://localhost:5000/get_country/Palestine,http://localhost:5000/get_country/continent/Asia,0
+184,Portugal,Lisbon,Europe,EU,EUR,PRT,2264397,http://localhost:5000/get_country/Portugal,http://localhost:5000/get_country/continent/Europe,0
+185,Palau,Melekeok - Palau State Capital,Oceania,OC,USD,PLW,1559582,http://localhost:5000/get_country/Palau,http://localhost:5000/get_country/continent/Oceania,0
+186,Paraguay,Asunción,South America,SA,PYG,PRY,3437598,http://localhost:5000/get_country/Paraguay,http://localhost:5000/get_country/continent/South%20America,0
+187,Qatar,Doha,Asia,AS,QAR,QAT,289688,http://localhost:5000/get_country/Qatar,http://localhost:5000/get_country/continent/Asia,0
+188,Réunion,Saint-Denis,Africa,AF,EUR,REU,935317,http://localhost:5000/get_country/Réunion,http://localhost:5000/get_country/continent/Africa,0
+189,Romania,Bucharest,Europe,EU,RON,ROU,798549,http://localhost:5000/get_country/Romania,http://localhost:5000/get_country/continent/Europe,0
+190,Serbia,Belgrade,Europe,EU,RSD,SRB,6290252,http://localhost:5000/get_country/Serbia,http://localhost:5000/get_country/continent/Europe,0
+191,Russia,Moscow,Europe,EU,RUB,RUS,2017370,http://localhost:5000/get_country/Russia,http://localhost:5000/get_country/continent/Europe,0
+192,Rwanda,Kigali,Africa,AF,RWF,RWA,49518,http://localhost:5000/get_country/Rwanda,http://localhost:5000/get_country/continent/Africa,0
+193,Saudi Arabia,Riyadh,Asia,AS,SAR,SAU,102358,http://localhost:5000/get_country/Saudi%20Arabia,http://localhost:5000/get_country/continent/Asia,0
+194,Solomon Islands,Honiara,Oceania,OC,SBD,SLB,2103350,http://localhost:5000/get_country/Solomon%20Islands,http://localhost:5000/get_country/continent/Oceania,0
+195,Seychelles,Victoria,Africa,AF,SCR,SYC,241170,http://localhost:5000/get_country/Seychelles,http://localhost:5000/get_country/continent/Africa,0
+196,Sudan,Khartoum,Africa,AF,SDG,SDN,366755,http://localhost:5000/get_country/Sudan,http://localhost:5000/get_country/continent/Africa,0
+197,Sweden,Stockholm,Europe,EU,SEK,SWE,2661886,http://localhost:5000/get_country/Sweden,http://localhost:5000/get_country/continent/Europe,0
+198,Singapore,Singapore,Asia,AS,SGD,SGP,1880251,http://localhost:5000/get_country/Singapore,http://localhost:5000/get_country/continent/Asia,0
+199,Saint Helena,Jamestown,Africa,AF,SHP,SHN,3370751,http://localhost:5000/get_country/Saint%20Helena,http://localhost:5000/get_country/continent/Africa,0
+200,Slovenia,Ljubljana,Europe,EU,EUR,SVN,3190538,http://localhost:5000/get_country/Slovenia,http://localhost:5000/get_country/continent/Europe,0
+201,Svalbard and Jan Mayen,Longyearbyen,Europe,EU,NOK,SJM,607072,http://localhost:5000/get_country/Svalbard%20and%20Jan%20Mayen,http://localhost:5000/get_country/continent/Europe,0
+202,Slovakia,Bratislava,Europe,EU,EUR,SVK,3057568,http://localhost:5000/get_country/Slovakia,http://localhost:5000/get_country/continent/Europe,0
+203,Sierra Leone,Freetown,Africa,AF,SLL,SLE,2403846,http://localhost:5000/get_country/Sierra%20Leone,http://localhost:5000/get_country/continent/Africa,0
+204,San Marino,San Marino,Europe,EU,EUR,SMR,3168068,http://localhost:5000/get_country/San%20Marino,http://localhost:5000/get_country/continent/Europe,0
+205,Senegal,Dakar,Africa,AF,XOF,SEN,2245662,http://localhost:5000/get_country/Senegal,http://localhost:5000/get_country/continent/Africa,0
+206,Somalia,Mogadishu,Africa,AF,SOS,SOM,51537,http://localhost:5000/get_country/Somalia,http://localhost:5000/get_country/continent/Africa,0
+207,Suriname,Paramaribo,South America,SA,SRD,SUR,3382998,http://localhost:5000/get_country/Suriname,http://localhost:5000/get_country/continent/South%20America,0
+208,South Sudan,Juba,Africa,AF,SSP,SSD,7909807,http://localhost:5000/get_country/South%20Sudan,http://localhost:5000/get_country/continent/Africa,0
+209,São Tomé and Príncipe,São Tomé,Africa,AF,STD,STP,2410758,http://localhost:5000/get_country/São%20Tomé%20and%20Príncipe,http://localhost:5000/get_country/continent/Africa,0
+210,El Salvador,San Salvador,North America,NA,USD,SLV,3585968,http://localhost:5000/get_country/El%20Salvador,http://localhost:5000/get_country/continent/North%20America,0
+211,Sint Maarten,Philipsburg,North America,NA,ANG,SXM,7609695,http://localhost:5000/get_country/Sint%20Maarten,http://localhost:5000/get_country/continent/North%20America,0
+212,Syria,Damascus,Asia,AS,SYP,SYR,163843,http://localhost:5000/get_country/Syria,http://localhost:5000/get_country/continent/Asia,0
+213,Swaziland,Mbabane,Africa,AF,SZL,SWZ,934841,http://localhost:5000/get_country/Swaziland,http://localhost:5000/get_country/continent/Africa,0
+214,Turks and Caicos Islands,Cockburn Town,North America,NA,USD,TCA,3576916,http://localhost:5000/get_country/Turks%20and%20Caicos%20Islands,http://localhost:5000/get_country/continent/North%20America,0
+215,Chad,N\Djamena,Africa,AF,XAF,TCD,2434508,http://localhost:5000/get_country/Chad,http://localhost:5000/get_country/continent/Africa,0
+216,French Southern Territories,Port-aux-Français,Antarctica,AN,EUR,ATF,1546748,http://localhost:5000/get_country/French%20Southern%20Territories,http://localhost:5000/get_country/continent/Antarctica,0
+217,Togo,Lomé,Africa,AF,XOF,TGO,2363686,http://localhost:5000/get_country/Togo,http://localhost:5000/get_country/continent/Africa,0
+218,Thailand,Bangkok,Asia,AS,THB,THA,1605651,http://localhost:5000/get_country/Thailand,http://localhost:5000/get_country/continent/Asia,0
+219,Tajikistan,Dushanbe,Asia,AS,TJS,TJK,1220409,http://localhost:5000/get_country/Tajikistan,http://localhost:5000/get_country/continent/Asia,0
+220,Tokelau,Nukunonu,Oceania,OC,NZD,TKL,4031074,http://localhost:5000/get_country/Tokelau,http://localhost:5000/get_country/continent/Oceania,0
+221,East Timor,Dili,Oceania,OC,USD,TLS,1966436,http://localhost:5000/get_country/East%20Timor,http://localhost:5000/get_country/continent/Oceania,0
+222,Turkmenistan,Ashgabat,Asia,AS,TMT,TKM,1218197,http://localhost:5000/get_country/Turkmenistan,http://localhost:5000/get_country/continent/Asia,0
+223,Tunisia,Tunis,Africa,AF,TND,TUN,2464461,http://localhost:5000/get_country/Tunisia,http://localhost:5000/get_country/continent/Africa,0
+224,Tonga,Nuku\alofa,Oceania,OC,TOP,TON,4032283,http://localhost:5000/get_country/Tonga,http://localhost:5000/get_country/continent/Oceania,0
+225,Turkey,Ankara,Asia,AS,TRY,TUR,298795,http://localhost:5000/get_country/Turkey,http://localhost:5000/get_country/continent/Asia,0
+226,Trinidad and Tobago,Port of Spain,North America,NA,TTD,TTO,3573591,http://localhost:5000/get_country/Trinidad%20and%20Tobago,http://localhost:5000/get_country/continent/North%20America,0
+227,Tuvalu,Funafuti,Oceania,OC,AUD,TUV,2110297,http://localhost:5000/get_country/Tuvalu,http://localhost:5000/get_country/continent/Oceania,0
+228,Taiwan,Taipei,Asia,AS,TWD,TWN,1668284,http://localhost:5000/get_country/Taiwan,http://localhost:5000/get_country/continent/Asia,0
+229,Tanzania,Dodoma,Africa,AF,TZS,TZA,149590,http://localhost:5000/get_country/Tanzania,http://localhost:5000/get_country/continent/Africa,0
+230,Ukraine,Kyiv,Europe,EU,UAH,UKR,690791,http://localhost:5000/get_country/Ukraine,http://localhost:5000/get_country/continent/Europe,0
+231,Uganda,Kampala,Africa,AF,UGX,UGA,226074,http://localhost:5000/get_country/Uganda,http://localhost:5000/get_country/continent/Africa,0
+232,U.S. Minor Outlying Islands,Washington D C,Oceania,OC,USD,UMI,5854968,http://localhost:5000/get_country/U.S.%20Minor%20Outlying%20Islands,http://localhost:5000/get_country/continent/Oceania,0
+233,United States,Washington,North America,NA,USD,USA,6252001,http://localhost:5000/get_country/United%20States,http://localhost:5000/get_country/continent/North%20America,0
+234,Uruguay,Montevideo,South America,SA,UYU,URY,3439705,http://localhost:5000/get_country/Uruguay,http://localhost:5000/get_country/continent/South%20America,0
+235,Uzbekistan,Tashkent,Asia,AS,UZS,UZB,1512440,http://localhost:5000/get_country/Uzbekistan,http://localhost:5000/get_country/continent/Asia,0
+236,Vatican City,Vatican,Europe,EU,EUR,VAT,3164670,http://localhost:5000/get_country/Vatican%20City,http://localhost:5000/get_country/continent/Europe,0
+237,Saint Vincent and the Grenadines,Kingstown,North America,NA,XCD,VCT,3577815,http://localhost:5000/get_country/Saint%20Vincent%20and%20the%20Grenadines,http://localhost:5000/get_country/continent/North%20America,0
+238,Venezuela,Caracas,South America,SA,VEF,VEN,3625428,http://localhost:5000/get_country/Venezuela,http://localhost:5000/get_country/continent/South%20America,0
+239,British Virgin Islands,Road Town,North America,NA,USD,VGB,3577718,http://localhost:5000/get_country/British%20Virgin%20Islands,http://localhost:5000/get_country/continent/North%20America,0
+240,U.S. Virgin Islands,Charlotte Amalie,North America,NA,USD,VIR,4796775,http://localhost:5000/get_country/U.S.%20Virgin%20Islands,http://localhost:5000/get_country/continent/North%20America,0
+241,Vietnam,Hanoi,Asia,AS,VND,VNM,1562822,http://localhost:5000/get_country/Vietnam,http://localhost:5000/get_country/continent/Asia,0
+242,Vanuatu,Port Vila,Oceania,OC,VUV,VUT,2134431,http://localhost:5000/get_country/Vanuatu,http://localhost:5000/get_country/continent/Oceania,0
+243,Wallis and Futuna,Mata-Utu,Oceania,OC,XPF,WLF,4034749,http://localhost:5000/get_country/Wallis%20and%20Futuna,http://localhost:5000/get_country/continent/Oceania,0
+244,Samoa,Apia,Oceania,OC,WST,WSM,4034894,http://localhost:5000/get_country/Samoa,http://localhost:5000/get_country/continent/Oceania,0
+245,Kosovo,Pristina,Europe,EU,EUR,XKX,831053,http://localhost:5000/get_country/Kosovo,http://localhost:5000/get_country/continent/Europe,0
+246,Yemen,Sanaa,Asia,AS,YER,YEM,69543,http://localhost:5000/get_country/Yemen,http://localhost:5000/get_country/continent/Asia,0
+247,Mayotte,Mamoutzou,Africa,AF,EUR,MYT,1024031,http://localhost:5000/get_country/Mayotte,http://localhost:5000/get_country/continent/Africa,0
+248,South Africa,Pretoria,Africa,AF,ZAR,ZAF,953987,http://localhost:5000/get_country/South%20Africa,http://localhost:5000/get_country/continent/Africa,0
+249,Zambia,Lusaka,Africa,AF,ZMW,ZMB,895949,http://localhost:5000/get_country/Zambia,http://localhost:5000/get_country/continent/Africa,0
+250,Zimbabwe,Harare,Africa,AF,ZWL,ZWE,878675,http://localhost:5000/get_country/Zimbabwe,http://localhost:5000/get_country/continent/Africa,0

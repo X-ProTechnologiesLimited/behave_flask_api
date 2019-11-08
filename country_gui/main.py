@@ -109,12 +109,29 @@ def ui_view_spec_country_post():
 @main.route('/ui_delete_country')
 @nocache
 def ui_delete_country():
-    return render_template('delete_specific.html')
+    return render_template('delete_country.html')
 
 @main.route('/ui_delete_country', methods=['POST'])
 @nocache
 def ui_delete_country_delete():
     url = api_url+'/delete/' + request.form.get('Country')
+    headers = {'Content-type': 'application/json', 'Accept': 'application/json'}
+    response_list = requests.delete(url=url, headers=headers)
+    data_list = response_list.json()
+    json_data = dumps(data_list)
+
+    return response.asset_retrieve(json_data)
+
+
+@main.route('/ui_delete_continent')
+@nocache
+def ui_delete_continent():
+    return render_template('delete_continent.html')
+
+@main.route('/ui_delete_continent', methods=['POST'])
+@nocache
+def ui_delete_continent_delete():
+    url = api_url+'/delete/continent/' + request.form.get('Continent')
     headers = {'Content-type': 'application/json', 'Accept': 'application/json'}
     response_list = requests.delete(url=url, headers=headers)
     data_list = response_list.json()
@@ -153,6 +170,51 @@ def ui_search_by_capital_post():
     response_list = requests.get(url=url, headers=headers)
     data_list = response_list.json()
     json_data = dumps(data_list)
+
+    return response.asset_retrieve(json_data)
+
+
+@main.route('/ui_update_country')
+@nocache
+def ui_update_country():
+    return render_template('update_country.html')
+
+@main.route('/ui_update_country', methods=['POST'])
+@nocache
+def ui_update_country_post():
+    url = api_url+'/update/' + request.form.get('country_name') + '/data/' + request.form.get('field_name')
+    field_name = request.form.get('field_name')
+    country_update_body = {}
+    field_value = request.form.get('field_value')
+    country_update_body[field_name] = field_value
+    country_update_request_body = json.dumps(country_update_body)
+    headers = {'Content-type': 'application/json', 'Accept': 'application/json'}
+    response_update = requests.post(url=url, data=country_update_request_body, headers=headers)
+    data_update = response_update.json()
+    json_data = dumps(data_update)
+
+    return response.asset_retrieve(json_data)
+
+
+@main.route('/ui_update_currency')
+@nocache
+def ui_update_currency():
+    return render_template('update_currency.html')
+
+@main.route('/ui_update_currency', methods=['POST'])
+@nocache
+def ui_update_currency_post():
+    url = api_url+'/update/' + request.form.get('country_name') + '/currency'
+    country_currency_body = {}
+    country_currency_body['currency'] = {}
+    country_currency_body['currency']['name'] = request.form.get('currency_name')
+    country_currency_body['currency']['type'] = request.form.get('currency_type')
+
+    country_currency_request_body = json.dumps(country_currency_body)
+    headers = {'Content-type': 'application/json', 'Accept': 'application/json'}
+    response_update = requests.post(url=url, data=country_currency_request_body, headers=headers)
+    data_update = response_update.json()
+    json_data = dumps(data_update)
 
     return response.asset_retrieve(json_data)
 
