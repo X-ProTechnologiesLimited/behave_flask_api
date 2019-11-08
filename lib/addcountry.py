@@ -49,7 +49,7 @@ def add_country(countryname):
     country_href = 'http://localhost:5000/get_country/' + country_name_encoded
     continent_href = 'http://localhost:5000/get_country/continent/' + continent_encoded
     new_country = Country(country_name=country_name, capital=capital, continent=continent, subregion=subregion,
-                     currency=currency, type=type, population=population, country_href=country_href, continent_href=continent_href)
+                     currency=currency, type=type, population=population, country_href=country_href, continent_href=continent_href, order_number=0)
 
     # add the new user to the database
     db.session.add(new_country)

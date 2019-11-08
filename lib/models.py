@@ -14,3 +14,4 @@ class Country(UserMixin, db.Model):
     population = db.Column(db.Integer)
     country_href = db.Column(db.String(500))
     continent_href = db.Column(db.String(500))
+    order_number = db.Column(db.Integer)

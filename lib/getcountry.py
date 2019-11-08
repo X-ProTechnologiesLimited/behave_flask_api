@@ -3,6 +3,7 @@
 from flask import Blueprint
 from .models import Country
 from . import errorchecker
+from . import db
 from bson.json_util import dumps
 import os
 import logging
@@ -38,6 +39,11 @@ def get_country(country_name):
     country_data['countries']['currency']['type'] = country.type
     country_data['countries']['population'] = country.population
     country_data['total'] = Country.query.filter_by(country_name=country_name_uncoded).count()
+    previous_order_number = country.order_number
+    current_order_number = previous_order_number + 1
+    order_update = Country.query.filter_by(country_name=country_name).update(dict(order_number=current_order_number))
+
+    db.session.commit()
 
     json_data = dumps(country_data, sort_keys=True)
     return json_data
@@ -132,7 +138,7 @@ def get_country_names():
     logger.info('Get All Country Names in Database')
     country_data = {}
     country_data['countries'] = []
-    for country in Country.query.all():
+    for country in Country.query.order_by(Country.order_number.desc()).all():
         country_data['countries'].append({
             'name': country.country_name,
             'ref': country.country_href
