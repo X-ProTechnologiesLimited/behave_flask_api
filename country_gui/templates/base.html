@@ -159,6 +159,15 @@
     </div>
   </div>
   <div class="dropdown">
+    <button class="dropbtn">View Resources
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="{{ url_for('main.ui_view_country_resources') }}">Country Resources</a>
+      <a href="{{ url_for('main.ui_view_continent_resources') }}">Continent Resources</a>
+    </div>
+  </div>
+  <div class="dropdown">
     <button class="dropbtn">Delete
       <i class="fa fa-caret-down"></i>
     </button>
@@ -166,6 +175,7 @@
       <a href="{{ url_for('main.ui_delete_country') }}">Delete Country</a>
       <a href="{{ url_for('main.ui_delete_continent') }}">Delete Continent</a>
     </div>
+
   </div>
 </div>
 

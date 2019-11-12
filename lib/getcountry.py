@@ -55,7 +55,7 @@ def get_country_continent(continent):
     logger.info('Get Country Request For Continent: ' + continent_name_uncoded)
     country_data = {}
     country_data['countries'] = []
-    for country in Country.query.filter_by(continent=continent_name_uncoded).all():
+    for country in Country.query.filter_by(continent=continent_name_uncoded).order_by(Country.order_number.desc()).all():
         country_data['countries'].append({
             'country_name': country.country_name,
             'capital': country.capital,
@@ -141,6 +141,27 @@ def get_country_names():
     for country in Country.query.order_by(Country.order_number.desc()).all():
         country_data['countries'].append({
             'name': country.country_name,
+            'capital': country.capital
+        })
+
+    country_data['total'] = Country.query.count()
+
+    if country_data['total'] == 0:  # If no countries found in the continent
+        logger.error('No Countries Found in Database')
+        return errorchecker.no_countries()
+
+    json_data = dumps(country_data)
+    return json_data
+
+
+@getcountry.route('/get_country/resources/all')
+def get_country_resources():
+    logger.info('Get All Country Resources in Database')
+    country_data = {}
+    country_data['countries'] = []
+    for country in Country.query.order_by(Country.order_number.desc()).all():
+        country_data['countries'].append({
+            'name': country.country_name,
             'ref': country.country_href
         })
 
@@ -159,10 +180,10 @@ def get_country_names_continent(continent):
     logger.info('Get All Country Names for a Continent')
     country_data = {}
     country_data['countries'] = []
-    for country in Country.query.filter_by(continent=continent).all():
+    for country in Country.query.filter_by(continent=continent).order_by(Country.order_number.desc()).all():
         country_data['countries'].append({
             'name': country.country_name,
-            'ref': country.country_href
+            'capital': country.capital
         })
 
     country_data['total'] = Country.query.filter_by(continent=continent).count()
@@ -171,9 +192,8 @@ def get_country_names_continent(continent):
         logger.error('No Countries Found in Database')
         return errorchecker.no_countries()
 
-    json_data = dumps(country_data, sort_keys=True)
+    json_data = dumps(country_data)
     return json_data
-
 
 
 @getcountry.route('/get_country/<country_name>/currency')
@@ -214,6 +234,28 @@ def get_continent_list():
     country_data = {}
     country_data['continents'] = []
     for country in Country.query.with_entities(Country.continent, Country.continent_href).distinct():
+        member_countries = Country.query.filter_by(continent=country.continent).count()
+        country_data['continents'].append({
+            'name': country.continent,
+            'member_countries': member_countries
+        })
+
+    country_data['total'] = Country.query.with_entities(Country.continent).distinct().count()
+
+    if country_data['total'] == 0:  # If no countries found in the continent
+        logger.error('No Continents Found in Database')
+        return errorchecker.no_countries()
+
+    json_data = dumps(country_data)
+    return json_data
+
+
+@getcountry.route('/get_continent/resources')
+def get_continent_resources():
+    logger.info('Get All Continent Resources in the Database')
+    country_data = {}
+    country_data['continents'] = []
+    for country in Country.query.with_entities(Country.continent, Country.continent_href).distinct():
         country_data['continents'].append({
             'name': country.continent,
             'ref': country.continent_href
@@ -225,5 +267,5 @@ def get_continent_list():
         logger.error('No Continents Found in Database')
         return errorchecker.no_countries()
 
-    json_data = dumps(country_data, sort_keys=True)
+    json_data = dumps(country_data)
     return json_data
