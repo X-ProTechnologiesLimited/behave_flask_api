@@ -1,12 +1,14 @@
 node() {
     def myImg
+    environment {
+       DOCKER_HOST = "host.docker.internal"
+        }
     stage ("Cleanup") {
             cleanWs()
         }
     stage ("Build image") {
         // download the dockerfile to build from
         git 'https://github.com/X-ProTechnologiesLimited/country_manager.git'
-	sh "export DOCKER_HOST=host.docker.internal"
 
         // build our docker image
         myImg = docker.build 'my-image:snapshot'
