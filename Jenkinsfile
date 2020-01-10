@@ -1,8 +1,5 @@
 node() {
     def myImg
-    environment {
-       DOCKER_HOST = "host.docker.internal"
-        }
     stage ("Cleanup") {
             cleanWs()
         }
@@ -11,9 +8,7 @@ node() {
         git 'https://github.com/X-ProTechnologiesLimited/country_manager.git'
 
         // build our docker image
-	sh "printenv"
-	sh "export DOCKER_HOST=host.docker.internal"
-	sh "printenv"    
+	sh "printenv"   
         myImg = docker.build 'my-image:snapshot'
     }
     stage ("Run Build") {
