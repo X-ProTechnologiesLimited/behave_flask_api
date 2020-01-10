@@ -11,6 +11,8 @@ node() {
         git 'https://github.com/X-ProTechnologiesLimited/country_manager.git'
 
         // build our docker image
+	sh "printenv"
+	sh "export DOCKER_HOST=host.docker.internal"
 	sh "printenv"    
         myImg = docker.build 'my-image:snapshot'
     }
