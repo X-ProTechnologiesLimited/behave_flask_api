@@ -29,7 +29,7 @@ node() {
                 echo "--------------------------------------------------------------------------------"
                 echo "Clearing Functional Test Data and Loading Performance Data"
                 sqlite3 /app/lib/db.sqlite "DELETE FROM country"
-                sqlite3 /app/lib/db.sqlite ".mode csv" ".import utils/preload_country.csv country"
+                sqlite3 /app/lib/db.sqlite ".mode csv" ".import utils/preload_country.csv country" 2>/dev/null
                 sleep 5
                 echo "Executing Performance Tests now for 1 minute....Using Jmeter"
                 jmeter -n -t tests/load_tests/Country_API.jmx -l ${WORKSPACE}/country_app_load.log -e -o ${WORKSPACE}/output

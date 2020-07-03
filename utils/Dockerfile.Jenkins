@@ -13,6 +13,7 @@ RUN    apk --update --upgrade add --no-cache \
         && apk upgrade \
         && apk add ca-certificates \
         && update-ca-certificates \
+        && apk add g++ gcc \
         && apk add --update openjdk8-jre tzdata curl unzip bash \
         && apk add --no-cache nss \
         && apk add --no-cache tzdata \

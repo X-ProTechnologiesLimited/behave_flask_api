@@ -42,6 +42,7 @@ USER root
 RUN apk add --update python3
 RUN apk add --no-cache bash
 RUN apk add sqlite
+RUN apk update && apk add g++ gcc
 RUN pip3 install --upgrade pip setuptools
 RUN pip3 install -r requirements.txt
 RUN if [ -d "lib/__pycache__/" ] ; then rm -rf lib/__pycache__ ; fi

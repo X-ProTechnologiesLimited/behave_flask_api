@@ -162,7 +162,7 @@ def get_country_resources():
     for country in Country.query.order_by(Country.order_number.desc()).all():
         country_data['countries'].append({
             'name': country.country_name,
-            'ref': country.country_href
+            'wiki': 'https://en.wikipedia.org/wiki/' + urllib.parse.quote(country.country_name)
         })
 
     country_data['total'] = Country.query.count()
@@ -171,7 +171,7 @@ def get_country_resources():
         logger.error('No Countries Found in Database')
         return errorchecker.no_countries()
 
-    json_data = dumps(country_data, sort_keys=True)
+    json_data = dumps(country_data, sort_keys=True, ensure_ascii=False)
     return json_data
 
 
@@ -258,7 +258,7 @@ def get_continent_resources():
     for country in Country.query.with_entities(Country.continent, Country.continent_href).distinct():
         country_data['continents'].append({
             'name': country.continent,
-            'ref': country.continent_href
+            'wiki': 'https://en.wikipedia.org/wiki/' + urllib.parse.quote(country.continent)
         })
 
     country_data['total'] = Country.query.with_entities(Country.continent).distinct().count()
