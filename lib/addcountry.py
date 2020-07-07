@@ -44,12 +44,8 @@ def add_country(countryname):
         return errorchecker.data_conflict(country_name)
 
     # create new country data.
-    country_name_encoded = urllib.parse.quote(country_name)
-    continent_encoded = urllib.parse.quote(continent)
-    country_href = 'http://localhost:5000/get_country/' + country_name_encoded
-    continent_href = 'http://localhost:5000/get_country/continent/' + continent_encoded
     new_country = Country(country_name=country_name, capital=capital, continent=continent, subregion=subregion,
-                     currency=currency, type=type, population=population, country_href=country_href, continent_href=continent_href, order_number=0)
+                     currency=currency, type=type, population=population, order_number=0)
 
     # add the new user to the database
     db.session.add(new_country)

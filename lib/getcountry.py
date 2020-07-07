@@ -233,7 +233,7 @@ def get_continent_list():
     logger.info('Get All Continents in the Database')
     country_data = {}
     country_data['continents'] = []
-    for country in Country.query.with_entities(Country.continent, Country.continent_href).distinct():
+    for country in Country.query.with_entities(Country.continent).distinct():
         member_countries = Country.query.filter_by(continent=country.continent).count()
         country_data['continents'].append({
             'name': country.continent,
@@ -255,7 +255,7 @@ def get_continent_resources():
     logger.info('Get All Continent Resources in the Database')
     country_data = {}
     country_data['continents'] = []
-    for country in Country.query.with_entities(Country.continent, Country.continent_href).distinct():
+    for country in Country.query.with_entities(Country.continent).distinct():
         country_data['continents'].append({
             'name': country.continent,
             'wiki': 'https://en.wikipedia.org/wiki/' + urllib.parse.quote(country.continent)
