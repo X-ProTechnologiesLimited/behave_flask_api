@@ -18,6 +18,15 @@ getcountry = Blueprint('getcountry', __name__)
 
 logger = logging.getLogger('getcountry')
 
+def replace_url_to_link(value):
+    # Replace url to link
+    urls = re.compile(r"((https?):((//)|(\\\\))+[\w\d:#@%/;$()~_?\+-=\\\.&]*)", re.MULTILINE|re.UNICODE)
+    value = urls.sub(r'<a href="\1" target="_blank">\1</a>', value)
+    # Replace email to mailto
+    urls = re.compile(r"([\w\-\.]+@(\w[\w\-]+\.)+[\w\-]+)", re.MULTILINE|re.UNICODE)
+    value = urls.sub(r'<a href="mailto:\1">\1</a>', value)
+    return value
+
 @getcountry.route('/get_country/<country_name>')
 def get_country(country_name):
     country_name_uncoded = urllib.parse.unquote_plus(country_name)
@@ -81,10 +90,11 @@ def get_country_continent(continent):
 def get_country_capital(capital):
     capital_name_uncoded = urllib.parse.unquote_plus(capital)
     logger.info('Get Country Request For Capital: ' + capital_name_uncoded)
+    search = "%{}%".format(capital_name_uncoded)
     country_data = {}
     country_data['countries'] = {}
     country_data['countries']['currency'] = {}
-    country = Country.query.filter_by(capital=capital_name_uncoded).first()
+    country = Country.query.filter(Country.capital.like(search)).first()
     if not country:# if a country is not found, return data not found
         logger.error('Country for Capital: ' + capital_name_uncoded + ' Not Found in Database')
         return errorchecker.data_not_found_capital(capital_name_uncoded)
@@ -97,7 +107,7 @@ def get_country_capital(capital):
     country_data['countries']['currency']['name'] = country.currency
     country_data['countries']['currency']['type'] = country.type
     country_data['countries']['population'] = country.population
-    country_data['total'] = Country.query.filter_by(capital=capital_name_uncoded).count()
+    country_data['total'] = Country.query.filter_by(capital=country.capital).count()
 
     json_data = dumps(country_data, sort_keys=True)
     return json_data
@@ -161,8 +171,10 @@ def get_country_resources():
     country_data['countries'] = []
     for country in Country.query.order_by(Country.order_number.desc()).all():
         country_data['countries'].append({
-            'name': country.country_name,
-            'wiki': 'https://en.wikipedia.org/wiki/' + urllib.parse.quote(country.country_name)
+            'Country Name(Click for Wiki Details)': '<a href="https://en.wikipedia.org/wiki/'
+                                                      + urllib.parse.quote(country.country_name)
+                                                      + '">' + country.country_name + '</a>'
+
         })
 
     country_data['total'] = Country.query.count()
@@ -215,7 +227,7 @@ def get_currency(country_name):
 
 @getcountry.route('/get_country/<country_name>/capital')
 def get_capital(country_name):
-    logger.info('Get Currency Request For: ' + country_name)
+    logger.info('Get Country Request For: ' + country_name)
     country_data = {}
     country = Country.query.filter_by(country_name=country_name).first()
     if not country:# if a country is not found, return data not found
@@ -257,8 +269,9 @@ def get_continent_resources():
     country_data['continents'] = []
     for country in Country.query.with_entities(Country.continent).distinct():
         country_data['continents'].append({
-            'name': country.continent,
-            'wiki': 'https://en.wikipedia.org/wiki/' + urllib.parse.quote(country.continent)
+            'Continent Name(Click for Wiki Details)': '<a href="https://en.wikipedia.org/wiki/'
+                                                      + urllib.parse.quote(country.continent)
+                                                      + '">' + country.continent + '</a>'
         })
 
     country_data['total'] = Country.query.with_entities(Country.continent).distinct().count()

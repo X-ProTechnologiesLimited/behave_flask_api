@@ -10,7 +10,6 @@ COPY country_gui/ /app/
 
 #SETTING UP PYTHON AND BEHAVE FUNCTIONAL TESTING ENV FOR APP
 RUN apk add --update python3
-RUN apk update && apk add g++ gcc libxml2 libxslt-dev
 RUN apk add --no-cache bash
 RUN apk add sqlite
 RUN pip3 install --upgrade pip setuptools
