@@ -7,6 +7,10 @@ USER root
 #SETTING UP FLASK APPLICATION
 COPY requirements_ui.txt /app/
 COPY country_gui/ /app/
+COPY requirements.txt /app/
+COPY utils /app/utils/
+COPY initialise_db.py /app/
+COPY lib/ /app/lib
 
 #SETTING UP PYTHON AND BEHAVE FUNCTIONAL TESTING ENV FOR APP
 RUN apk add --update python3
@@ -20,4 +24,3 @@ ENV PATH $PATH:$JMETER_BIN
 ENV TZ Europe/London
 
 RUN /bin/sh
-ENTRYPOINT ["./ui_start.sh"]

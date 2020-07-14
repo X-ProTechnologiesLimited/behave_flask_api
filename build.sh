@@ -1,13 +1,15 @@
 #!/bin/bash
 . utils/app_run.config && export $(cut -d= -f1 utils/app_run.config)
-cp utils/Dockerfile.local Dockerfile.local
 
 #Setting up the flags for the Dockerfile
 if [[ $1 == "--no-test" ]];then
+  cp utils/Dockerfile.lite Dockerfile.local
   echo 'ENTRYPOINT ["utils/start_app.sh", "Y"]' >> Dockerfile.local
 elif [[ $1 == "--load" ]];then
+  cp utils/Dockerfile.lite Dockerfile.local
   echo 'ENTRYPOINT ["utils/start_app.sh", "Y", "--load-data"]' >> Dockerfile.local
 elif [[ $1 == "--run-test" ]];then
+  cp utils/Dockerfile.test Dockerfile.local
   echo 'ENTRYPOINT ["utils/start_app.sh", "Y", "local"]' >> Dockerfile.local
 else
   printf "Please use correct flags for either starting container with or without running tests....\n"
@@ -29,7 +31,8 @@ if [[ $2 == "--d" ]];then
   sleep 5
   printf "\nNow starting the Country Manager UI\n"
   . country_gui/ui_run.config && export $(cut -d= -f1 country_gui/ui_run.config)
-  cp utils/Dockerfile.ui Dockerfile.ui
+  cp utils/Dockerfile.lite Dockerfile.ui
+  echo 'ENTRYPOINT ["./ui_start.sh"]' >> Dockerfile.ui
   docker build -f Dockerfile.ui --tag=country_ui .
   docker run --rm -it --name country_gui -v $PWD/logs:/app/logs --name country_gui -p $FLASK_RUN_PORT_UI:$FLASK_RUN_PORT_UI -d -it country_ui /bin/bash
   
@@ -44,7 +47,8 @@ else
   printf "\nStarting the Application\n"
   docker run --rm -it --name country_manager -v $PWD/logs:/app/logs --name country_manager -p $FLASK_RUN_PORT:$FLASK_RUN_PORT -it country_api /bin/bash
   . country_gui/ui_run.config && export $(cut -d= -f1 country_gui/ui_run.config)
-  cp utils/Dockerfile.ui Dockerfile.ui
+  cp utils/Dockerfile.lite Dockerfile.ui
+  echo 'ENTRYPOINT ["./ui_start.sh"]' >> Dockerfile.ui
   sleep 5
   printf "\nNow starting the Country Manager UI\n"
   docker build -f Dockerfile.ui --tag=country_ui .

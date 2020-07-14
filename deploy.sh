@@ -9,7 +9,8 @@ sleep 5
 printf "Starting the Country App UI services..\n"
 docker run --rm -it --name country_gui -v $PWD/logs:/app/logs \
        --name country_gui --add-host $D_HOST:$D_IP \
-       -p $FLASK_RUN_PORT_UI:$FLASK_RUN_PORT_UI -d -it xprotech/country_ui:latest /bin/bash
+       -p $FLASK_RUN_PORT_UI:$FLASK_RUN_PORT_UI -d -it xprotech/country_ui:latest /bin/bash \
+       -c "./ui_start.sh"
 }
 if [[ $1 == '--no-pull' ]];
 then
