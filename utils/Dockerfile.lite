@@ -22,5 +22,6 @@ RUN pip3 install -r requirements_ui.txt
 
 ENV PATH $PATH:$JMETER_BIN
 ENV TZ Europe/London
+ENV UI_HREF_URL http://app.xprotechnologies.com
 
 RUN /bin/sh

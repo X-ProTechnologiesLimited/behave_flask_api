@@ -48,17 +48,6 @@ def ui_add_country_post():
     return response.asset_retrieve(json_data)
 
 
-# @main.route('/ui_view_country')
-# @nocache
-# def ui_view_country():
-#     url = api_url+'/get_country/name'
-#     headers = {'Content-type': 'application/json', 'Accept': 'application/json'}
-#     response_country_list = requests.get(url=url, headers=headers)
-#     data_country_list = response_country_list.json()
-#     json_data = dumps(data_country_list)
-#
-#     return response.asset_retrieve(json_data)
-
 @main.route('/ui_view_country_details/<country_name>')
 @nocache
 def ui_view_country_details(country_name):
