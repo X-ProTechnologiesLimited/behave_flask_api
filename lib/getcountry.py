@@ -171,9 +171,12 @@ def get_country_resources():
     country_data['countries'] = []
     for country in Country.query.order_by(Country.order_number.desc()).all():
         country_data['countries'].append({
-            'Country Name(Click for Wiki Details)': '<a href="https://en.wikipedia.org/wiki/'
+            'Name' : '<a href="http://localhost:15000/ui_view_country_details/'
                                                       + urllib.parse.quote(country.country_name)
-                                                      + '">' + country.country_name + '</a>'
+                                                      + '">' + country.country_name + '</a>',
+            'Capital': '<a href="https://en.wikipedia.org/wiki/'
+                                                      + urllib.parse.quote(country.capital)
+                                                      + '">' + country.capital + '</a>'
 
         })
 
@@ -183,7 +186,7 @@ def get_country_resources():
         logger.error('No Countries Found in Database')
         return errorchecker.no_countries()
 
-    json_data = dumps(country_data, sort_keys=True, ensure_ascii=False)
+    json_data = dumps(country_data, ensure_ascii=False)
     return json_data
 
 
@@ -207,6 +210,29 @@ def get_country_names_continent(continent):
     json_data = dumps(country_data)
     return json_data
 
+@getcountry.route('/get_members/continent/<continent>')
+def get_continent_members(continent):
+    logger.info('Get All Country Names for a Continent')
+    country_data = {}
+    country_data[continent] = []
+    for country in Country.query.filter_by(continent=continent).order_by(Country.order_number.desc()).all():
+        country_data[continent].append({
+            'Name' : '<a href="http://localhost:15000/ui_view_country_details/'
+                                                      + urllib.parse.quote(country.country_name)
+                                                      + '">' + country.country_name + '</a>',
+            'Capital': '<a href="https://en.wikipedia.org/wiki/'
+                                                      + urllib.parse.quote(country.capital)
+                                                      + '">' + country.capital + '</a>'
+        })
+
+    country_data['total'] = Country.query.filter_by(continent=continent).count()
+
+    if country_data['total'] == 0:  # If no countries found in the continent
+        logger.error('No Countries Found in Database')
+        return errorchecker.no_countries()
+
+    json_data = dumps(country_data)
+    return json_data
 
 @getcountry.route('/get_country/<country_name>/currency')
 def get_currency(country_name):
@@ -268,10 +294,14 @@ def get_continent_resources():
     country_data = {}
     country_data['continents'] = []
     for country in Country.query.with_entities(Country.continent).distinct():
+        member_countries = Country.query.filter_by(continent=country.continent).count()
         country_data['continents'].append({
             'Continent Name(Click for Wiki Details)': '<a href="https://en.wikipedia.org/wiki/'
                                                       + urllib.parse.quote(country.continent)
-                                                      + '">' + country.continent + '</a>'
+                                                      + '">' + country.continent + '</a>',
+            'member_countries' : '<a href="http://localhost:15000/ui_view_continent_members/'
+                                                      + urllib.parse.quote(country.continent)
+                                                      + '">' + str(member_countries) + '</a>'
         })
 
     country_data['total'] = Country.query.with_entities(Country.continent).distinct().count()

@@ -171,8 +171,8 @@ body {margin:0;font-family:Arial}
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="dropdown-content">
-      <a href="{{ url_for('main.ui_view_country') }}">List All Countries</a>
-      <a href="{{ url_for('main.ui_view_continent') }}">List All Continents</a>
+      <a href="{{ url_for('main.ui_view_country_resources') }}">List All Countries</a>
+      <a href="{{ url_for('main.ui_view_continent_resources') }}">List All Continents</a>
       <a href="{{ url_for('main.ui_view_spec_country') }}">View Country Details</a>
       <a href="{{ url_for('main.ui_view_specific_continent') }}">Filter Countries by Continents</a>
     </div>
@@ -194,15 +194,6 @@ body {margin:0;font-family:Arial}
     <div class="dropdown-content">
       <a href="{{ url_for('main.ui_update_country') }}">Update Country Details</a>
       <a href="{{ url_for('main.ui_update_currency') }}">Update Country Currency Details</a>
-    </div>
-  </div>
-  <div class="dropdown">
-    <button class="dropbtn">View Wiki Resources
-      <i class="fa fa-caret-down"></i>
-    </button>
-    <div class="dropdown-content">
-      <a href="{{ url_for('main.ui_view_country_resources') }}">Wikipedia Country</a>
-      <a href="{{ url_for('main.ui_view_continent_resources') }}">Wikipedia Continent</a>
     </div>
   </div>
   <div class="dropdown">

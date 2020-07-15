@@ -8,6 +8,7 @@ import requests
 from .nocache import nocache
 import os
 from . import response
+import urllib.parse
 
 api_host = os.environ['COUNTRY_API_HOST']
 api_port = os.environ['COUNTRY_API_PORT']
@@ -47,16 +48,27 @@ def ui_add_country_post():
     return response.asset_retrieve(json_data)
 
 
-@main.route('/ui_view_country')
-@nocache
-def ui_view_country():
-    url = api_url+'/get_country/name'
-    headers = {'Content-type': 'application/json', 'Accept': 'application/json'}
-    response_country_list = requests.get(url=url, headers=headers)
-    data_country_list = response_country_list.json()
-    json_data = dumps(data_country_list)
+# @main.route('/ui_view_country')
+# @nocache
+# def ui_view_country():
+#     url = api_url+'/get_country/name'
+#     headers = {'Content-type': 'application/json', 'Accept': 'application/json'}
+#     response_country_list = requests.get(url=url, headers=headers)
+#     data_country_list = response_country_list.json()
+#     json_data = dumps(data_country_list)
+#
+#     return response.asset_retrieve(json_data)
 
-    return response.asset_retrieve(json_data)
+@main.route('/ui_view_country_details/<country_name>')
+@nocache
+def ui_view_country_details(country_name):
+    url = api_url + '/get_country/' + country_name
+    headers = {'Content-type': 'application/json', 'Accept': 'application/json'}
+    response_list = requests.get(url=url, headers=headers)
+    data_list = response_list.json()
+    json_data = dumps(data_list)
+
+    return response.asset_retrieve_details(json_data, country_name)
 
 @main.route('/ui_view_country_resources')
 @nocache
@@ -70,10 +82,11 @@ def ui_view_country_resources():
     return response.asset_retrieve(json_data)
 
 
-@main.route('/ui_view_continents')
+
+@main.route('/ui_view_continent_members/<continent_name>')
 @nocache
-def ui_view_continent():
-    url = api_url+'/get_continent/name'
+def ui_view_continent_members(continent_name):
+    url = api_url+'/get_members/continent/' + continent_name
     headers = {'Content-type': 'application/json', 'Accept': 'application/json'}
     response_continent_list = requests.get(url=url, headers=headers)
     data_continent_list = response_continent_list.json()
@@ -109,12 +122,13 @@ def ui_view_spec_country():
 @nocache
 def ui_view_spec_country_post():
     url = api_url+'/get_country/' + request.form.get('Country')
+    country_name_uncoded = urllib.parse.unquote_plus(request.form.get('Country'))
     headers = {'Content-type': 'application/json', 'Accept': 'application/json'}
     response_list = requests.get(url=url, headers=headers)
     data_list = response_list.json()
     json_data = dumps(data_list)
 
-    return response.asset_retrieve(json_data)
+    return response.asset_retrieve_details(json_data, country_name_uncoded)
 
 
 @main.route('/ui_delete_country')
@@ -159,7 +173,7 @@ def ui_view_specific_continent():
 @main.route('/ui_view_specific_continent', methods=['POST'])
 @nocache
 def ui_view_specific_continent_post():
-    url = api_url+'/get_country/continent/' + request.form.get('Continent') + '/name'
+    url = api_url+'/get_members/continent/' + request.form.get('Continent')
     headers = {'Content-type': 'application/json', 'Accept': 'application/json'}
     response_list = requests.get(url=url, headers=headers)
     data_list = response_list.json()
