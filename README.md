@@ -31,7 +31,7 @@ Use optional `--d` flag to start application container in background
 5. To start the application within container without running the tests, but loading sample data `build.sh --load`
 Use optional `--d` flag to start application container in background.
 6. To start from the docker hub image, use the script `deploy.sh`. Use the optional flag `--no-pull` to run the
-preloaded image.
+preloaded images for the applications
 
 ## Building in Jenkins Pipeline
 1. The project is designed to work on both local Jenkins as well as Dockerised Jenkins.
