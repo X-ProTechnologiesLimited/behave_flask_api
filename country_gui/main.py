@@ -42,10 +42,14 @@ def ui_add_country_post():
     new_country_add_request_body = json.dumps(new_country_add_body)
     headers = {'Content-type': 'application/json', 'Accept': 'application/json'}
     response_new_country = requests.post(url=url, data=new_country_add_request_body, headers=headers)
-    data_new_country = response_new_country.json()
-    json_data = dumps(data_new_country)
 
-    return response.asset_retrieve(json_data)
+    if response_new_country.status_code == 409:
+        return render_template('error_409_conflict.html')
+    else:
+        data_new_country = response_new_country.json()
+        json_data = dumps(data_new_country)
+
+        return response.asset_retrieve(json_data)
 
 
 @main.route('/ui_view_country_details/<country_name>')
@@ -54,10 +58,13 @@ def ui_view_country_details(country_name):
     url = api_url + '/get_country/' + country_name
     headers = {'Content-type': 'application/json', 'Accept': 'application/json'}
     response_list = requests.get(url=url, headers=headers)
-    data_list = response_list.json()
-    json_data = dumps(data_list)
+    if response_list.status_code == 404:
+        return render_template('error_404.html')
+    else:
+        data_list = response_list.json()
+        json_data = dumps(data_list)
 
-    return response.asset_retrieve_details(json_data, country_name)
+        return response.asset_retrieve_details(json_data, country_name)
 
 @main.route('/ui_view_country_resources')
 @nocache
@@ -96,10 +103,13 @@ def search_country_post():
     url = api_url+'/search/country/qs=' + request.form.get('Keyword')
     headers = {'Content-type': 'application/json', 'Accept': 'application/json'}
     response_continent_list = requests.get(url=url, headers=headers)
-    data_continent_list = response_continent_list.json()
-    json_data = dumps(data_continent_list)
+    if response_continent_list.status_code == 404:
+        return render_template('error_404.html')
+    else:
+        data_continent_list = response_continent_list.json()
+        json_data = dumps(data_continent_list)
 
-    return response.asset_retrieve(json_data)
+        return response.asset_retrieve(json_data)
 
 
 @main.route('/ui_view_specific_country')
@@ -114,10 +124,13 @@ def ui_view_spec_country_post():
     country_name_uncoded = urllib.parse.unquote_plus(request.form.get('Country'))
     headers = {'Content-type': 'application/json', 'Accept': 'application/json'}
     response_list = requests.get(url=url, headers=headers)
-    data_list = response_list.json()
-    json_data = dumps(data_list)
+    if response_list.status_code == 404:
+        return render_template('error_404.html')
+    else:
+        data_list = response_list.json()
+        json_data = dumps(data_list)
 
-    return response.asset_retrieve_details(json_data, country_name_uncoded)
+        return response.asset_retrieve_details(json_data, country_name_uncoded)
 
 
 @main.route('/ui_delete_country')
@@ -165,10 +178,13 @@ def ui_view_specific_continent_post():
     url = api_url+'/get_members/continent/' + request.form.get('Continent')
     headers = {'Content-type': 'application/json', 'Accept': 'application/json'}
     response_list = requests.get(url=url, headers=headers)
-    data_list = response_list.json()
-    json_data = dumps(data_list)
+    if response_list.status_code == 404:
+        return render_template('error_404.html')
+    else:
+        data_list = response_list.json()
+        json_data = dumps(data_list)
 
-    return response.asset_retrieve(json_data)
+        return response.asset_retrieve(json_data)
 
 
 @main.route('/ui_view_continent_resources')
@@ -194,8 +210,11 @@ def ui_search_by_capital_post():
     url = api_url+'/get_country/capital/' + request.form.get('Capital')
     headers = {'Content-type': 'application/json', 'Accept': 'application/json'}
     response_list = requests.get(url=url, headers=headers)
-    data_list = response_list.json()
-    json_data = dumps(data_list)
+    if response_list.status_code == 404:
+        return render_template('error_404.html')
+    else:
+        data_list = response_list.json()
+        json_data = dumps(data_list)
 
     return response.asset_retrieve(json_data)
 
