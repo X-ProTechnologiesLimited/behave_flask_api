@@ -5,17 +5,17 @@ Feature:Get Country
     Given I want to get data for "<country>"
     When I send request to get specific country details
     Then The http get country request is successful
-    And The response should return "capital" : "<capital>"
-    And The response should return "continent" : "<continent>"
-    And The response should return "subregion" : "<subregion>"
-    And The response should return currency "name" : "<currency>"
-    And The response should return currency "type" : "<type>"
-    And The response should return integer "population" : "<population>"
+    And The response should return "Capital" : "<capital>"
+    And The response should return "Continent" : "<continent>"
+    And The response should return "Subregion" : "<subregion>"
+    And The response should return "Currency" : "<currency>"
+    And The response should return "Code" : "<code>"
+    And The response should return integer "Population" : "<population>"
     And The response should return number of results : 1
 
 
 	Examples:"<country>"
-        | country      |capital    | continent | subregion       | population | currency       | type      |
+        | country      |capital    | continent | subregion       | population | currency       | code      |
         | India        |New Delhi  | Asia      | Southern Asia   | 1295210000 | Rupees         | INR       |
         | Ireland      |Dublin     | Europe    | Northern Europe | 6378000    | Euro           | EUR       |
         | France       |Paris      | Europe    | Western Europe  | 66710000   | Euro           | EUR       |
@@ -50,17 +50,17 @@ Feature:Get Country
     Given I want to get data based on "<capital>"
     When I send request to get country for capital
     Then The http get country request is successful
-    And The response should return "country_name" : "<country>"
-    And The response should return "continent" : "<continent>"
-    And The response should return "subregion" : "<subregion>"
-    And The response should return currency "name" : "<currency>"
-    And The response should return currency "type" : "<type>"
-    And The response should return integer "population" : "<population>"
+    And The response should return "Name" : "<country>"
+    And The response should return "Continent" : "<continent>"
+    And The response should return "Subregion" : "<subregion>"
+    And The response should return "Currency" : "<currency>"
+    And The response should return "Code" : "<code>"
+    And The response should return integer "Population" : "<population>"
     And The response should return number of results : 1
 
 
 	Examples:"<country>"
-        | country      |capital    | continent | subregion       | population | currency       | type      |
+        | country      |capital    | continent | subregion       | population | currency       | code      |
         | India        |New Delhi  | Asia      | Southern Asia   | 1295210000 | Rupees         | INR       |
         | Ireland      |Dublin     | Europe    | Northern Europe | 6378000    | Euro           | EUR       |
         | France       |Paris      | Europe    | Western Europe  | 66710000   | Euro           | EUR       |

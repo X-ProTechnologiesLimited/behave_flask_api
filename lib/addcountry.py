@@ -27,8 +27,8 @@ def add_country(countryname):
         capital = data['capital']
         continent = data['continent']
         subregion = data['subregion']
-        currency = data['currency']['name']
-        type = data['currency']['type']
+        currency = data['currency']
+        code = data['code']
         population = data['population']
 
     except:
@@ -45,7 +45,7 @@ def add_country(countryname):
 
     # create new country data.
     new_country = Country(country_name=country_name, capital=capital, continent=continent, subregion=subregion,
-                     currency=currency, type=type, population=population, order_number=0)
+                     currency=currency, code=code, population=population, order_number=0)
 
     # add the new user to the database
     db.session.add(new_country)

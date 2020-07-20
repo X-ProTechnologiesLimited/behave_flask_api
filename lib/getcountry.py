@@ -34,28 +34,27 @@ def get_country(country_name):
     logger.info('Get Country Request For: ' + country_name_uncoded)
     country_data = {}
     country_data['countries'] = {}
-    country_data['countries']['currency'] = {}
     country = Country.query.filter_by(country_name=country_name_uncoded).first()
     if not country:# if a country is not found, return data not found
         logger.error('Country: ' + country_name_uncoded + ' Not Found in Database')
         return errorchecker.data_not_found_country(country_name_uncoded)
 
 
-    country_data['countries']['country_name'] = country.country_name
-    country_data['countries']['capital'] = country.capital
-    country_data['countries']['continent'] = country.continent
-    country_data['countries']['subregion'] = country.subregion
-    country_data['countries']['currency']['name'] = country.currency
-    country_data['countries']['currency']['type'] = country.type
-    country_data['countries']['population'] = country.population
-    country_data['total'] = Country.query.filter_by(country_name=country_name_uncoded).count()
+    country_data['countries']['Name'] = country.country_name
+    country_data['countries']['Capital'] = country.capital
+    country_data['countries']['Continent'] = country.continent
+    country_data['countries']['Subregion'] = country.subregion
+    country_data['countries']['Currency'] = country.currency
+    country_data['countries']['Code'] = country.code
+    country_data['countries']['Population'] = country.population
+    country_data['Total'] = Country.query.filter_by(country_name=country_name_uncoded).count()
     previous_order_number = country.order_number
     current_order_number = previous_order_number + 1
     order_update = Country.query.filter_by(country_name=country_name).update(dict(order_number=current_order_number))
 
     db.session.commit()
 
-    json_data = dumps(country_data, sort_keys=True)
+    json_data = dumps(country_data)
     return json_data
 
 
@@ -67,23 +66,21 @@ def get_country_continent(continent):
     country_data['countries'] = []
     for country in Country.query.filter_by(continent=continent_name_uncoded).order_by(Country.order_number.desc()).all():
         country_data['countries'].append({
-            'country_name': country.country_name,
-            'capital': country.capital,
-            'continent': country.continent,
-            'subregion': country.subregion,
-            'currency': {
-                'type': country.currency,
-                'name': country.type,
-            },
-            'population': country.population,
+            'Name': country.country_name,
+            'Capital': country.capital,
+            'Continent': country.continent,
+            'Subregion': country.subregion,
+            'Currency': country.currency,
+            'Code': country.code,
+            'Population': country.population,
         })
 
-    country_data['total'] = Country.query.filter_by(continent=continent_name_uncoded).count()
-    if country_data['total'] == 0: # If no countries found in the continent
+    country_data['Total'] = Country.query.filter_by(continent=continent_name_uncoded).count()
+    if country_data['Total'] == 0: # If no countries found in the continent
         logger.warning('No Countries Found For Continent: ' + continent_name_uncoded)
         return errorchecker.data_not_found_continent(continent_name_uncoded)
 
-    json_data = dumps(country_data, sort_keys=True)
+    json_data = dumps(country_data)
     return json_data
 
 
@@ -94,23 +91,22 @@ def get_country_capital(capital):
     search = "%{}%".format(capital_name_uncoded)
     country_data = {}
     country_data['countries'] = {}
-    country_data['countries']['currency'] = {}
     country = Country.query.filter(Country.capital.like(search)).first()
     if not country:# if a country is not found, return data not found
         logger.error('Country for Capital: ' + capital_name_uncoded + ' Not Found in Database')
         return errorchecker.data_not_found_capital(capital_name_uncoded)
 
 
-    country_data['countries']['country_name'] = country.country_name
-    country_data['countries']['capital'] = country.capital
-    country_data['countries']['continent'] = country.continent
-    country_data['countries']['subregion'] = country.subregion
-    country_data['countries']['currency']['name'] = country.currency
-    country_data['countries']['currency']['type'] = country.type
-    country_data['countries']['population'] = country.population
-    country_data['total'] = Country.query.filter_by(capital=country.capital).count()
+    country_data['countries']['Name'] = country.country_name
+    country_data['countries']['Capital'] = country.capital
+    country_data['countries']['Continent'] = country.continent
+    country_data['countries']['Subregion'] = country.subregion
+    country_data['countries']['Currency'] = country.currency
+    country_data['countries']['Code'] = country.code
+    country_data['countries']['Population'] = country.population
+    country_data['Total'] = Country.query.filter_by(capital=country.capital).count()
 
-    json_data = dumps(country_data, sort_keys=True)
+    json_data = dumps(country_data)
     return json_data
 
 
@@ -123,24 +119,22 @@ def get_countries():
     country_data['countries'] = []
     for country in Country.query.all():
         country_data['countries'].append({
-            'country_name': country.country_name,
-            'capital': country.capital,
-            'continent': country.continent,
-            'subregion': country.subregion,
-            'currency': {
-                'type': country.currency,
-                'name': country.type,
-            },
-            'population': country.population,
+            'Name': country.country_name,
+            'Capital': country.capital,
+            'Continent': country.continent,
+            'Subregion': country.subregion,
+            'Currency': country.currency,
+            'Code': country.code,
+            'Population': country.population,
         })
 
-    country_data['total'] = Country.query.count()
+    country_data['Total'] = Country.query.count()
 
-    if country_data['total'] == 0:  # If no countries found in the continent
+    if country_data['Total'] == 0:  # If no countries found in the continent
         logger.error('No Countries Found in Database')
         return errorchecker.no_countries()
 
-    json_data = dumps(country_data, sort_keys=True)
+    json_data = dumps(country_data)
     return json_data
 
 
@@ -151,13 +145,13 @@ def get_country_names():
     country_data['countries'] = []
     for country in Country.query.order_by(Country.order_number.desc()).all():
         country_data['countries'].append({
-            'name': country.country_name,
-            'capital': country.capital
+            'Name': country.country_name,
+            'Capital': country.capital
         })
 
-    country_data['total'] = Country.query.count()
+    country_data['Total'] = Country.query.count()
 
-    if country_data['total'] == 0:  # If no countries found in the continent
+    if country_data['Total'] == 0:  # If no countries found in the continent
         logger.error('No Countries Found in Database')
         return errorchecker.no_countries()
 
@@ -181,9 +175,9 @@ def get_country_resources():
 
         })
 
-    country_data['total'] = Country.query.count()
+    country_data['Total'] = Country.query.count()
 
-    if country_data['total'] == 0:  # If no countries found in the continent
+    if country_data['Total'] == 0:  # If no countries found in the continent
         logger.error('No Countries Found in Database')
         return errorchecker.no_countries()
 
@@ -198,13 +192,13 @@ def get_country_names_continent(continent):
     country_data['countries'] = []
     for country in Country.query.filter_by(continent=continent).order_by(Country.order_number.desc()).all():
         country_data['countries'].append({
-            'name': country.country_name,
-            'capital': country.capital
+            'Name': country.country_name,
+            'Capital': country.capital
         })
 
-    country_data['total'] = Country.query.filter_by(continent=continent).count()
+    country_data['Total'] = Country.query.filter_by(continent=continent).count()
 
-    if country_data['total'] == 0:  # If no countries found in the continent
+    if country_data['Total'] == 0:  # If no countries found in the continent
         logger.error('No Countries Found in Database')
         return errorchecker.no_countries()
 
@@ -225,9 +219,9 @@ def get_continent_members(continent):
                                                       + '">' + country.capital + '</a>'
         })
 
-    country_data['total'] = Country.query.filter_by(continent=continent).count()
+    country_data['Total'] = Country.query.filter_by(continent=continent).count()
 
-    if country_data['total'] == 0:  # If no countries found in the continent
+    if country_data['Total'] == 0:  # If no countries found in the continent
         logger.error('No Countries Found in Database')
         return errorchecker.no_countries()
 
@@ -238,16 +232,14 @@ def get_continent_members(continent):
 def get_currency(country_name):
     logger.info('Get Currency Request For: ' + country_name)
     country_data = {}
-    country_data['currency'] = {}
     country = Country.query.filter_by(country_name=country_name).first()
     if not country:# if a country is not found, return data not found
         logger.error('Country: ' + country_name + ' Not Found in Database')
         return errorchecker.data_not_found_country(country_name)
 
-    country_data['currency']['name'] = country.currency
-    country_data['currency']['type'] = country.type
+    country_data['Currency'] = country.currency
 
-    json_data = dumps(country_data, sort_keys=True)
+    json_data = dumps(country_data)
     return json_data
 
 
@@ -260,7 +252,7 @@ def get_capital(country_name):
         logger.error('Country: ' + country_name + ' Not Found in Database')
         return errorchecker.data_not_found_country(country_name)
 
-    country_data['capital'] = country.capital
+    country_data['Capital'] = country.capital
 
     json_data = dumps(country_data, sort_keys=True)
     return json_data
@@ -274,13 +266,13 @@ def get_continent_list():
     for country in Country.query.with_entities(Country.continent).distinct():
         member_countries = Country.query.filter_by(continent=country.continent).count()
         country_data['continents'].append({
-            'name': country.continent,
-            'member_countries': member_countries
+            'Name': country.continent,
+            'Member_Countries': member_countries
         })
 
-    country_data['total'] = Country.query.with_entities(Country.continent).distinct().count()
+    country_data['Total'] = Country.query.with_entities(Country.continent).distinct().count()
 
-    if country_data['total'] == 0:  # If no countries found in the continent
+    if country_data['Total'] == 0:  # If no countries found in the continent
         logger.error('No Continents Found in Database')
         return errorchecker.no_countries()
 
@@ -299,7 +291,7 @@ def get_continent_resources():
             'Continent Name(Click for Wiki Details)': '<a href="https://en.wikipedia.org/wiki/'
                                                       + urllib.parse.quote(country.continent)
                                                       + '">' + country.continent + '</a>',
-            'member_countries' : '<a href="' + UI_HREF + '/ui_view_continent_members/'
+            'Member_countries' : '<a href="' + UI_HREF + '/ui_view_continent_members/'
                                  + urllib.parse.quote(country.continent) + '">' + str(member_countries) + '</a>'
         })
 

@@ -69,14 +69,9 @@ def step_and_should_return_string(context, parameter_int, parameter_country):
     context.get_country.single_country_base_map(parameter_int)
     assert_that(context.get_country.response_json_map[parameter_int], equal_to(int(parameter_country)))
 
-@then('The response should return currency "{parameter_string}" : "{parameter_country}"')
-def step_and_should_return_string(context, parameter_string, parameter_country):
-    context.get_country.single_country_currency_map(parameter_string)
-    assert_that(context.get_country.response_json_map[parameter_string], equal_to(parameter_country))
-
 @then('The response should return number of results : {result_count}')
 def step_and_should_return_string(context, result_count):
-    assert_that(context.get_country.response_json_map['total'], equal_to(int(result_count)))
+    assert_that(context.get_country.response_json_map['Total'], equal_to(int(result_count)))
 
 
 @then('The response should return status : {status_code}')

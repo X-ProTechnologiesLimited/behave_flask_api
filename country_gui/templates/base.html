@@ -186,16 +186,8 @@ body {margin:0;font-family:Arial}
       <a href="{{ url_for('main.ui_search_by_capital') }}">Search by Capital</a>
     </div>
   </div>
-  <a href="{{ url_for('main.ui_add_country') }}">Add New Country</a>
-  <div class="dropdown">
-    <button class="dropbtn">Update
-      <i class="fa fa-caret-down"></i>
-    </button>
-    <div class="dropdown-content">
-      <a href="{{ url_for('main.ui_update_country') }}">Update Country Details</a>
-      <a href="{{ url_for('main.ui_update_currency') }}">Update Country Currency Details</a>
-    </div>
-  </div>
+  <a href="{{ url_for('main.ui_add_country') }}">Add Country</a>
+  <a href="{{ url_for('main.ui_update_country') }}">Update Country</a>
   <div class="dropdown">
     <button class="dropbtn">Delete
       <i class="fa fa-caret-down"></i>

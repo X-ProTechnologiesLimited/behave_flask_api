@@ -10,6 +10,6 @@ class Country(UserMixin, db.Model):
     continent = db.Column(db.String(100))
     subregion = db.Column(db.String(100))
     currency = db.Column(db.String(100))
-    type = db.Column(db.String(100))
+    code = db.Column(db.String(100))
     population = db.Column(db.Integer)
     order_number = db.Column(db.Integer)

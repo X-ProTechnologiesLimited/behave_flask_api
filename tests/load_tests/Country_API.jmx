@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.1.1 r1855137">
+<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.3">
   <hashTree>
     <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Countries_API" enabled="true">
       <stringProp name="TestPlan.comments"></stringProp>
@@ -34,6 +34,7 @@
         <boolProp name="ThreadGroup.scheduler">true</boolProp>
         <stringProp name="ThreadGroup.duration">60</stringProp>
         <stringProp name="ThreadGroup.delay"></stringProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
       </ThreadGroup>
       <hashTree>
         <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Get_All_Countries" enabled="true">
@@ -57,7 +58,7 @@
         <hashTree>
           <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="country_extractor" enabled="true">
             <stringProp name="JSONPostProcessor.referenceNames">COUNTRY</stringProp>
-            <stringProp name="JSONPostProcessor.jsonPathExprs">$..country_name</stringProp>
+            <stringProp name="JSONPostProcessor.jsonPathExprs">$..Name</stringProp>
             <stringProp name="JSONPostProcessor.match_numbers">0</stringProp>
           </JSONPostProcessor>
           <hashTree/>
@@ -90,7 +91,7 @@
         <hashTree>
           <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="capital_extractor" enabled="true">
             <stringProp name="JSONPostProcessor.referenceNames">CAPITAL</stringProp>
-            <stringProp name="JSONPostProcessor.jsonPathExprs">$..capital</stringProp>
+            <stringProp name="JSONPostProcessor.jsonPathExprs">$..Capital</stringProp>
             <stringProp name="JSONPostProcessor.match_numbers"></stringProp>
           </JSONPostProcessor>
           <hashTree/>
@@ -200,6 +201,7 @@
         <boolProp name="ThreadGroup.scheduler">true</boolProp>
         <stringProp name="ThreadGroup.duration">60</stringProp>
         <stringProp name="ThreadGroup.delay"></stringProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
       </ThreadGroup>
       <hashTree>
         <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Get_All_Continent" enabled="true">
@@ -223,7 +225,7 @@
         <hashTree>
           <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="continent_extractor" enabled="true">
             <stringProp name="JSONPostProcessor.referenceNames">CONTINENT</stringProp>
-            <stringProp name="JSONPostProcessor.jsonPathExprs">$..name</stringProp>
+            <stringProp name="JSONPostProcessor.jsonPathExprs">$..Name</stringProp>
             <stringProp name="JSONPostProcessor.match_numbers">0</stringProp>
           </JSONPostProcessor>
           <hashTree/>
@@ -333,6 +335,7 @@
         <boolProp name="ThreadGroup.scheduler">true</boolProp>
         <stringProp name="ThreadGroup.duration">60</stringProp>
         <stringProp name="ThreadGroup.delay">5</stringProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
       </ThreadGroup>
       <hashTree>
         <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Search_Country" enabled="true">
