@@ -28,9 +28,13 @@ def step_given_add_subregion(context, country, subregion):
 def step_given_add_population(context, population, country):
     context.set_country.add_population(population)
 
-@given('I add currency name "{currency}" and type "{type}" to "{country}"')
-def step_given_add_currency(context, currency, type, country):
-    context.set_country.add_currency(currency, type)
+@given('I add currency "{currency}" to "{country}"')
+def step_given_add_currency(context, currency, country):
+    context.set_country.add_currency(currency)
+
+@given('I add code "{code}" to "{country}"')
+def step_given_add_code(context, code, country):
+    context.set_country.add_code(code)
 
 @given('I add bulk data for {limit} countries to "{continent}"')
 def step_given_add_bulk_country(context, limit, continent):

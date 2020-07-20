@@ -9,7 +9,7 @@ Feature:Update Country
     Given I want to get data for "<country>"
     When I send request to get specific country details
     Then The http get country request is successful
-    And The response should return integer "population" : "<value>"
+    And The response should return integer "Population" : "<value>"
 
 
 	Examples:"<country>"
@@ -27,7 +27,7 @@ Feature:Update Country
     Given I want to get data for "<country>"
     When I send request to get specific country details
     Then The http get country request is successful
-    And The response should return "capital" : "<value>"
+    And The response should return "Capital" : "<value>"
 
 
 	Examples:"<country>"
@@ -44,7 +44,7 @@ Feature:Update Country
     Given I want to get data for "<country>"
     When I send request to get specific country details
     Then The http get country request is successful
-    And The response should return "continent" : "<value>"
+    And The response should return "Continent" : "<value>"
 
 
 	Examples:"<country>"
@@ -61,7 +61,7 @@ Feature:Update Country
     Given I want to get data for "<country>"
     When I send request to get specific country details
     Then The http get country request is successful
-    And The response should return "subregion" : "<value>"
+    And The response should return "Subregion" : "<value>"
 
 
 	Examples:"<country>"
@@ -71,18 +71,35 @@ Feature:Update Country
 
 
    Scenario Outline:Update currency of country "<country>" from the database
-    Given I want to update the currency of country "<country>" to "<value>" and "<type>"
+    Given I want to update the "code" of country "<country>" to "<value>"
     When I send request to update the country
     Then The http update request is successful
     And I get a successful update message "Country Updated Successfully"
     Given I want to get data for "<country>"
     When I send request to get specific country details
     Then The http get country request is successful
-    And The response should return currency "name" : "<value>"
-    And The response should return currency "type" : "<type>"
+    And The response should return "Code" : "<value>"
 
 
 	Examples:"<country>"
-        | country      | value             | type  |
-        | France       | Franc             | FRC   |
-        | Canada       | Dollars           | CADDY |
+        | country      | value           |
+        | France       | FRN             |
+        | Canada       | CAD             |
+
+
+
+   Scenario Outline:Update currency of country "<country>" from the database
+    Given I want to update the "currency" of country "<country>" to "<value>"
+    When I send request to update the country
+    Then The http update request is successful
+    And I get a successful update message "Country Updated Successfully"
+    Given I want to get data for "<country>"
+    When I send request to get specific country details
+    Then The http get country request is successful
+    And The response should return "Currency" : "<value>"
+
+
+	Examples:"<country>"
+        | country      | value             |
+        | France       | Franc             |
+        | Canada       | Dollars           |

@@ -36,8 +36,8 @@ def ui_add_country_post():
     new_country_add_body['capital'] = request.form.get('Capital')
     new_country_add_body['continent'] = request.form.get('Continent')
     new_country_add_body['subregion'] = request.form.get('Subregion')
-    new_country_add_body['currency']['name'] = request.form.get('Currency_Name')
-    new_country_add_body['currency']['type'] = request.form.get('Currency_Type')
+    new_country_add_body['currency'] = request.form.get('Currency')
+    new_country_add_body['code'] = request.form.get('Code')
     new_country_add_body['population'] = int(request.form.get('Population'))
     new_country_add_request_body = json.dumps(new_country_add_body)
     headers = {'Content-type': 'application/json', 'Accept': 'application/json'}

@@ -7,7 +7,8 @@ Feature:Add Country
     And I add "<country>" to continent "<continent>"
     And I add "<country>" to subregion "<subregion>"
     And I add population "<population>" to "<country>"
-    And I add currency name "<currency>" and type "<type>" to "<country>"
+    And I add currency "<currency>" to "<country>"
+    And I add code "<code>" to "<country>"
     When I send request to add the country
     Then The http request is successful
     And I get a success message "Country Added Successfully"
@@ -15,7 +16,7 @@ Feature:Add Country
 
 
 	Examples:"<country>"
-        | country      |capital    | continent | subregion       | population | currency       | type      |
+        | country      |capital    | continent | subregion       | population | currency       | code      |
         | India        |New Delhi  | Asia      | Southern Asia   | 1295210000 | Rupees         | INR       |
         | Ireland      |Dublin     | Europe    | Northern Europe | 6378000    | Euro           | EUR       |
         | France       |Paris      | Europe    | Western Europe  | 66710000   | Euro           | EUR       |

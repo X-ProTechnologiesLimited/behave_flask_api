@@ -25,17 +25,17 @@ def search_country_names(country_name):
     search = "%{}%".format(country_name)
     for country in Country.query.filter(Country.country_name.like(search)).all():
         country_data['countries'].append({
-            'name': country.country_name,
-            'continent': country.continent
+            'Name': country.country_name,
+            'Continent': country.continent
         })
 
-    country_data['total'] = Country.query.filter(Country.country_name.like(search)).count()
+    country_data['Total'] = Country.query.filter(Country.country_name.like(search)).count()
 
-    if country_data['total'] == 0:  # If no countries found in the continent
+    if country_data['Total'] == 0:  # If no countries found in the continent
         logger.error('No Countries Found in Database')
         return errorchecker.data_not_found_string(country_name)
 
-    json_data = dumps(country_data, sort_keys=True, indent=4)
+    json_data = dumps(country_data)
     return json_data
 
 
@@ -48,15 +48,15 @@ def search_country_names_starting(country_name):
     search = "{}%".format(country_name_uncoded)
     for country in Country.query.filter(Country.country_name.like(search)).all():
         country_data['countries'].append({
-            'name': country.country_name,
-            'continent': country.continent
+            'Name': country.country_name,
+            'Continent': country.continent
         })
 
-    country_data['total'] = Country.query.filter(Country.country_name.like(search)).count()
+    country_data['Total'] = Country.query.filter(Country.country_name.like(search)).count()
 
-    if country_data['total'] == 0:  # If no countries found in the continent
+    if country_data['Total'] == 0:  # If no countries found in the continent
         logger.error('No Countries Found in Database')
         return errorchecker.data_not_found_string(country_name)
 
-    json_data = dumps(country_data, sort_keys=True)
+    json_data = dumps(country_data)
     return json_data

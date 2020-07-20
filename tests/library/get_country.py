@@ -36,7 +36,7 @@ class Get_Country(object):
         self.response_json_map = {}
         self.response_json_map['http_response_code'] = response_country.status_code
         try:
-            self.response_json_map['total'] = self.get_single_country['total']
+            self.response_json_map['Total'] = self.get_single_country['Total']
         except KeyError:
             self.response_json_map['status'] = self.get_single_country['status']
 
@@ -47,7 +47,7 @@ class Get_Country(object):
         self.response_json_map = {}
         self.response_json_map['http_response_code'] = response_country.status_code
         try:
-            self.response_json_map['total'] = self.get_single_country['total']
+            self.response_json_map['Total'] = self.get_single_country['Total']
         except KeyError:
             self.response_json_map['status'] = self.get_single_country['status']
 
@@ -57,7 +57,7 @@ class Get_Country(object):
         self.get_continent_country = response_country.json()
         self.response_json_map = {}
         self.response_json_map['http_response_code'] = response_country.status_code
-        self.response_json_map['total'] = self.get_continent_country['total']
+        self.response_json_map['Total'] = self.get_continent_country['Total']
 
     def get_continent_country_list(self):
         self.url = self.get_country_continent_url + self.continent + '/name'
@@ -65,7 +65,7 @@ class Get_Country(object):
         self.get_continent_country = response_country.json()
         self.response_json_map = {}
         self.response_json_map['http_response_code'] = response_country.status_code
-        self.response_json_map['total'] = self.get_continent_country['total']
+        self.response_json_map['Total'] = self.get_continent_country['Total']
 
     def get_all_countries(self):
         self.url = self.get_countries_url
@@ -73,7 +73,7 @@ class Get_Country(object):
         self.get_all_country = response_country.json()
         self.response_json_map = {}
         self.response_json_map['http_response_code'] = response_country.status_code
-        self.response_json_map['total'] = self.get_all_country['total']
+        self.response_json_map['Total'] = self.get_all_country['Total']
 
     def get_country_list(self):
         self.url = self.get_country_url + 'name'
@@ -81,12 +81,8 @@ class Get_Country(object):
         self.get_all_country = response_country.json()
         self.response_json_map = {}
         self.response_json_map['http_response_code'] = response_country.status_code
-        self.response_json_map['total'] = self.get_all_country['total']
+        self.response_json_map['Total'] = self.get_all_country['Total']
 
     def single_country_base_map(self, key):
         for items in self.get_single_country['countries']:
             self.response_json_map[key] = self.get_single_country['countries'][key]
-
-    def single_country_currency_map(self, key):
-        for items in self.get_single_country['countries']['currency']:
-            self.response_json_map[key] = self.get_single_country['countries']['currency'][key]

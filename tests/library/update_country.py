@@ -37,10 +37,10 @@ class Update_Country(object):
         self.url = self.update_country_url + self.country + '/data/' + self.param
         if self.param == 'population':
             self.update_country_body[self.param] = int(self.value)
-        elif self.param == 'currency':
-            self.url = self.update_country_url + self.country + '/' + self.param
-            self.update_country_body[self.param]['name'] = self.value
-            self.update_country_body[self.param]['type'] = self.type
+        # elif self.param == 'currency':
+        #     self.url = self.update_country_url + self.country + '/' + self.param
+        #     self.update_country_body[self.param]['name'] = self.value
+        #     self.update_country_body[self.param]['type'] = self.type
         else:
             self.update_country_body[self.param] = self.value
         update_country_request_body = json.dumps(self.update_country_body)

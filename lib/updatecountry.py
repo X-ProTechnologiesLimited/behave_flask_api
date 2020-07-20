@@ -42,6 +42,10 @@ def update_country(country_name, param):
         country = Country.query.filter_by(country_name=country_name).update(dict(subregion=field_value))
     elif param == 'population':
         country = Country.query.filter_by(country_name=country_name).update(dict(population=field_value))
+    elif param == 'currency':
+        country = Country.query.filter_by(country_name=country_name).update(dict(currency=field_value))
+    elif param == 'code':
+        country = Country.query.filter_by(country_name=country_name).update(dict(code=field_value))
     else:
         logger.error('Invalid Update Parameter: ' + param + ' Used')
         return errorchecker.int_serv_error_bad_param(param)
@@ -51,35 +55,6 @@ def update_country(country_name, param):
     message = {
         'status' : 201,
         'message' : 'Country Updated Successfully'
-    }
-    resp = jsonify(message)
-    resp.status_code = 201
-    logger.info('Country: ' + country_name + ' Updated Successfully')
-    return resp
-
-
-@updatecountry.route('/update/<country_name>/currency', methods=['POST'])
-def update_country_currency(country_name):
-    data = json.loads(request.data)
-    try:
-        currency = data['currency']['name']
-        type = data['currency']['type']
-    except:
-        logger.error('Json Body Not Correct')
-        return errorchecker.param_mismatch_error()
-    country = Country.query.filter_by(
-        country_name=country_name).first()  # if this returns a country_name, then the country already exists in database
-
-    if not country:  # if a country is not found, return a data_not_found
-        logger.error('Country: ' + country_name + ' Not Found in Database')
-        return errorchecker.data_not_found_country(country_name)
-
-    # update existing country data.
-    country = Country.query.filter_by(country_name=country_name).update(dict(currency=currency, type=type))
-    db.session.commit()
-    message = {
-        'status': 201,
-        'message': 'Country Updated Successfully'
     }
     resp = jsonify(message)
     resp.status_code = 201
