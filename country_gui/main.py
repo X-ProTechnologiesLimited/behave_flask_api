@@ -1,6 +1,6 @@
 # main.py
 
-from flask import Blueprint, render_template, redirect, url_for, request, flash, jsonify
+from flask import Blueprint, render_template, redirect, url_for, request, flash, jsonify, send_from_directory
 import json
 from json2html import *
 from bson.json_util import dumps
@@ -14,6 +14,13 @@ api_host = os.environ['COUNTRY_API_HOST']
 api_port = os.environ['COUNTRY_API_PORT']
 api_url = 'http://'+api_host+':'+api_port
 main = Blueprint('main', __name__)
+UPLOAD_DIRECTORY = 'templates'
+
+@main.route("/files/<path:path>")
+@nocache
+def get_file(path):
+    """Download a supporing file."""
+    return send_from_directory(UPLOAD_DIRECTORY, path, as_attachment=True)
 
 @main.route('/')
 @nocache
@@ -214,9 +221,10 @@ def ui_search_by_capital_post():
         return render_template('error_404.html')
     else:
         data_list = response_list.json()
+        capital_encoded = data_list['countries']['Capital']
         json_data = dumps(data_list)
 
-    return response.asset_retrieve(json_data)
+    return response.asset_retrieve_details(json_data, capital_encoded)
 
 
 @main.route('/ui_update_country')
