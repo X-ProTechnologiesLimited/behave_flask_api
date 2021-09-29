@@ -207,34 +207,61 @@ tr td:hover { background: lightgrey; color: red; }
 <div class="topnav" id="myTopnav">
   <a href="{{ url_for('main.index') }}">Home</a>
   <div class="dropdown">
-    <button class="dropbtn">View
-      <i class="fa fa-caret-down"></i>
-    </button>
-    <div class="dropdown-content">
-      <a href="{{ url_for('main.ui_view_country_resources') }}" >List All Countries</a>
-      <a href="{{ url_for('main.ui_view_continent_resources') }}">List All Continents</a>
-      <a href="{{ url_for('main.ui_view_spec_country') }}">View Country Details</a>
-      <a href="{{ url_for('main.ui_view_specific_continent') }}">Filter Countries by Continents</a>
-    </div>
-  </div>
-  <div class="dropdown">
     <button class="dropbtn">Search
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="dropdown-content">
-      <a href="{{ url_for('main.ui_search_country') }}">Search by Country Name</a>
-      <a href="{{ url_for('main.ui_search_by_capital') }}">Search by Capital</a>
+      <a href="{{ url_for('main.ui_search', resource='country') }}">Search by Country Name</a>
+      <a href="{{ url_for('main.ui_search', resource='capital') }}">Search by Capital</a>
+      <a href="{{ url_for('main.ui_search', resource='city') }}">Search City</a>
     </div>
   </div>
+  <div class="dropdown">
+    <button class="dropbtn">List
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="{{ url_for('main.ui_view_all_resource', resource_name='country') }}" >List All Countries</a>
+      <a href="{{ url_for('main.ui_view_all_resource', resource_name='continent') }}">List All Continents</a>
+      <a href="{{ url_for('main.ui_filter_resource', resource_name='country') }}">Filter Cities by Countries</a>
+      <a href="{{ url_for('main.ui_filter_resource', resource_name='continent') }}">Filter Countries by Continents</a>
+    </div>
+  </div>
+  <div class="dropdown">
+    <button class="dropbtn">View
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="{{ url_for('main.ui_view_specific', resource='country') }}">View Country Details</a>
+      <a href="{{ url_for('main.ui_view_specific', resource='city') }}">View City Details</a>
+    </div>
+  </div>
+  <div class="dropdown">
+    <button class="dropbtn">Add
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
   <a href="{{ url_for('main.ui_add_country') }}">Add Country</a>
-  <a href="{{ url_for('main.ui_update_country') }}">Update Country</a>
+  <a href="{{ url_for('main.ui_add_city') }}">Add City</a>
+  </div>
+  </div>
+  <div class="dropdown">
+    <button class="dropbtn">Update
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+  <a href="{{ url_for('main.ui_update_resource', resource='city') }}">Update City</a>
+  <a href="{{ url_for('main.ui_update_resource', resource='country') }}">Update Country</a>
+  </div>
+  </div>
   <div class="dropdown">
     <button class="dropbtn">Delete
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="dropdown-content">
-      <a href="{{ url_for('main.ui_delete_country') }}">Delete Country</a>
-      <a href="{{ url_for('main.ui_delete_continent') }}">Delete Continent</a>
+      <a href="{{ url_for('main.ui_delete_resource', resource_name='city') }}">Delete City</a>
+      <a href="{{ url_for('main.ui_delete_resource', resource_name='country') }}">Delete Country</a>
+      <a href="{{ url_for('main.ui_delete_resource', resource_name='continent') }}">Delete Continent</a>
     </div>
   </div>
 

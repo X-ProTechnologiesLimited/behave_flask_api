@@ -1,7 +1,7 @@
 # getcountry.py
 
 from flask import Blueprint
-from .models import Country
+from .models import Country, Citydata
 from . import errorchecker
 from . import db
 from bson.json_util import dumps
@@ -47,6 +47,7 @@ def get_country(country_name):
     country_data['countries']['Currency'] = country.currency
     country_data['countries']['Code'] = country.code
     country_data['countries']['Population'] = country.population
+    country_data['countries']['Cities'] = '<a href="' + UI_HREF + '/ui_view_member_country/' + urllib.parse.quote(country.country_name) +'">' + str(Citydata.query.filter_by(country_code=country.code).count()) + '</a>'
     country_data['Total'] = Country.query.filter_by(country_name=country_name_uncoded).count()
     previous_order_number = country.order_number
     current_order_number = previous_order_number + 1
@@ -171,7 +172,7 @@ def get_country_resources():
                      '">' + country.country_name + '</a>',
             'Capital': '<a href="https://en.wikipedia.org/wiki/'
                                                       + urllib.parse.quote(country.capital)
-                                                      + '">' + country.capital + '</a>'
+                                                      + '">' + country.capital + '</a>',
 
         })
 
@@ -216,7 +217,7 @@ def get_continent_members(continent):
                      + urllib.parse.quote(country.country_name) + '">' + country.country_name + '</a>',
             'Capital': '<a href="https://en.wikipedia.org/wiki/'
                                                       + urllib.parse.quote(country.capital)
-                                                      + '">' + country.capital + '</a>'
+                                                      + '">' + country.capital + '</a>',
         })
 
     country_data['Total'] = Country.query.filter_by(continent=continent).count()
@@ -280,7 +281,7 @@ def get_continent_list():
     return json_data
 
 
-@getcountry.route('/get_continent/resources')
+@getcountry.route('/get_continent/resources/all')
 def get_continent_resources():
     logger.info('Get All Continent Resources in the Database')
     country_data = {}
@@ -291,7 +292,7 @@ def get_continent_resources():
             'Continent Name(Click for Wiki Details)': '<a href="https://en.wikipedia.org/wiki/'
                                                       + urllib.parse.quote(country.continent)
                                                       + '">' + country.continent + '</a>',
-            'Member_countries' : '<a href="' + UI_HREF + '/ui_view_continent_members/'
+            'Member_countries' : '<a href="' + UI_HREF + '/ui_view_member_continent/'
                                  + urllib.parse.quote(country.continent) + '">' + str(member_countries) + '</a>'
         })
 

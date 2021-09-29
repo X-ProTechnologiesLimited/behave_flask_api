@@ -30,6 +30,7 @@ then
        echo "Loading Preloaded Country Data to Container..."
        sleep 5
        sqlite3 $PROJECT_DIR/lib/db.sqlite ".mode csv" ".import $PROJECT_DIR/utils/preload_country.csv country" 2>/dev/null
+       sqlite3 $PROJECT_DIR/lib/db.sqlite ".mode csv" ".import $PROJECT_DIR/utils/preload_cities.csv citydata" 2>/dev/null
     else
        echo "Using Empty Database For Container"
     fi
