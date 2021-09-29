@@ -3,7 +3,7 @@
 {% block content %}
 <div class="container">
 <div class="column is-4 is-offset-4">
-    <h3 class="title">Update Country</h3>
+    <h3 class="title">Update City</h3>
     <div class="box">
       {% with messages = get_flashed_messages() %}
 {% if messages %}
@@ -12,24 +12,23 @@
     </div>
 {% endif %}
 {% endwith %}
-        <form method="POST" action="/ui_update_country">
+        <form method="POST" action="/ui_update_city">
 
             <div class="field">
                 <div class="control">
-                    <input class="input is-large" type="text" name="country" placeholder="country" autofocus="" required>
+                    <input class="input is-large" type="text" name="city" placeholder="city" autofocus="" required>
                 </div>
             </div>
 
 
             <div class="field">
                 <div class="control">
-                    <input class="input is-large" list="atype" name="field_name" placeholder="field_name">
-                    <datalist id="atype">
-                      <option value="capital">
-                      <option value="continent">
-                      <option value="subregion">
-                      <option value="currency">
-                      <option value="code">
+                    <input class="input is-large" list="btype" name="field_name" placeholder="field_name">
+                    <datalist id="btype">
+                      <option value="latitude">
+                      <option value="longitude">
+                      <option value="country">
+                      <option value="country_code">
                       <option value="population">
                     </datalist>
                 </div>
@@ -43,7 +42,7 @@
 
             <p></p>
 
-            <button class="button is-block is-info is-medium is-fullwidth">Update Country</button>
+            <button class="button is-block is-info is-medium is-fullwidth">Update City</button>
         </form>
     </div>
 </div>

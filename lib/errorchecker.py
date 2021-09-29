@@ -14,11 +14,42 @@ def data_conflict(country_name):
     resp.status_code = 409
     return resp
 
+
+@errorchecker.errorhandler(409)
+def data_conflict_city(city_name):
+    message = {
+        'status' : 409,
+        'message' : 'City:' + city_name + ' Already Exists'
+    }
+    resp = jsonify(message)
+    resp.status_code = 409
+    return resp
+
 @errorchecker.errorhandler(404)
 def data_not_found_country(country_name):
     message = {
         'status' : 404,
         'message' : 'Country:' + country_name + ' Not Found'
+    }
+    resp = jsonify(message)
+    resp.status_code = 404
+    return resp
+
+@errorchecker.errorhandler(404)
+def data_not_found_city_country(country_name):
+    message = {
+        'status' : 404,
+        'message' : 'No city found for :' + country_name
+    }
+    resp = jsonify(message)
+    resp.status_code = 404
+    return resp
+
+@errorchecker.errorhandler(404)
+def data_not_found_city(city_name):
+    message = {
+        'status' : 404,
+        'message' : 'City:' + city_name + ' Not Found'
     }
     resp = jsonify(message)
     resp.status_code = 404
@@ -73,6 +104,16 @@ def invalid_country():
     message = {
         'status' : 500,
         'message' : 'Country Name Mismatch'
+    }
+    resp = jsonify(message)
+    resp.status_code = 500
+    return resp
+
+@errorchecker.errorhandler(500)
+def invalid_city():
+    message = {
+        'status' : 500,
+        'message' : 'City Name Mismatch'
     }
     resp = jsonify(message)
     resp.status_code = 500
