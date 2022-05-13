@@ -40,7 +40,7 @@ For dockerised Jenkins, please refer to either `https://jenkins.io/doc/book/inst
 2. The file `<repo_root>/Jenkinsfile` creates the pipeline and builds it automatically and
 run the behave functional unit test case and Jmeter Performance tests.
 
-### Notes
+### Notes for Containerised Jenkins
 Linux
 Yum install docker
 systemctl start docker
