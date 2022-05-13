@@ -40,6 +40,14 @@ For dockerised Jenkins, please refer to either `https://jenkins.io/doc/book/inst
 2. The file `<repo_root>/Jenkinsfile` creates the pipeline and builds it automatically and
 run the behave functional unit test case and Jmeter Performance tests.
 
+### Notes
+Linux
+Yum install docker
+systemctl start docker
+Sudo chmod 666 /var/run/docker.sock
+docker run -v /var/run/docker.sock:/var/run/docker.sock --rm -d --network="host" -p 8080:8080 jenkinsci
+/blueocean
+
 ## Test Results and Logs
 
 ### Local and Container Test Runs
