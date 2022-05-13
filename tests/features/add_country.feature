@@ -11,7 +11,7 @@ Feature:Add Country
     And I add code "<code>" to "<country>"
     When I send request to add the country
     Then The http request is successful
-    And I get a success message "Country Added Successfully"
+    And I get a success message "Country: <country> is added successfully"
 
 
 

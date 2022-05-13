@@ -11,7 +11,7 @@ Feature:Delete Continent
     And The response should return number of results : 3
     When I send request to delete continent "Africa"
     Then The http delete request is successful
-    And I get a successful continent delete message "All countries for continent: Africa Deleted Successfully"
+    And I get a successful continent delete message "continent: Africa is deleteed successfully"
 
 
 

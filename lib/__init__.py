@@ -19,28 +19,24 @@ def create_app():
     db.init_app(app)
 
     # blueprint for non-auth parts of app
-    from .errorchecker import errorchecker as errorchecker_blueprint
-    app.register_blueprint(errorchecker_blueprint)
+    from .util import util as util_blueprint
+    app.register_blueprint(util_blueprint)
 
     # blueprint for non-auth parts of app
-    from .addcountry import addcountry as addcountry_blueprint
-    app.register_blueprint(addcountry_blueprint)
+    from .addresource import addresource as addresource_blueprint
+    app.register_blueprint(addresource_blueprint)
 
     # blueprint for non-auth parts of app
     from .getcountry import getcountry as getcountry_blueprint
     app.register_blueprint(getcountry_blueprint)
 
     # blueprint for non-auth parts of app
-    from .deletecountry import deletecountry as deletecountry_blueprint
-    app.register_blueprint(deletecountry_blueprint)
+    from .deleteresource import deleteresource as deleteresource_blueprint
+    app.register_blueprint(deleteresource_blueprint)
 
     # blueprint for non-auth parts of app
     from .updatecountry import updatecountry as updatecountry_blueprint
     app.register_blueprint(updatecountry_blueprint)
-
-    # blueprint for non-auth parts of app
-    from .deletecontinent import deletecontinent as deletecontinent_blueprint
-    app.register_blueprint(deletecontinent_blueprint)
 
     # blueprint for non-auth parts of app
     from .searchcountry import searchcountry as searchcountry_blueprint

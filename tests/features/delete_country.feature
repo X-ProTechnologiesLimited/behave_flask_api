@@ -7,7 +7,7 @@ Feature:Delete Country
     Given I want to delete country "<country>"
     When I send request to delete the country
     Then The http delete request is successful
-    And I get a successful delete message "Country Deleted Successfully"
+    And I get a successful delete message "country: <country> is deleteed successfully"
 
 
 	Examples:"<country>"

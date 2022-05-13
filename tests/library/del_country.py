@@ -13,7 +13,7 @@ class Del_Country(object):
             app_port = int(os.environ['FLASK_RUN_PORT'])
         except KeyError:
             app_port = 5000
-        self.delete_country_url = 'http://localhost:' + str(app_port) + '/delete/'
+        self.delete_country_url = 'http://localhost:' + str(app_port) + '/delete/country/'
         self.delete_continent_url = 'http://localhost:' + str(app_port) + '/delete/continent/'
 
 

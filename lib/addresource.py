@@ -1,25 +1,22 @@
-# addcountry.py
+# addresource.py
 
-from flask import Blueprint, jsonify
+from flask import Blueprint
 from . import db
 from flask import request
 from .models import Country, Citydata
 import json
-from . import errorchecker
+from . import errorchecker, response
 import os
 import logging
 import logging.config
-import urllib.parse
 
-BASE_DIR=os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 logging.config.fileConfig(os.path.join(BASE_DIR, 'utils', 'logger.conf'))
+addresource = Blueprint('addresource', __name__)
+logger = logging.getLogger('addresource')
 
-addcountry = Blueprint('addcountry', __name__)
 
-logger = logging.getLogger('addcountry')
-
-@addcountry.route('/add_country/<countryname>', methods=['POST'])
+@addresource.route('/add_country/<countryname>', methods=['POST'])
 def add_country(countryname):
     data = json.loads(request.data)
     try:
@@ -30,37 +27,27 @@ def add_country(countryname):
         currency = data['currency']
         code = data['code']
         population = data['population']
-
-    except:
+    except KeyError:
         return errorchecker.param_mismatch_error()
-
     if country_name != countryname:
-        return errorchecker.invalid_country()
-
+        return errorchecker.invalid_entry('Country Name')
     country = Country.query.filter_by(
-        country_name=country_name).first()  # if this returns a country_name, then the country already exists in database
-
+        country_name=country_name).first()
     if country:  # if a country is found, return a data_conflict
-        return errorchecker.data_conflict(country_name)
-
+        return errorchecker.data_conflict('Country', country_name)
     # create new country data.
-    new_country = Country(country_name=country_name, capital=capital, continent=continent, subregion=subregion,
-                     currency=currency, code=code, population=population, order_number=0)
-
+    new_country = Country(country_name=country_name, capital=capital,
+                          continent=continent, subregion=subregion,
+                          currency=currency, code=code,
+                          population=population, order_number=0)
     # add the new user to the database
     db.session.add(new_country)
     db.session.commit()
-    message = {
-        'status' : 201,
-        'message' : 'Country Added Successfully'
-    }
-    resp = jsonify(message)
-    resp.status_code = 201
     logger.info('Country: ' + country_name + ' Added Successfully')
-    return resp
+    return response.success_message('add', 'Country', countryname)
 
 
-@addcountry.route('/add_city/<cityname>', methods=['POST'])
+@addresource.route('/add_city/<cityname>', methods=['POST'])
 def add_city(cityname):
     data = json.loads(request.data)
     try:
@@ -70,38 +57,20 @@ def add_city(cityname):
         country = data['country']
         country_code = data['country_code']
         city_population = data['city_population']
-
-    except:
+    except KeyError:
         return errorchecker.param_mismatch_error()
-
     if city_name != cityname:
-        return errorchecker.invalid_city()
-
+        return errorchecker.invalid_entry('City Name')
     city = Citydata.query.filter_by(
-        city_name=city_name).first()  # if this returns a country_name, then the country already exists in database
-
+        city_name=city_name).first()
     if city:  # if a country is found, return a data_conflict
-        return errorchecker.data_conflict_city(city_name)
-
+        return errorchecker.data_conflict('City', city_name)
     # create new country data.
-    new_city = Citydata(city_name=city_name, latitude=latitude, longitude=longitude, country=country,
+    new_city = Citydata(city_name=city_name, latitude=latitude,
+                        longitude=longitude, country=country,
                         country_code=country_code, city_population=city_population)
-
     # add the new user to the database
     db.session.add(new_city)
     db.session.commit()
-    message = {
-        'status' : 201,
-        'message' : 'City Added Successfully'
-    }
-    resp = jsonify(message)
-    resp.status_code = 201
     logger.info('City: ' + city_name + ' Added Successfully')
-    return resp
-
-
-@addcountry.route('/quit')
-def quit():
-    func = request.environ.get('werkzeug.server.shutdown')
-    func()
-    return 'Appliation shutting down...'
+    return response.success_message('add', 'city', city_name)
