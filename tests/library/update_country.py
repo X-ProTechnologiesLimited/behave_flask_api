@@ -17,7 +17,7 @@ class Update_Country(object):
             app_port = int(os.environ['FLASK_RUN_PORT'])
         except KeyError:
             app_port = 5000
-        self.update_country_url = 'http://localhost:' + str(app_port) + '/update/'
+        self.update_country_url = 'http://localhost:' + str(app_port) + '/update_country/'
 
 
     @classmethod

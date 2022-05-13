@@ -1,31 +1,26 @@
 # errorchecker.py
 
-from flask import Blueprint, jsonify
+from flask import jsonify
 
-errorchecker = Blueprint('errorchecker', __name__)
-
-@errorchecker.errorhandler(409)
-def data_conflict(country_name):
+def data_conflict(data_type, data):
     message = {
-        'status' : 409,
-        'message' : 'Country:' + country_name + ' Already Exists'
+        'status': 409,
+        'message': f'{data_type}: {data} Already Exists'
     }
     resp = jsonify(message)
     resp.status_code = 409
     return resp
 
-
-@errorchecker.errorhandler(409)
-def data_conflict_city(city_name):
+def data_not_found(data_type, data):
     message = {
-        'status' : 409,
-        'message' : 'City:' + city_name + ' Already Exists'
+        'status': 404,
+        'message': f'No data found for {data_type}: {data}'
     }
     resp = jsonify(message)
-    resp.status_code = 409
+    resp.status_code = 404
     return resp
 
-@errorchecker.errorhandler(404)
+
 def data_not_found_country(country_name):
     message = {
         'status' : 404,
@@ -35,7 +30,6 @@ def data_not_found_country(country_name):
     resp.status_code = 404
     return resp
 
-@errorchecker.errorhandler(404)
 def data_not_found_city_country(country_name):
     message = {
         'status' : 404,
@@ -45,7 +39,6 @@ def data_not_found_city_country(country_name):
     resp.status_code = 404
     return resp
 
-@errorchecker.errorhandler(404)
 def data_not_found_city(city_name):
     message = {
         'status' : 404,
@@ -56,7 +49,6 @@ def data_not_found_city(city_name):
     return resp
 
 
-@errorchecker.errorhandler(404)
 def data_not_found_capital(capital):
     message = {
         'status' : 404,
@@ -67,7 +59,7 @@ def data_not_found_capital(capital):
     return resp
 
 
-@errorchecker.errorhandler(404)
+
 def data_not_found_continent(continent):
     message = {
         'status' : 404,
@@ -78,7 +70,6 @@ def data_not_found_continent(continent):
     return resp
 
 
-@errorchecker.errorhandler(500)
 def int_serv_error_bad_param(param):
     message = {
         'status' : 500,
@@ -89,7 +80,6 @@ def int_serv_error_bad_param(param):
     return resp
 
 
-@errorchecker.errorhandler(500)
 def param_mismatch_error():
     message = {
         'status' : 500,
@@ -99,28 +89,15 @@ def param_mismatch_error():
     resp.status_code = 500
     return resp
 
-@errorchecker.errorhandler(500)
-def invalid_country():
+def invalid_entry(entry_type):
     message = {
-        'status' : 500,
-        'message' : 'Country Name Mismatch'
+        'status': 500,
+        'message': f'{entry_type} Mismatch'
     }
     resp = jsonify(message)
     resp.status_code = 500
     return resp
 
-@errorchecker.errorhandler(500)
-def invalid_city():
-    message = {
-        'status' : 500,
-        'message' : 'City Name Mismatch'
-    }
-    resp = jsonify(message)
-    resp.status_code = 500
-    return resp
-
-
-@errorchecker.errorhandler(404)
 def no_countries():
     message = {
         'status' : 404,
@@ -131,7 +108,6 @@ def no_countries():
     return resp
 
 
-@errorchecker.errorhandler(404)
 def data_not_found_string(search_string):
     message = {
         'status' : 404,
