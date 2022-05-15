@@ -1,4 +1,5 @@
 # COUNTRY_MANAGER_APPLICATION
+## This is a demo for CI
 
 This project is a demo for flask API and behave automated framework deployed on Docker
 The project also support integration with Jenkins Pipeline. The pipeline is designed to build the project, run
